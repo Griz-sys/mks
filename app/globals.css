@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: var(--font-nunito), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Sunburst background ──────────────────────────────────────────────────── */
+.sunburst {
+  background-color: #F5EDD8;
+  background-image: repeating-conic-gradient(
+    #F5EDD8 0deg 4.5deg,
+    #EAE0C6 4.5deg 9deg
+  );
+  background-position: center center;
+}
+
+/* ── Marquee ──────────────────────────────────────────────────────────────── */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Scroll-driven fade-in (Chrome 115+ progressive enhancement) ──────────── */
+@supports (animation-timeline: view()) {
+  [data-scroll] {
+    opacity: 0;
+    animation: slideUp linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 38%;
+  }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Custom scrollbar ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #FF9A00; }
+
+/* ── Global resets for poster aesthetic ──────────────────────────────────── */
+* { border-radius: 0 !important; }
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}
