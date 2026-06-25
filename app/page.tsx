@@ -97,7 +97,7 @@ export default function HomePage() {
             className="font-poster text-white leading-none uppercase text-center w-full py-3 px-2"
             style={{ fontSize: 'clamp(3rem, 10.5vw, 11rem)', letterSpacing: '-0.01em' }}
           >
-            TANDOORI CHICKEN SHOP
+            MK&apos;S TANDOORI CHICKEN SHOP
           </h1>
         </div>
 
