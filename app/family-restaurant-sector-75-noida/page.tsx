@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: "Family Restaurant in Sector 75 Noida | MK's — Dine Together",
   description:
-    "Planning a family meal in Noida Sector 75? MK's offers a warm, welcoming dining experience with authentic tandoori food for the whole family. Call +91 77973 39211.",
+    "Planning a family meal in Noida Sector 75? MK's offers a warm, welcoming dining experience with authentic tandoori food for the whole family. Call +91 80763 74624.",
   keywords: [
     'family restaurant sector 75 noida',
     'best family restaurant noida',
@@ -30,13 +30,13 @@ const schema = {
   servesCuisine: 'Indian',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Spectrum Mall, Sector 50',
+    streetAddress: 'Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75',
     addressLocality: 'Noida',
     addressRegion: 'Uttar Pradesh',
     postalCode: '201301',
     addressCountry: 'IN',
   },
-  telephone: '+91-7797339211',
+  telephone: '+91-8076374624',
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     q: "Where exactly is MK's located near Sector 75?",
-    a: "MK's is at Spectrum Mall, Sector 50 — a short drive or auto ride from Sector 75. It's very close to the Sector 75 metro station as well.",
+    a: "MK's is at Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75 — a short drive or auto ride from Sector 75. It's very close to the Sector 75 metro station as well.",
   },
   {
     q: "Does MK's have vegetarian options for family dining?",
@@ -71,7 +71,7 @@ const faqs = [
   },
   {
     q: "Can I book a table at MK's for a family gathering?",
-    a: "Call us at +91 77973 39211 to reserve a table or enquire about group bookings for family gatherings.",
+    a: "Call us at +91 80763 74624 to reserve a table or enquire about group bookings for family gatherings.",
   },
 ]
 
@@ -204,8 +204,8 @@ export default function FamilyRestaurantPage() {
               <div className="space-y-6">
                 {[
                   { icon: '🕐', title: 'Open Every Day', body: 'Monday to Sunday, 11:00 AM – 11:00 PM. No closed days.' },
-                  { icon: '📍', title: 'Easy to Find', body: 'Spectrum Mall, Sector 50, Noida — a short drive from Sector 75. Ample parking.' },
-                  { icon: '📞', title: 'Book a Table', body: 'Call +91 77973 39211 to reserve your table or ask about group bookings for family gatherings.' },
+                  { icon: '📍', title: 'Easy to Find', body: 'Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75, Noida — a short drive from Sector 75. Ample parking.' },
+                  { icon: '📞', title: 'Book a Table', body: 'Call +91 80763 74624 to reserve your table or ask about group bookings for family gatherings.' },
                   { icon: '🚴', title: 'Delivery Too', body: 'Can\'t make it in? Order delivery through our phone line or popular food delivery apps.' },
                 ].map((feature) => (
                   <div key={feature.title} className="flex gap-4">
@@ -292,10 +292,10 @@ export default function FamilyRestaurantPage() {
         <section className="py-20 px-4 text-center">
           <h2 className="font-display text-4xl text-white mb-4">Bring the Family</h2>
           <p className="font-body text-white/50 mb-8 max-w-md mx-auto">
-            Spectrum Mall, Sector 50, Noida. Open daily 11am–11pm.
+            Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75, Noida. Open daily 11am–11pm.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+917797339211" className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors">
+            <a href="tel:+918076374624" className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors">
               Reserve a Table
             </a>
             <Link href="/#menu" className="border border-white/20 text-white font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:border-mk-orange hover:text-mk-orange transition-colors">

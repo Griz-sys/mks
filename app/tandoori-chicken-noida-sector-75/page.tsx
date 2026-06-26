@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: "Best Tandoori Chicken in Noida Sector 75 | MK's Restaurant",
   description:
-    "Looking for the best tandoori chicken in Noida Sector 75? MK's serves authentic clay tandoor roasted chicken — marinated overnight, never fried. Starting ₹199. Call +91 77973 39211.",
+    "Looking for the best tandoori chicken in Noida Sector 75? MK's serves authentic clay tandoor roasted chicken — marinated overnight, never fried. Starting ₹199. Call +91 80763 74624.",
   keywords: [
     'tandoori chicken noida sector 75',
     'tandoori chicken noida',
@@ -31,38 +31,43 @@ const schema = {
   hasMenuItem: [
     {
       '@type': 'MenuItem',
-      name: 'Tandoori Chicken (Half)',
-      description: 'Half chicken marinated overnight in yoghurt and spices, roasted in clay tandoor.',
-      offers: { '@type': 'Offer', price: '199', priceCurrency: 'INR' },
+      name: 'Classic Chicken 2 Pc',
+      description: 'Classic tandoori chicken — marinated overnight in yoghurt and spices, roasted in clay tandoor.',
+      offers: { '@type': 'Offer', price: '180', priceCurrency: 'INR' },
     },
     {
       '@type': 'MenuItem',
-      name: 'Tandoori Chicken (Full)',
-      description: 'Full chicken marinated overnight in yoghurt and spices, roasted in clay tandoor.',
-      offers: { '@type': 'Offer', price: '349', priceCurrency: 'INR' },
+      name: 'Classic Chicken 4 Pc',
+      offers: { '@type': 'Offer', price: '350', priceCurrency: 'INR' },
     },
     {
       '@type': 'MenuItem',
-      name: 'Chicken Tikka (6 pcs)',
-      description: 'Boneless chicken tikka pieces marinated and roasted in clay tandoor.',
-      offers: { '@type': 'Offer', price: '249', priceCurrency: 'INR' },
+      name: 'Creamy Chicken 2 Pc',
+      description: 'Creamy marinated tandoori chicken roasted in clay tandoor.',
+      offers: { '@type': 'Offer', price: '190', priceCurrency: 'INR' },
+    },
+    {
+      '@type': 'MenuItem',
+      name: 'Classic Chicken Tikka 4 Pc',
+      description: 'Classic boneless chicken tikka pieces roasted in clay tandoor.',
+      offers: { '@type': 'Offer', price: '350', priceCurrency: 'INR' },
     },
   ],
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Spectrum Mall, Sector 50',
+    streetAddress: 'Shop No. 33, E Block, Spectrum Metro Mall, Phase-2',
     addressLocality: 'Noida',
     addressRegion: 'Uttar Pradesh',
     postalCode: '201301',
     addressCountry: 'IN',
   },
-  telephone: '+91-7797339211',
+  telephone: '+91-8076374624',
 }
 
 const faqs = [
   {
     q: 'Where can I get the best tandoori chicken in Noida Sector 75?',
-    a: "MK's at Spectrum Mall (near Sector 75 Metro) is rated among the best tandoori chicken spots in Noida. We roast in a clay tandoor at 450°C — no frying, ever.",
+    a: "MK’s at Spectrum Metro Mall, Phase-2, Sector 75 is rated among the best tandoori chicken spots in Noida. We roast in a clay tandoor at 450°C — no frying, ever.",
   },
   {
     q: "Is MK’s tandoori chicken fried or roasted?",
@@ -70,11 +75,11 @@ const faqs = [
   },
   {
     q: "What is the price of tandoori chicken at MK’s?",
-    a: 'Tandoori Chicken (Half) starts at ₹199. Full chicken is ₹349. Chicken Tikka (6 pcs) is ₹249. Seekh Kebab (4 pcs) is ₹229.',
+    a: "Classic Chicken starts at Rs.180 (2 pc) or Rs.350 (4 pc). Creamy Chicken is Rs.190 (2 pc). Chicken Tikka starts at Rs.350 (4 pc). Classic Chicken Roll is Rs.180.",
   },
   {
     q: "Does MK’s offer home delivery for tandoori chicken in Noida?",
-    a: "Call us at +91 77973 39211 for delivery details. We're also available on popular food delivery platforms.",
+    a: "Call us at +91 80763 74624 for delivery details. We’re also available on popular food delivery platforms.",
   },
   {
     q: "What makes MK's tandoori chicken different?",
@@ -178,20 +183,16 @@ export default function TandooriChickenPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { name: 'Tandoori Chicken (Half)', price: '₹199', desc: '4 pieces — 2 legs, 2 breast. Served with mint chutney & onion rings.' },
-                { name: 'Tandoori Chicken (Full)', price: '₹349', desc: '8 pieces — whole chicken portioned. Best for 2–3 people.' },
-                { name: 'Chicken Tikka (6 pcs)', price: '₹249', desc: 'Boneless breast chunks marinated and roasted. Tender, no bones.' },
-                { name: 'Seekh Kebab (4 pcs)', price: '₹229', desc: 'Minced chicken on iron skewers with chilli and coriander.' },
-                { name: 'Paneer Tikka', price: '₹199', veg: true, desc: 'Chunky cottage cheese cubes in a smoky tandoor marinade.' },
+                { name: 'Classic Chicken 2 Pc', price: '₹180', desc: 'Classic tandoori marinade. Roasted to order in clay tandoor. Served with mint chutney & onions.' },
+                { name: 'Classic Chicken 4 Pc', price: '₹350', desc: 'Four pieces — best for sharing. Classic spice marinade, zero frying.' },
+                { name: 'Classic Chicken 8 Pc', price: '₹650', desc: 'Eight pieces — perfect for a group. The full MK\'s classic experience.' },
+                { name: 'Creamy Chicken 2 Pc', price: '₹190', desc: 'Creamy marinade with a rich, mellow spice profile. Still roasted, never fried.' },
+                { name: 'Creamy Chicken 4 Pc', price: '₹380', desc: 'Four pieces of our popular creamy variant. Great for those who prefer milder spice.' },
+                { name: 'Hot & Spicy Chicken Tikka 4 Pc', price: '₹380', desc: 'Boneless tikka with extra heat. For the spice lovers.' },
               ].map((item) => (
                 <div key={item.name} className="bg-mk-black border border-white/10 hover:border-mk-orange/40 transition-colors p-5">
                   <div className="flex justify-between items-start mb-2">
                     <div className="flex items-center gap-2">
-                      {item.veg && (
-                        <span className="inline-block w-4 h-4 border border-green-500 flex-shrink-0 flex items-center justify-center">
-                          <span className="block w-2 h-2 bg-green-500 rounded-full" />
-                        </span>
-                      )}
                       <h3 className="font-body font-semibold text-white">{item.name}</h3>
                     </div>
                     <span className="font-display text-mk-orange text-xl ml-4 flex-shrink-0">{item.price}</span>
@@ -263,14 +264,14 @@ export default function TandooriChickenPage() {
             Ready to taste the roast?
           </h2>
           <p className="font-body text-white/50 mb-8 max-w-md mx-auto">
-            Visit us at Spectrum Mall, Sector 50 — or call to order.
+            Visit us at Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75 — or call to order.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+917797339211"
+              href="tel:+918076374624"
               className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors"
             >
-              Call +91 77973 39211
+              Call +91 80763 74624
             </a>
             <Link
               href="/#location"

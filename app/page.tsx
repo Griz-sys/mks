@@ -26,15 +26,15 @@ type MenuCard = FoodCard | DividerCard
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 const menuCards: MenuCard[] = [
-  { type: 'item',    name: 'TANDOORI CHICKEN', nameHindi: 'तंदूरी चिकन',   price: 'FROM ₹199', image: '/pngtree-grilled-tandoori-chicken-leg-piece-image_20244660.webp', alt: 'Smoking tandoori chicken leg piece fresh off the clay tandoor', bg: 'orange' },
-  { type: 'item',    name: 'CHICKEN TIKKA',    nameHindi: 'चिकन टिक्का',   price: '₹249',      image: '/images.jpg',                                                                      alt: 'Tandoori chicken platter with mint chutney and onion rings',    bg: 'dark'   },
-  { type: 'divider', title: 'TANDOORI SPECIALS', titleHindi: 'तंदूरी विशेष' },
-  { type: 'item',    name: 'SEEKH KEBAB',      nameHindi: 'सीख कबाब',      price: '₹229',      image: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&q=85&fit=crop', alt: 'Seekh kebab on skewers',     bg: 'orange' },
-  { type: 'item',    name: 'CHICKEN BIRYANI',  nameHindi: 'चिकन बिरयानी',  price: '₹249',      image: '/biryani.avif', alt: 'Chicken biryani',            bg: 'dark'   },
-  { type: 'divider', title: 'BIRYANI & ROLLS',  titleHindi: 'बिरयानी और रोल' },
-  { type: 'item',    name: 'CHICKEN ROLL',     nameHindi: 'चिकन रोल',      price: '₹149',      image: 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=600&q=85&fit=crop', alt: 'Chicken tikka roll',         bg: 'orange' },
-  { type: 'item',    name: 'PANEER TIKKA',     nameHindi: 'पनीर टिक्का',   price: '₹199',      image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=85&fit=crop', alt: 'Paneer tikka in clay bowl',  bg: 'dark'   },
-  { type: 'divider', title: 'SIDES & MORE',     titleHindi: 'साइड्स और अधिक' },
+  { type: 'item',    name: 'CLASSIC CHICKEN',  nameHindi: 'क्लासिक चिकन',  price: 'FROM ₹180', image: '/pngtree-grilled-tandoori-chicken-leg-piece-image_20244660.webp', alt: 'Smoking classic tandoori chicken leg piece', bg: 'orange' },
+  { type: 'item',    name: 'CREAMY CHICKEN',   nameHindi: 'क्रीमी चिकन',   price: 'FROM ₹190', image: '/images.jpg',                                                   alt: 'Creamy tandoori chicken platter with chutney', bg: 'dark'   },
+  { type: 'divider', title: 'TANDOORI CHICKEN', titleHindi: 'तंदूरी चिकन' },
+  { type: 'item',    name: 'CHICKEN TIKKA',    nameHindi: 'चिकन टिक्का',   price: 'FROM ₹350', image: '/butterflied_tandoori_chicken_passage_to_india.jpeg',            alt: 'Chicken tikka pieces off the clay tandoor',   bg: 'orange' },
+  { type: 'item',    name: 'SOYA CHAAP',       nameHindi: 'सोया चाप',       price: '₹250',      image: '/l-intro-1607603831.jpg',                                       alt: 'Soya chaap strips over live fire',            bg: 'dark'   },
+  { type: 'divider', title: 'TIKKA & CHAAP',   titleHindi: 'टिक्का और चाप' },
+  { type: 'item',    name: 'CHICKEN ROLL',     nameHindi: 'चिकन रोल',      price: '₹180',      image: '/pngtree-grilled-tandoori-chicken-leg-piece-image_20244660.webp', alt: 'Classic chicken roll with chutney',           bg: 'orange' },
+  { type: 'item',    name: 'SOYA ROLL',        nameHindi: 'सोया रोल',       price: '₹150',      image: '/images.jpg',                                                   alt: 'Classic soya roll',                          bg: 'dark'   },
+  { type: 'divider', title: 'ROLLS & ROTI',    titleHindi: 'रोल्स और रोटी' },
 ]
 
 const localBusinessSchema = {
@@ -43,10 +43,10 @@ const localBusinessSchema = {
   name: "MK's",
   description: "Authentic tandoori chicken in Noida Sector 75 — roasted in a clay tandoor, not fried.",
   url: 'https://www.mkstandoori.in',
-  telephone: '+91-7797339211',
+  telephone: '+91-8076374624',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Spectrum Mall, Sector 50',
+    streetAddress: 'Shop No. 33, E Block, Spectrum Metro Mall, Phase-2',
     addressLocality: 'Noida',
     addressRegion: 'Uttar Pradesh',
     postalCode: '201301',
@@ -400,8 +400,8 @@ export default function HomePage() {
             </h2>
             <div className="space-y-5">
               {[
-                { label: 'ADDRESS', value: 'Spectrum Mall, Sector 50\nNoida, Uttar Pradesh 201301', note: 'Near Sector 75 Metro Station' },
-                { label: 'PHONE',   value: '+91 77973 39211', href: 'tel:+917797339211' },
+                { label: 'ADDRESS', value: 'Shop No. 33, E Block, Spectrum Metro Mall\nPhase-2, Sector 75, Noida 201301', note: 'Spectrum Metro Mall, Phase-2' },
+                { label: 'PHONE',   value: '+91 80763 74624', href: 'tel:+918076374624' },
                 { label: 'HOURS',   value: 'Mon – Sun  ·  11:00 AM – 11:00 PM' },
               ].map((item) => (
                 <div key={item.label}>
@@ -415,7 +415,7 @@ export default function HomePage() {
               ))}
             </div>
             <a
-              href="https://maps.google.com?q=Spectrum+Mall+Sector+50+Noida"
+              href="https://maps.google.com?q=Spectrum+Metro+Mall+Phase+2+Sector+75+Noida"
               target="_blank" rel="noopener noreferrer"
               className="inline-block mt-10 font-poster text-mk-black bg-mk-orange text-sm uppercase tracking-widest px-8 py-3 hover:bg-white transition-colors"
             >

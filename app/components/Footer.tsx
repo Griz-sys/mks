@@ -32,10 +32,10 @@ export default function Footer() {
         </p>
         <div className="mt-8 space-y-1">
           <p className="font-body text-mk-black/50 text-xs uppercase tracking-widest">
-            SPECTRUM MALL, SECTOR 50, NOIDA · UTTAR PRADESH 201301
+            SHOP NO. 33, E BLOCK, SPECTRUM METRO MALL, PHASE-2, SECTOR 75, NOIDA
           </p>
           <p className="font-body text-mk-black/50 text-xs uppercase tracking-widest">
-            +91 77973 39211 &nbsp;·&nbsp; MON – SUN &nbsp;·&nbsp; 11AM – 11PM
+            +91 80763 74624 &nbsp;·&nbsp; MON – SUN &nbsp;·&nbsp; 11AM – 11PM
           </p>
         </div>
       </div>

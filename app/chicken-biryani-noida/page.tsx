@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Where can I get the best chicken biryani in Noida?',
-    a: "MK's near Sector 75 Noida (at Spectrum Mall, Sector 50) serves slow-cooked dum biryani with whole spices and tender chicken pieces.",
+    a: "MK's near Sector 75 Noida (at Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75) serves slow-cooked dum biryani with whole spices and tender chicken pieces.",
   },
   {
     q: "What type of biryani does MK's serve?",
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     q: "Is the biryani at MK's available for delivery in Noida?",
-    a: "Yes — call +91 77973 39211 for home delivery or check our presence on food delivery apps.",
+    a: "Yes — call +91 80763 74624 for home delivery or check our presence on food delivery apps.",
   },
   {
     q: "What makes MK's chicken biryani different?",
@@ -72,13 +72,13 @@ const schema = {
   ],
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Spectrum Mall, Sector 50',
+    streetAddress: 'Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75',
     addressLocality: 'Noida',
     addressRegion: 'Uttar Pradesh',
     postalCode: '201301',
     addressCountry: 'IN',
   },
-  telephone: '+91-7797339211',
+  telephone: '+91-8076374624',
 }
 
 export default function ChickenBiryaniPage() {
@@ -266,11 +266,11 @@ export default function ChickenBiryaniPage() {
         <section className="py-20 px-4 bg-mk-black text-center">
           <h2 className="font-display text-4xl text-white mb-4">Order Your Biryani</h2>
           <p className="font-body text-white/50 mb-8 max-w-md mx-auto">
-            Visit us at Spectrum Mall, Sector 50, Noida — or call to order.
+            Visit us at Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75, Noida — or call to order.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+917797339211" className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors">
-              Call +91 77973 39211
+            <a href="tel:+918076374624" className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors">
+              Call +91 80763 74624
             </a>
             <Link href="/#location" className="border border-white/20 text-white font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:border-mk-orange hover:text-mk-orange transition-colors">
               Get Directions
