@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'mk-orange': '#FF9A00',
+        'mk-orange': '#CD3910',
         'mk-black': '#000000',
         'mk-charcoal': '#282521',
         'mk-white': '#FFFFFF',

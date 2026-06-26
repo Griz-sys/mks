@@ -49,10 +49,17 @@ body {
 /* ── Custom scrollbar ─────────────────────────────────────────────────────── */
 ::-webkit-scrollbar       { width: 4px; }
 ::-webkit-scrollbar-track { background: #000; }
-::-webkit-scrollbar-thumb { background: #FF9A00; }
+::-webkit-scrollbar-thumb { background: #CD3910; }
 
 /* ── Global resets for poster aesthetic ──────────────────────────────────── */
 * { border-radius: 0 !important; }
+
+/* ── Circle override — used for deliberate circular design elements ───────── */
+.mk-circle { border-radius: 50% !important; }
+
+/* ── Circular stamp spin animation ───────────────────────────────────────── */
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+.stamp-spin { animation: spin-slow 18s linear infinite; }
 
 @layer utilities {
   .text-balance { text-wrap: balance; }

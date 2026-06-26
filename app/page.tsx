@@ -71,8 +71,8 @@ export default function HomePage() {
           1. HERO — two photos side by side → massive headline → 3-col info
       ══════════════════════════════════════════════════════════════════════ */}
       <section className="pt-16">
-        {/* Two editorial photos */}
-        <div className="grid grid-cols-2 h-[55vh] min-h-[320px]">
+        {/* Two editorial photos + circular logo stamp */}
+        <div className="grid grid-cols-2 h-[55vh] min-h-[320px] relative">
           <div className="relative overflow-hidden">
             <Image
               src="/l-intro-1607603831.jpg"
@@ -89,6 +89,25 @@ export default function HomePage() {
               priority
             />
           </div>
+
+          {/* ── Circular logo stamp — centered over both photos ── */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+            <div className="relative" style={{ width: 'clamp(200px, 22vw, 300px)', height: 'clamp(200px, 22vw, 300px)' }}>
+
+              {/* 1 — Solid black background circle */}
+              <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full" aria-hidden="true">
+                <circle cx="50" cy="50" r="44" fill="#000"/>
+              </svg>
+
+              {/* Logo centered, static */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative" style={{ width: '78%', height: '78%' }}>
+                  <Image src="/MKs-Logo.svg" alt="MK's" fill className="object-contain"/>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
 
         {/* Massive full-width headline */}
@@ -97,7 +116,7 @@ export default function HomePage() {
             className="font-poster text-white leading-none uppercase text-center w-full py-3 px-2"
             style={{ fontSize: 'clamp(3rem, 10.5vw, 11rem)', letterSpacing: '-0.01em' }}
           >
-            MK&apos;S TANDOORI CHICKEN SHOP
+            TANDOORI CHICKEN SHOP
           </h1>
         </div>
 
@@ -150,7 +169,7 @@ export default function HomePage() {
           <svg viewBox="0 0 80 100" fill="none" className="w-14 md:w-20 flex-shrink-0 opacity-40" aria-hidden="true">
             <ellipse cx="40" cy="88" rx="28" ry="8" fill="white"/>
             <path d="M12 30 Q12 88 40 88 Q68 88 68 30 Q68 8 40 8 Q12 8 12 30Z" fill="white"/>
-            <ellipse cx="40" cy="30" rx="28" ry="12" fill="#FF9A00"/>
+            <ellipse cx="40" cy="30" rx="28" ry="12" fill="#CD3910"/>
             <ellipse cx="40" cy="30" rx="18" ry="8" fill="#282521"/>
             <path d="M33 20 Q36 12 40 16 Q44 12 47 20" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round"/>
           </svg>
@@ -197,7 +216,7 @@ export default function HomePage() {
             भुना हुआ, तला नहीं
           </p>
           <p className="font-body text-white/30 text-xs uppercase tracking-widest mt-4">
-            Spectrum Mall, Sector 50<br />Noida · +91 77973 39211
+            Spectrum Metro Mall, Phase-2<br />Sector 75, Noida · +91 80763 74624
           </p>
         </div>
       </section>
@@ -207,14 +226,30 @@ export default function HomePage() {
       ══════════════════════════════════════════════════════════════════════ */}
       <section className="bg-mk-black" id="menu">
         {/* Section label */}
-        <div className="border-b border-white/10 px-8 py-5 flex items-baseline justify-between">
+        <div className="border-b border-white/10 px-8 py-5 flex items-center justify-between">
           <h2
             className="font-poster text-white uppercase"
             style={{ fontSize: 'clamp(2rem, 5vw, 5rem)' }}
           >
             OUR MENU
           </h2>
-          <p className="font-hindi text-white/30 text-xl">हमारा मेनू</p>
+          {/* Circular stamp badge */}
+          <div className="relative flex-shrink-0 hidden sm:block" style={{ width: '80px', height: '80px' }}>
+            <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full" aria-hidden="true">
+              <circle cx="50" cy="50" r="44" fill="none" stroke="rgba(205,57,16,0.4)" strokeWidth="1"/>
+            </svg>
+            <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full stamp-spin" aria-hidden="true">
+              <defs>
+                <path id="menu-badge-ring" d="M 50,50 m -43,0 a 43,43 0 1,1 86,0 a 43,43 0 1,1 -86,0"/>
+              </defs>
+              <text fontSize="9" fill="rgba(205,57,16,0.7)" fontFamily="var(--font-bebas)" letterSpacing="1.5">
+                <textPath href="#menu-badge-ring" startOffset="0%">· FRESH · CLAY · HOT ·</textPath>
+              </text>
+            </svg>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <p className="font-hindi text-white/40 text-xs text-center leading-tight">हमारा<br/>मेनू</p>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3">
@@ -295,7 +330,7 @@ export default function HomePage() {
           {/* Flame icon */}
           <svg viewBox="0 0 60 80" fill="none" className="w-10 md:w-16 flex-shrink-0 opacity-40" aria-hidden="true">
             <path d="M30 4 C30 4 50 25 50 45 C50 62 42 74 30 76 C18 74 10 62 10 45 C10 25 30 4 30 4Z" fill="white"/>
-            <path d="M30 30 C30 30 40 42 40 52 C40 62 36 68 30 70 C24 68 20 62 20 52 C20 42 30 30 30 30Z" fill="#FF9A00"/>
+            <path d="M30 30 C30 30 40 42 40 52 C40 62 36 68 30 70 C24 68 20 62 20 52 C20 42 30 30 30 30Z" fill="#CD3910"/>
           </svg>
           <div className="flex-1 text-right">
             <p
@@ -363,7 +398,7 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════════
-          8. SEO LINKS — three cards
+          9. SEO LINKS — three cards
       ══════════════════════════════════════════════════════════════════════ */}
       <section className="bg-mk-black border-t border-white/10" data-scroll>
         <div className="grid grid-cols-1 sm:grid-cols-3">
@@ -385,7 +420,7 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════════
-          9. LOCATION — full-width strip
+          10. LOCATION — full-width strip
       ══════════════════════════════════════════════════════════════════════ */}
       <section className="bg-mk-charcoal border-t-2 border-mk-orange" id="location" data-scroll>
         <div className="grid grid-cols-1 md:grid-cols-2">

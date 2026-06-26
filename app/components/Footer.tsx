@@ -15,21 +15,14 @@ export default function Footer() {
     <footer>
       {/* ── Pre-footer: sunburst with massive type ─────────────────────── */}
       <div className="sunburst py-24 text-center px-6 overflow-hidden">
-        <p
-          className="font-poster text-mk-orange uppercase leading-none"
-          style={{ fontSize: 'clamp(4rem, 16vw, 16rem)' }}
-        >
-          MK&apos;S
-        </p>
-        <p
-          className="font-poster text-mk-black uppercase tracking-widest leading-none mt-2"
-          style={{ fontSize: 'clamp(1rem, 3.5vw, 4rem)' }}
-        >
-          TANDOORI CHICKEN · NOIDA
-        </p>
-        <p className="font-hindi text-mk-black/30 text-xl mt-3">
-          तंदूरी चिकन · नोएडा
-        </p>
+        <div className="relative mx-auto" style={{ width: 'clamp(260px, 50vw, 700px)', height: 'clamp(100px, 18vw, 260px)' }}>
+          <Image
+            src="/logo_mk_light-removebg-preview.svg"
+            alt="MK's Tandoori Chicken Noida"
+            fill
+            className="object-contain"
+          />
+        </div>
         <div className="mt-8 space-y-1">
           <p className="font-body text-mk-black/50 text-xs uppercase tracking-widest">
             SHOP NO. 33, E BLOCK, SPECTRUM METRO MALL, PHASE-2, SECTOR 75, NOIDA
