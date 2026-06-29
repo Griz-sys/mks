@@ -7,35 +7,33 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.mkstandoori.in' },
 }
 
-// ─── Types ────────────────────────────────────────────────────────────────────
-type FoodCard = {
-  type: 'item'
-  name: string
-  nameHindi: string
-  price: string
-  image: string
-  alt: string
-  bg: 'orange' | 'dark'
-}
-type DividerCard = {
-  type: 'divider'
-  title: string
-  titleHindi: string
-}
-type MenuCard = FoodCard | DividerCard
+// ─── Menu helpers ─────────────────────────────────────────────────────────────
+const ORANGE = 'bg-mk-orange'
+const GREY   = 'bg-mk-charcoal'
+const CREAM  = 'bg-mk-cream'
 
-// ─── Data ────────────────────────────────────────────────────────────────────
-const menuCards: MenuCard[] = [
-  { type: 'item',    name: 'CLASSIC CHICKEN',  nameHindi: 'क्लासिक चिकन',  price: 'FROM ₹180', image: '/pngtree-grilled-tandoori-chicken-leg-piece-image_20244660.webp', alt: 'Smoking classic tandoori chicken leg piece', bg: 'orange' },
-  { type: 'item',    name: 'CREAMY CHICKEN',   nameHindi: 'क्रीमी चिकन',   price: 'FROM ₹190', image: '/images.jpg',                                                   alt: 'Creamy tandoori chicken platter with chutney', bg: 'dark'   },
-  { type: 'divider', title: 'TANDOORI CHICKEN', titleHindi: 'तंदूरी चिकन' },
-  { type: 'item',    name: 'CHICKEN TIKKA',    nameHindi: 'चिकन टिक्का',   price: 'FROM ₹350', image: '/butterflied_tandoori_chicken_passage_to_india.jpeg',            alt: 'Chicken tikka pieces off the clay tandoor',   bg: 'orange' },
-  { type: 'item',    name: 'SOYA CHAAP',       nameHindi: 'सोया चाप',       price: '₹250',      image: '/l-intro-1607603831.jpg',                                       alt: 'Soya chaap strips over live fire',            bg: 'dark'   },
-  { type: 'divider', title: 'TIKKA & CHAAP',   titleHindi: 'टिक्का और चाप' },
-  { type: 'item',    name: 'CHICKEN ROLL',     nameHindi: 'चिकन रोल',      price: '₹180',      image: '/pngtree-grilled-tandoori-chicken-leg-piece-image_20244660.webp', alt: 'Classic chicken roll with chutney',           bg: 'orange' },
-  { type: 'item',    name: 'SOYA ROLL',        nameHindi: 'सोया रोल',       price: '₹150',      image: '/images.jpg',                                                   alt: 'Classic soya roll',                          bg: 'dark'   },
-  { type: 'divider', title: 'ROLLS & ROTI',    titleHindi: 'रोल्स और रोटी' },
-]
+function MenuCard({ bg, nameHindi, name, image, alt, desc, price }: {
+  bg: string; nameHindi: string; name: string
+  image: string; alt: string; desc: string; price: string
+}) {
+  return (
+    <div className={`${bg} flex flex-col border-r border-white/5 last:border-r-0`}>
+      <div className="px-5 pt-5 pb-2">
+        <p className="font-hindi text-white/40 text-xs mb-1">{nameHindi}</p>
+        <h4 className="font-poster text-white uppercase leading-none" style={{ fontSize: 'clamp(1.2rem, 2.2vw, 2rem)' }}>
+          {name}
+        </h4>
+      </div>
+      <div className="flex-1 relative min-h-[130px] mx-5 mt-2">
+        <Image src={image} alt={alt} fill className="object-cover" />
+      </div>
+      <div className="px-5 pt-3 pb-5">
+        <p className="font-body text-white/35 text-[9px] uppercase tracking-widest mb-1.5">{desc}</p>
+        <p className="font-poster text-white text-xl">{price}</p>
+      </div>
+    </div>
+  )
+}
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -114,7 +112,7 @@ export default function HomePage() {
         <div className="bg-mk-black overflow-hidden">
           <h1
             className="font-poster text-white leading-none uppercase text-center w-full py-3 px-2"
-            style={{ fontSize: 'clamp(3rem, 10.5vw, 11rem)', letterSpacing: '-0.01em' }}
+            style={{ fontSize: 'clamp(5rem, 12.5vw, 13rem)', letterSpacing: '-0.01em', WebkitTextStroke: '2px white' }}
           >
             TANDOORI CHICKEN SHOP
           </h1>
@@ -222,104 +220,126 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════════
-          4. MENU GRID — 3-col alternating cards
+          4. MENU GRID
       ══════════════════════════════════════════════════════════════════════ */}
-      <section className="bg-mk-black" id="menu">
-        {/* Section label */}
-        <div className="border-b border-white/10 px-8 py-5 flex items-center justify-between">
-          <h2
-            className="font-poster text-white uppercase"
-            style={{ fontSize: 'clamp(2rem, 5vw, 5rem)' }}
-          >
+      <section id="menu" className="bg-mk-black">
+
+        <div className="border-b border-white/10 px-8 py-5">
+          <h2 className="font-poster text-white uppercase" style={{ fontSize: 'clamp(2rem, 5vw, 5rem)' }}>
             OUR MENU
           </h2>
-          {/* Circular stamp badge */}
-          <div className="relative flex-shrink-0 hidden sm:block" style={{ width: '80px', height: '80px' }}>
-            <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full" aria-hidden="true">
-              <circle cx="50" cy="50" r="44" fill="none" stroke="rgba(205,57,16,0.4)" strokeWidth="1"/>
-            </svg>
-            <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full stamp-spin" aria-hidden="true">
-              <defs>
-                <path id="menu-badge-ring" d="M 50,50 m -43,0 a 43,43 0 1,1 86,0 a 43,43 0 1,1 -86,0"/>
-              </defs>
-              <text fontSize="9" fill="rgba(205,57,16,0.7)" fontFamily="var(--font-bebas)" letterSpacing="1.5">
-                <textPath href="#menu-badge-ring" startOffset="0%">· FRESH · CLAY · HOT ·</textPath>
-              </text>
-            </svg>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <p className="font-hindi text-white/40 text-xs text-center leading-tight">हमारा<br/>मेनू</p>
+        </div>
+
+        {/* ── CHICKEN GROUP: Tandoori + Tikka flow together, no break ─────── */}
+        <div className="grid grid-cols-2 md:grid-cols-4 border-b border-white/10">
+
+          {/* Tandoori label — wide (spans 2 cols) */}
+          <div className={`${CREAM} md:col-span-2 flex flex-col justify-between p-7 border-r border-black/10`}>
+            <div>
+              <p className="font-hindi text-mk-black/35 text-sm mb-2">तंदूरी चिकन</p>
+              <h3 className="font-poster text-mk-black uppercase leading-none" style={{ fontSize: 'clamp(1.8rem, 3.2vw, 3.5rem)' }}>
+                TANDOORI<br/>CHICKEN
+              </h3>
             </div>
+            <p className="font-body text-mk-black/35 text-[10px] uppercase tracking-widest mt-6">
+              MARINATED OVERNIGHT · CLAY TANDOOR · 450°C
+            </p>
           </div>
+
+          {/* Classic Chicken */}
+          <MenuCard bg={ORANGE} nameHindi="क्लासिक चिकन" name="CLASSIC CHICKEN"
+            image="/pngtree-grilled-tandoori-chicken-leg-piece-image_20244660.webp"
+            alt="Classic tandoori chicken" desc="OVERNIGHT MARINADE · CLAY TANDOOR" price="FROM ₹180" />
+
+          {/* Creamy Chicken */}
+          <MenuCard bg={ORANGE} nameHindi="क्रीमी चिकन" name="CREAMY CHICKEN"
+            image="/images.jpg"
+            alt="Creamy tandoori chicken" desc="RICH CREAM MARINADE · CLAY TANDOOR" price="FROM ₹190" />
+
+          {/* Tikka sub-label — 1 col, continues on same grid row */}
+          <div className={`${CREAM} flex flex-col justify-between p-7 border-r border-black/10 border-t border-t-black/10`}>
+            <div>
+              <p className="font-hindi text-mk-black/35 text-sm mb-2">चिकन टिक्का</p>
+              <h3 className="font-poster text-mk-black uppercase leading-none" style={{ fontSize: 'clamp(1.8rem, 3.2vw, 3.5rem)' }}>
+                CHICKEN<br/>TIKKA
+              </h3>
+            </div>
+            <p className="font-body text-mk-black/35 text-[10px] uppercase tracking-widest mt-6">
+              BONELESS · SKEWERED · CLAY TANDOOR
+            </p>
+          </div>
+
+          {/* Classic Tikka */}
+          <MenuCard bg={GREY} nameHindi="क्लासिक टिक्का" name="CLASSIC TIKKA"
+            image="/butterflied_tandoori_chicken_passage_to_india.jpeg"
+            alt="Classic chicken tikka" desc="BONELESS · CLASSIC SPICE BLEND" price="FROM ₹350" />
+
+          {/* Creamy Tikka */}
+          <MenuCard bg={GREY} nameHindi="क्रीमी टिक्का" name="CREAMY TIKKA"
+            image="/pngtree-grilled-tandoori-chicken-leg-piece-image_20244660.webp"
+            alt="Creamy chicken tikka" desc="BONELESS · CREAM & CASHEW MARINADE" price="FROM ₹370" />
+
+          {/* Hot & Spicy Tikka */}
+          <MenuCard bg={GREY} nameHindi="हॉट & स्पाइसी टिक्का" name="HOT & SPICY TIKKA"
+            image="/butterflied_tandoori_chicken_passage_to_india.jpeg"
+            alt="Hot and spicy chicken tikka" desc="BONELESS · EXTRA CHILLI MARINADE" price="FROM ₹380" />
+
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3">
-          {menuCards.map((card, i) => {
-            if (card.type === 'divider') {
-              return (
-                <div
-                  key={i}
-                  className="bg-white flex flex-col justify-end p-8 min-h-[320px]"
-                  data-scroll
-                >
-                  <div className="w-8 h-1 bg-mk-orange mb-5" />
-                  <h3
-                    className="font-poster text-mk-black uppercase leading-tight"
-                    style={{ fontSize: 'clamp(1.8rem, 3vw, 3rem)' }}
-                  >
-                    {card.title}
-                  </h3>
-                  <p className="font-hindi text-mk-black/40 text-sm mt-2 text-right">
-                    {card.titleHindi}
-                  </p>
-                </div>
-              )
-            }
+        {/* ── SOYA CHAAP ──────────────────────────────────────────────────── */}
+        <div className="grid grid-cols-2 md:grid-cols-4 border-b border-white/10">
 
-            const isFoodCard = card as FoodCard
-            const isOrange = isFoodCard.bg === 'orange'
+          <div className={`${CREAM} flex flex-col justify-between p-7 border-r border-black/10`}>
+            <div>
+              <p className="font-hindi text-mk-black/35 text-sm mb-2">सोया चाप</p>
+              <h3 className="font-poster text-mk-black uppercase leading-none" style={{ fontSize: 'clamp(1.8rem, 3.2vw, 3.5rem)' }}>
+                SOYA<br/>CHAAP
+              </h3>
+            </div>
+            <p className="font-body text-mk-black/35 text-[10px] uppercase tracking-widest mt-6">
+              SLOW MARINATED · CLAY TANDOOR ROASTED
+            </p>
+          </div>
 
-            return (
-              <div
-                key={i}
-                className={`relative flex flex-col min-h-[320px] overflow-hidden border border-black ${
-                  isOrange ? 'bg-mk-orange' : 'bg-mk-charcoal'
-                }`}
-                data-scroll
-              >
-                {/* Brand stamp */}
-                <div className="absolute top-4 right-4 w-9 h-9 border border-white/25 flex items-center justify-center">
-                  <span className="font-poster text-white/30 text-[9px] uppercase">MK&apos;S</span>
-                </div>
+          <MenuCard bg={ORANGE} nameHindi="क्लासिक चाप" name="CLASSIC CHAAP"
+            image="/l-intro-1607603831.jpg"
+            alt="Classic soya chaap" desc="CLASSIC SPICE MARINADE · TANDOOR" price="₹250" />
+          <MenuCard bg={ORANGE} nameHindi="क्रीमी चाप" name="CREAMY CHAAP"
+            image="/l-intro-1607603831.jpg"
+            alt="Creamy soya chaap" desc="CREAM MARINADE · TANDOOR" price="₹270" />
+          <MenuCard bg={ORANGE} nameHindi="अचारी चाप" name="PICKLED CHAAP"
+            image="/l-intro-1607603831.jpg"
+            alt="Pickled soya chaap" desc="ACHARI MARINADE · TANDOOR" price="₹270" />
 
-                {/* Dish name + Hindi */}
-                <div className="px-6 pt-6 pb-3 flex-shrink-0">
-                  <h3 className="font-poster text-white text-2xl md:text-3xl uppercase leading-none">
-                    {isFoodCard.name}
-                  </h3>
-                  <p className="font-hindi text-white/40 text-xs mt-1 text-right">
-                    {isFoodCard.nameHindi}
-                  </p>
-                </div>
-
-                {/* Food photo */}
-                <div className="flex-1 relative mx-6 min-h-[140px]">
-                  <Image
-                    src={isFoodCard.image}
-                    alt={isFoodCard.alt}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                {/* Price */}
-                <div className="px-6 py-4 flex items-end justify-between">
-                  <p className="font-body text-white/50 text-[10px] uppercase tracking-widest">Starting</p>
-                  <p className="font-poster text-white text-2xl">{isFoodCard.price}</p>
-                </div>
-              </div>
-            )
-          })}
         </div>
+
+        {/* ── ROLLS & ROTI ────────────────────────────────────────────────── */}
+        <div className="grid grid-cols-2 md:grid-cols-4 border-b border-white/10">
+
+          <div className={`${CREAM} flex flex-col justify-between p-7 border-r border-black/10`}>
+            <div>
+              <p className="font-hindi text-mk-black/35 text-sm mb-2">रोल्स और रोटी</p>
+              <h3 className="font-poster text-mk-black uppercase leading-none" style={{ fontSize: 'clamp(1.8rem, 3.2vw, 3.5rem)' }}>
+                ROLLS<br/>& ROTI
+              </h3>
+            </div>
+            <p className="font-body text-mk-black/35 text-[10px] uppercase tracking-widest mt-6">
+              FRESH RUMALI · GRILLED · HAND-ROLLED
+            </p>
+          </div>
+
+          <MenuCard bg={GREY} nameHindi="चिकन रोल" name="CHICKEN ROLL"
+            image="/pngtree-grilled-tandoori-chicken-leg-piece-image_20244660.webp"
+            alt="Chicken roll" desc="TANDOORI CHICKEN · RUMALI · CHUTNEY" price="₹180" />
+          <MenuCard bg={GREY} nameHindi="सोया रोल" name="SOYA ROLL"
+            image="/l-intro-1607603831.jpg"
+            alt="Soya roll" desc="SOYA CHAAP · RUMALI · CHUTNEY" price="₹150" />
+          <MenuCard bg={GREY} nameHindi="रुमाली रोटी" name="RUMALI ROTI"
+            image="/images.jpg"
+            alt="Rumali roti" desc="THIN HAND-STRETCHED · TAWA ROASTED" price="₹40" />
+
+        </div>
+
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════════
