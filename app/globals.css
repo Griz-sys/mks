@@ -5,27 +5,37 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: #FAF6F0;
+  color: #2A2521;
   font-family: var(--font-nunito), sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Sunburst background ──────────────────────────────────────────────────── */
-.sunburst {
-  background-color: #F5EDD8;
-  background-image: repeating-conic-gradient(
-    #F5EDD8 0deg 4.5deg,
-    #EAE0C6 4.5deg 9deg
-  );
-  background-position: center center;
+/* Eyebrow label — small caps flanked by dashes, matching the reference's editorial tone */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-family: var(--font-nunito), sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #B84700;
+}
+.eyebrow::before, .eyebrow::after {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
 }
 
 /* ── Marquee ──────────────────────────────────────────────────────────────── */
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee 28s linear infinite;
+  animation: marquee 26s linear infinite;
 }
 @keyframes marquee {
   0%   { transform: translateX(0); }
@@ -47,19 +57,25 @@ body {
 }
 
 /* ── Custom scrollbar ─────────────────────────────────────────────────────── */
-::-webkit-scrollbar       { width: 4px; }
-::-webkit-scrollbar-track { background: #000; }
-::-webkit-scrollbar-thumb { background: #CD3910; }
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: #FAF6F0; }
+::-webkit-scrollbar-thumb { background: #B84700; border-radius: 999px; }
 
-/* ── Global resets for poster aesthetic ──────────────────────────────────── */
-* { border-radius: 0 !important; }
+/* ── Die-cut box silhouette — the little "house-shaped" flap from the
+   packaging, borrowed as a section-divider / image-frame motif ───────────── */
+.box-clip {
+  clip-path: polygon(
+    0% 12%, 50% 0%, 100% 12%,
+    100% 100%, 0% 100%
+  );
+}
 
-/* ── Circle override — used for deliberate circular design elements ───────── */
-.mk-circle { border-radius: 50% !important; }
-
-/* ── Circular stamp spin animation ───────────────────────────────────────── */
-@keyframes spin-slow { to { transform: rotate(360deg); } }
-.stamp-spin { animation: spin-slow 18s linear infinite; }
+/* ── Springy press/hover feel for pill buttons ───────────────────────────── */
+.pill-press {
+  transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.18s ease;
+}
+.pill-press:hover { transform: translateY(-3px) scale(1.03); }
+.pill-press:active { transform: translateY(0) scale(0.97); }
 
 @layer utilities {
   .text-balance { text-wrap: balance; }

@@ -1,36 +1,19 @@
 import type { Metadata } from 'next'
-import {
-  Bagel_Fat_One,
-  Belanosima,
-  Nunito,
-  Bebas_Neue,
-  Noto_Sans_Devanagari,
-} from 'next/font/google'
+import { Bebas_Neue, Nunito, Noto_Sans_Devanagari } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
-const bagelFatOne = Bagel_Fat_One({
-  weight: '400',
+const bebas = Bebas_Neue({
+  weight: ['400'],
   subsets: ['latin'],
-  variable: '--font-bagel',
-  display: 'swap',
-})
-const belanosima = Belanosima({
-  weight: ['400', '600'],
-  subsets: ['latin'],
-  variable: '--font-belanosima',
+  variable: '--font-bebas',
   display: 'swap',
 })
 const nunito = Nunito({
+  weight: ['400', '500', '600', '700', '800'],
   subsets: ['latin'],
   variable: '--font-nunito',
-  display: 'swap',
-})
-const bebasNeue = Bebas_Neue({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-bebas',
   display: 'swap',
 })
 const devanagari = Noto_Sans_Devanagari({
@@ -43,20 +26,19 @@ const devanagari = Noto_Sans_Devanagari({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.mkstandoori.in'),
   title: {
-    template: "%s | MK's — Tandoori Chicken Noida Sector 75",
-    default: "MK's — Best Tandoori Chicken in Noida Sector 75 | It's Roasted, Not Fried",
+    template: "%s | MK's Tandoori Chicken — Sector 75, Noida",
+    default: "MK's Tandoori Chicken — Real Roasted | Sector 75, Noida",
   },
   description:
-    "MK's serves authentic tandoori chicken in Noida Sector 75. Roasted in a clay tandoor at 450°C — not fried. Spectrum Mall, Sector 50, Noida. Call +91 77973 39211.",
+    "MK's Tandoori Chicken — roasted, not fried. Rolls, tikka, soya chaap & more from Spectrum Metro Mall, Sector 75, Noida. Order on Swiggy or Zomato.",
   keywords: [
-    'tandoori chicken noida', 'chicken restaurant sector 75 noida',
-    'best restaurant noida sector 75', "MK's restaurant noida",
-    'chicken biryani noida', 'family restaurant sector 75',
+    'tandoori chicken noida', 'mk\'s tandoori chicken', 'chicken roll sector 75',
+    'best restaurant noida sector 75', 'soya chaap noida', 'spectrum metro mall food',
   ],
   openGraph: {
-    type: 'website', locale: 'en_IN', siteName: "MK's",
-    title: "MK's — Best Tandoori Chicken in Noida Sector 75",
-    description: "Authentic tandoori chicken. Roasted, not fried. Noida Sector 75.",
+    type: 'website', locale: 'en_IN', siteName: "MK's Tandoori Chicken",
+    title: "MK's Tandoori Chicken — Real Roasted",
+    description: "It's roasted, not fried. Bite it, love it. Sector 75, Noida.",
   },
   robots: { index: true, follow: true },
 }
@@ -65,9 +47,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${bagelFatOne.variable} ${belanosima.variable} ${nunito.variable} ${bebasNeue.variable} ${devanagari.variable}`}
+      className={`${bebas.variable} ${nunito.variable} ${devanagari.variable}`}
     >
-      <body className="font-body bg-mk-black text-white antialiased">
+      <body className="font-body bg-paper text-ink antialiased overflow-x-hidden">
         <Navbar />
         <main>{children}</main>
         <Footer />
