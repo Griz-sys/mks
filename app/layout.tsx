@@ -25,6 +25,11 @@ const devanagari = Noto_Sans_Devanagari({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.mkstandoori.in'),
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   title: {
     template: "%s | MK's Tandoori Chicken — Sector 75, Noida",
     default: "MK's Tandoori Chicken — Real Roasted | Sector 75, Noida",
