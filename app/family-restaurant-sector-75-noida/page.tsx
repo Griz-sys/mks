@@ -86,10 +86,20 @@ export default function FamilyRestaurantPage() {
     })),
   }
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.mkstandoori.in' },
+      { '@type': 'ListItem', position: 2, name: 'Family Restaurant Sector 75 Noida', item: 'https://www.mkstandoori.in/family-restaurant-sector-75-noida' },
+    ],
+  }
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-mk-charcoal pt-20">

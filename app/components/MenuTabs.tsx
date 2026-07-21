@@ -21,9 +21,6 @@ const TAB_ICONS: Record<string, React.ReactNode> = {
 
 export default function MenuTabs({ categories }: { categories: MenuCategory[] }) {
   const [active, setActive] = useState(0)
-  const cat = categories[active]
-  const mid = Math.ceil(cat.items.length / 2)
-  const columns = [cat.items.slice(0, mid), cat.items.slice(mid)]
 
   return (
     <div>
@@ -32,6 +29,7 @@ export default function MenuTabs({ categories }: { categories: MenuCategory[] })
           <button
             key={c.id}
             onClick={() => setActive(i)}
+            aria-pressed={i === active}
             className="flex flex-col items-center gap-2.5 group"
           >
             <svg
@@ -50,40 +48,49 @@ export default function MenuTabs({ categories }: { categories: MenuCategory[] })
         ))}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-        {columns.map((col, colIdx) => (
-          <div key={colIdx} className="flex flex-col gap-7">
-            {col.map((item, i) => {
-              const imgIndex = colIdx * mid + i
-              return (
-                <div key={item.name} className="flex items-center gap-4">
-                  {cat.id === 'beverages' ? (
-                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-full flex-shrink-0 shadow-md bg-tint/50 flex items-center justify-center">
-                      <svg viewBox="0 0 32 40" className="w-6 h-6 md:w-7 md:h-7 text-terracotta" fill="none" stroke="currentColor" strokeWidth="2.2">
-                        {TAB_ICONS.beverages}
-                      </svg>
+      {categories.map((cat, catIdx) => {
+        const mid = Math.ceil(cat.items.length / 2)
+        const columns = [cat.items.slice(0, mid), cat.items.slice(mid)]
+        return (
+          <div
+            key={cat.id}
+            className={`grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 ${catIdx === active ? '' : 'hidden'}`}
+          >
+            {columns.map((col, colIdx) => (
+              <div key={colIdx} className="flex flex-col gap-7">
+                {col.map((item, i) => {
+                  const imgIndex = colIdx * mid + i
+                  return (
+                    <div key={item.name} className="flex items-center gap-4">
+                      {cat.id === 'beverages' ? (
+                        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full flex-shrink-0 shadow-md bg-tint/50 flex items-center justify-center">
+                          <svg viewBox="0 0 32 40" className="w-6 h-6 md:w-7 md:h-7 text-terracotta" fill="none" stroke="currentColor" strokeWidth="2.2">
+                            {TAB_ICONS.beverages}
+                          </svg>
+                        </div>
+                      ) : (
+                        <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden flex-shrink-0 shadow-md">
+                          <Image src={ITEM_IMAGES[imgIndex % ITEM_IMAGES.length]} alt={item.name} fill className="object-cover" />
+                        </div>
+                      )}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-baseline gap-2 flex-wrap">
+                          <h4 className="font-body font-bold text-ink text-sm md:text-base leading-snug">{item.name}</h4>
+                          <span className="flex-1 min-w-[10px] border-b border-dotted border-ink/25 translate-y-[-2px]" />
+                          <span className="font-heading text-terracotta text-lg md:text-xl tracking-wide whitespace-nowrap flex-shrink-0">
+                            {item.prices.map((p) => (p.label ? `${p.label} ${p.price}` : p.price)).join(' · ')}
+                          </span>
+                        </div>
+                        <p className="font-body text-ink/45 text-xs md:text-sm mt-1">{item.desc}</p>
+                      </div>
                     </div>
-                  ) : (
-                    <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden flex-shrink-0 shadow-md">
-                      <Image src={ITEM_IMAGES[imgIndex % ITEM_IMAGES.length]} alt={item.name} fill className="object-cover" />
-                    </div>
-                  )}
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-baseline gap-2 flex-wrap">
-                      <h4 className="font-body font-bold text-ink text-sm md:text-base leading-snug">{item.name}</h4>
-                      <span className="flex-1 min-w-[10px] border-b border-dotted border-ink/25 translate-y-[-2px]" />
-                      <span className="font-heading text-terracotta text-lg md:text-xl tracking-wide whitespace-nowrap flex-shrink-0">
-                        {item.prices.map((p) => (p.label ? `${p.label} ${p.price}` : p.price)).join(' · ')}
-                      </span>
-                    </div>
-                    <p className="font-body text-ink/45 text-xs md:text-sm mt-1">{item.desc}</p>
-                  </div>
-                </div>
-              )
-            })}
+                  )
+                })}
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        )
+      })}
     </div>
   )
 }

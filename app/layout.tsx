@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Bebas_Neue, Nunito, Noto_Sans_Devanagari } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/Navbar'
@@ -44,8 +44,27 @@ export const metadata: Metadata = {
     type: 'website', locale: 'en_IN', siteName: "MK's Tandoori Chicken",
     title: "MK's Tandoori Chicken — Real Roasted",
     description: "It's roasted, not fried. Bite it, love it. Sector 75, Noida.",
+    images: [
+      {
+        url: 'https://www.mkstandoori.in/mascot-badge.png',
+        alt: "MK's mascot badge — MK's Tandoori Chicken",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   robots: { index: true, follow: true },
+  authors: [{ name: "MK's Tandoori Chicken" }],
+  twitter: {
+    card: 'summary_large_image',
+    title: "MK's Tandoori Chicken — Real Roasted",
+    description: "It's roasted, not fried. Bite it, love it. Sector 75, Noida.",
+    images: ['https://www.mkstandoori.in/mascot-badge.png'],
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#ffffff',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -98,6 +98,15 @@ export default function TandooriChickenPage() {
     })),
   }
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.mkstandoori.in' },
+      { '@type': 'ListItem', position: 2, name: 'Tandoori Chicken Noida Sector 75', item: 'https://www.mkstandoori.in/tandoori-chicken-noida-sector-75' },
+    ],
+  }
+
   return (
     <>
       <script
@@ -107,6 +116,10 @@ export default function TandooriChickenPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}

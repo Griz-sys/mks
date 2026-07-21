@@ -22,7 +22,9 @@ const localBusinessSchema = {
   name: "MK's Tandoori Chicken",
   description: "It's roasted, not fried. Tandoori chicken, rolls & soya chaap in Noida Sector 75.",
   url: 'https://www.mkstandoori.in',
+  image: 'https://www.mkstandoori.in/mascot-badge.png',
   telephone: PHONE_SECONDARY_TEL.replace('tel:', ''),
+  sameAs: [INSTAGRAM_URL, SWIGGY_URL, ZOMATO_URL],
   address: {
     '@type': 'PostalAddress',
     streetAddress: ADDRESS_LINE_1,
@@ -83,7 +85,9 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-ink/35" />
 
         <div className="relative flex flex-col items-center justify-center gap-6 md:gap-8">
-          <h1 className="sr-only">Real Roasted — It&apos;s Roasted Not Fried</h1>
+          <h1 className="sr-only">
+            MK&apos;s Tandoori Chicken — Real Roasted, Not Fried | Spectrum Metro Mall, Sector 75, Noida
+          </h1>
 
           {/* Big circle — mascot badge */}
           <div className="relative w-[94vw] max-w-[680px] aspect-square">
