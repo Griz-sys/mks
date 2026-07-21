@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'tandoor chicken sector 75',
     "MK's tandoori chicken",
   ],
-  alternates: { canonical: 'https://www.mkstandoori.in/tandoori-chicken-noida-sector-75' },
+  alternates: { canonical: 'https://www.mkstandoori.com/tandoori-chicken-noida-sector-75' },
   openGraph: {
     title: "Best Tandoori Chicken in Noida Sector 75 — MK's",
     description:
@@ -102,8 +102,8 @@ export default function TandooriChickenPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.mkstandoori.in' },
-      { '@type': 'ListItem', position: 2, name: 'Tandoori Chicken Noida Sector 75', item: 'https://www.mkstandoori.in/tandoori-chicken-noida-sector-75' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.mkstandoori.com' },
+      { '@type': 'ListItem', position: 2, name: 'Tandoori Chicken Noida Sector 75', item: 'https://www.mkstandoori.com/tandoori-chicken-noida-sector-75' },
     ],
   }
 

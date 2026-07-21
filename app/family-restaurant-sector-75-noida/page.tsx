@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'family friendly restaurant noida',
     "MK's family restaurant",
   ],
-  alternates: { canonical: 'https://www.mkstandoori.in/family-restaurant-sector-75-noida' },
+  alternates: { canonical: 'https://www.mkstandoori.com/family-restaurant-sector-75-noida' },
   openGraph: {
     title: "Family Restaurant in Sector 75 Noida | MK's",
     description: 'Warm, welcoming family dining in Noida Sector 75. Authentic tandoori food for all ages.',
@@ -90,8 +90,8 @@ export default function FamilyRestaurantPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.mkstandoori.in' },
-      { '@type': 'ListItem', position: 2, name: 'Family Restaurant Sector 75 Noida', item: 'https://www.mkstandoori.in/family-restaurant-sector-75-noida' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.mkstandoori.com' },
+      { '@type': 'ListItem', position: 2, name: 'Family Restaurant Sector 75 Noida', item: 'https://www.mkstandoori.com/family-restaurant-sector-75-noida' },
     ],
   }
 

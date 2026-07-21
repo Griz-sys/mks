@@ -13,7 +13,7 @@ import {
 
 export const metadata: Metadata = {
   title: "MK's Tandoori Chicken — Real Roasted | Sector 75, Noida",
-  alternates: { canonical: 'https://www.mkstandoori.in' },
+  alternates: { canonical: 'https://www.mkstandoori.com' },
 }
 
 const localBusinessSchema = {
@@ -21,8 +21,8 @@ const localBusinessSchema = {
   '@type': 'Restaurant',
   name: "MK's Tandoori Chicken",
   description: "It's roasted, not fried. Tandoori chicken, rolls & soya chaap in Noida Sector 75.",
-  url: 'https://www.mkstandoori.in',
-  image: 'https://www.mkstandoori.in/mascot-badge.png',
+  url: 'https://www.mkstandoori.com',
+  image: 'https://www.mkstandoori.com/mascot-badge.png',
   telephone: PHONE_SECONDARY_TEL.replace('tel:', ''),
   sameAs: [INSTAGRAM_URL, SWIGGY_URL, ZOMATO_URL],
   address: {
