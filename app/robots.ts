@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://www.mkstandoori.com/sitemap.xml',
+    sitemap: 'https://mkstandoori.com/sitemap.xml',
   }
 }

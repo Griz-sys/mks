@@ -24,7 +24,7 @@ const devanagari = Noto_Sans_Devanagari({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.mkstandoori.com'),
+  metadataBase: new URL('https://mkstandoori.com'),
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     description: "It's roasted, not fried. Bite it, love it. Sector 75, Noida.",
     images: [
       {
-        url: 'https://www.mkstandoori.com/mascot-badge.png',
+        url: 'https://mkstandoori.com/mascot-badge.png',
         alt: "MK's mascot badge — MK's Tandoori Chicken",
         width: 1200,
         height: 630,
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "MK's Tandoori Chicken — Real Roasted",
     description: "It's roasted, not fried. Bite it, love it. Sector 75, Noida.",
-    images: ['https://www.mkstandoori.com/mascot-badge.png'],
+    images: ['https://mkstandoori.com/mascot-badge.png'],
   },
 }
 

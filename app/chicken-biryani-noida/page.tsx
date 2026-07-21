@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "MK's biryani noida",
     'biryani near sector 75',
   ],
-  alternates: { canonical: 'https://www.mkstandoori.com/chicken-biryani-noida' },
+  alternates: { canonical: 'https://mkstandoori.com/chicken-biryani-noida' },
   openGraph: {
     title: "Chicken Biryani in Noida — MK's Restaurant Sector 75",
     description: 'Slow-cooked dum biryani. Basmati rice, whole spices, roasted chicken. ₹249.',
@@ -96,8 +96,8 @@ export default function ChickenBiryaniPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.mkstandoori.com' },
-      { '@type': 'ListItem', position: 2, name: 'Chicken Biryani Noida', item: 'https://www.mkstandoori.com/chicken-biryani-noida' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://mkstandoori.com' },
+      { '@type': 'ListItem', position: 2, name: 'Chicken Biryani Noida', item: 'https://mkstandoori.com/chicken-biryani-noida' },
     ],
   }
 
