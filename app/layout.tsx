@@ -31,18 +31,18 @@ export const metadata: Metadata = {
     apple: '/favicon.ico',
   },
   title: {
-    template: "%s | MK's Tandoori Chicken — Sector 75, Noida",
-    default: "MK's Tandoori Chicken — Real Roasted | Sector 75, Noida",
+    template: "%s | MK's Tandoori — Sector 75, Noida",
+    default: "MK's Tandoori — Real Roasted | Sector 75, Noida",
   },
   description:
-    "MK's Tandoori Chicken — roasted, not fried. Rolls, tikka, soya chaap & more from Spectrum Metro Mall, Sector 75, Noida. Order on Swiggy or Zomato.",
+    "MK's Tandoori — roasted, not fried. Rolls, tikka, soya chaap & more from Spectrum Metro Mall, Sector 75, Noida. Order on Swiggy or Zomato.",
   keywords: [
     'tandoori chicken noida', 'mk\'s tandoori chicken', 'chicken roll sector 75',
     'best restaurant noida sector 75', 'soya chaap noida', 'spectrum metro mall food',
   ],
   openGraph: {
-    type: 'website', locale: 'en_IN', siteName: "MK's Tandoori Chicken",
-    title: "MK's Tandoori Chicken — Real Roasted",
+    type: 'website', locale: 'en_IN', siteName: "MK's Tandoori",
+    title: "MK's Tandoori — Real Roasted",
     description: "It's roasted, not fried. Bite it, love it. Sector 75, Noida.",
     images: [
       {
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   authors: [{ name: "MK's Tandoori Chicken" }],
   twitter: {
     card: 'summary_large_image',
-    title: "MK's Tandoori Chicken — Real Roasted",
+    title: "MK's Tandoori — Real Roasted",
     description: "It's roasted, not fried. Bite it, love it. Sector 75, Noida.",
     images: ['https://mkstandoori.com/mascot-badge.png'],
   },

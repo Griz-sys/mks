@@ -12,8 +12,17 @@ import {
 } from './lib/constants'
 
 export const metadata: Metadata = {
-  title: "MK's Tandoori Chicken — Real Roasted | Sector 75, Noida",
+  title: "MK's Tandoori — Real Roasted | Sector 75, Noida",
   alternates: { canonical: 'https://mkstandoori.com' },
+}
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: "MK's Tandoori",
+  url: 'https://mkstandoori.com',
+  logo: 'https://mkstandoori.com/logo-mk-light.jpg',
+  sameAs: [INSTAGRAM_URL, SWIGGY_URL, ZOMATO_URL],
 }
 
 const localBusinessSchema = {
@@ -69,6 +78,7 @@ const FEATURES = [
 export default function HomePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
       {/* ══════════════════════════════════════════════════════════════════
