@@ -13,6 +13,9 @@ const footerLinks = [
   { label: 'Find Us', href: '/#location' },
   { label: 'Tandoori Chicken, Noida', href: '/tandoori-chicken-noida-sector-75' },
   { label: 'Chicken Biryani', href: '/chicken-biryani-noida' },
+  { label: 'Soya Chaap, Noida', href: '/soya-chaap-noida' },
+  { label: 'Chicken Roll, Noida', href: '/chicken-roll-noida' },
+  { label: 'Kati Roll, Noida', href: '/kati-roll-noida' },
 ]
 
 export default function Footer() {

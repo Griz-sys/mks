@@ -321,6 +321,12 @@ export default function FamilyRestaurantPage() {
               <Link href="/chicken-biryani-noida" className="font-body text-xs text-white/40 hover:text-mk-orange transition-colors uppercase tracking-widest border border-white/10 px-4 py-2">
                 Chicken Biryani Noida
               </Link>
+              <Link href="/soya-chaap-noida" className="font-body text-xs text-white/40 hover:text-mk-orange transition-colors uppercase tracking-widest border border-white/10 px-4 py-2">
+                Soya Chaap Noida
+              </Link>
+              <Link href="/kati-roll-noida" className="font-body text-xs text-white/40 hover:text-mk-orange transition-colors uppercase tracking-widest border border-white/10 px-4 py-2">
+                Kati Roll Noida
+              </Link>
             </div>
           </div>
         </section>
