@@ -70,7 +70,7 @@ export default function MenuTabs({ categories }: { categories: MenuCategory[] })
                         </div>
                       ) : (
                         <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden flex-shrink-0 shadow-md">
-                          <Image src={ITEM_IMAGES[imgIndex % ITEM_IMAGES.length]} alt={item.name} fill className="object-cover" />
+                          <Image src={item.image ?? ITEM_IMAGES[imgIndex % ITEM_IMAGES.length]} alt={item.name} fill className="object-cover" />
                         </div>
                       )}
                       <div className="flex-1 min-w-0">
