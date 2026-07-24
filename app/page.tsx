@@ -28,7 +28,7 @@ const organizationSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'Restaurant',
-  name: "MK's Tandoori Chicken",
+  name: "MK's Tandoori",
   description: "It's roasted, not fried. Tandoori chicken, rolls & soya chaap in Noida Sector 75.",
   url: 'https://mkstandoori.com',
   image: 'https://mkstandoori.com/mascot-badge.png',
@@ -96,14 +96,14 @@ export default function HomePage() {
 
         <div className="relative flex flex-col items-center justify-center gap-6 md:gap-8">
           <h1 className="sr-only">
-            MK&apos;s Tandoori Chicken — Real Roasted, Not Fried | Spectrum Metro Mall, Sector 75, Noida
+            MK&apos;s Tandoori — Real Roasted, Not Fried | Spectrum Metro Mall, Sector 75, Noida
           </h1>
 
           {/* Big circle — mascot badge */}
           <div className="relative w-[94vw] max-w-[680px] aspect-square">
             <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl">
               <Image
-                src="/mascot-badge.png"
+                src="/Gemini_Generated_Image_c19bsjc19bsjc19b.png"
                 alt="It's Roasted Not Fried — MK's mascot holding a tandoori roll, standing on the packaging's spotted pattern"
                 fill
                 className="object-cover"
@@ -114,8 +114,8 @@ export default function HomePage() {
             {/* Small badge — actual MK's logo on a brown circle */}
             <div className="absolute -bottom-2 -right-2 md:-bottom-4 md:-right-4 w-32 h-32 md:w-44 md:h-44 drop-shadow-xl rounded-full bg-ink flex items-center justify-center p-4">
               <Image
-                src="/MKs-Logo.svg"
-                alt="MK's Tandoori Chicken logo"
+                src="/Artboard%201%20copy.svg"
+                alt="MK's Tandoori logo"
                 width={80}
                 height={80}
                 className="w-full h-full object-contain"
@@ -168,7 +168,7 @@ export default function HomePage() {
               <Image src="/l-intro-1607603831.jpg" alt="Chicken sizzling over the open tandoor flame" fill className="object-cover" />
             </div>
             <div className="absolute right-0 top-0 md:top-4 w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden shadow-xl border-8 border-paper">
-              <Image src="/biryani.avif" alt="Slow-cooked dum chicken biryani" fill className="object-cover" />
+              <Image src="/Classic%20Chicken%20Tikka%20Skewers.jpg" alt="Slow-cooked dum chicken biryani" fill className="object-cover" />
             </div>
           </div>
 
@@ -244,8 +244,8 @@ export default function HomePage() {
                   className="tracking-wide mx-6 md:mx-8"
                   style={
                     i % 2 === 0
-                      ? { fontSize: 'clamp(2.5rem, 6vw, 5rem)', fontFamily: 'var(--font-bebas)', color: 'transparent', WebkitTextStroke: '1.5px #2A2521' }
-                      : { fontSize: 'clamp(2.5rem, 6vw, 5rem)', fontFamily: 'var(--font-bebas)', color: '#2A2521' }
+                      ? { fontSize: 'clamp(2.5rem, 6vw, 5rem)', fontFamily: 'var(--font-gluten)', color: 'transparent', WebkitTextStroke: '1.5px #2A2521' }
+                      : { fontSize: 'clamp(2.5rem, 6vw, 5rem)', fontFamily: 'var(--font-gluten)', color: '#2A2521' }
                   }
                 >
                   {word}
@@ -270,15 +270,19 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
             {[
-              { src: '/l-intro-1607603831.jpg', alt: 'Chicken pieces sizzling over the open tandoor flame', tall: true },
+              { src: '/l-intro-1607603831.jpg', alt: 'Chicken pieces sizzling over the open tandoor flame' },
               { src: '/pngtree-grilled-tandoori-chicken-leg-piece-image_20244660.webp', alt: 'Grilled tandoori chicken leg piece, char-marked and roasted' },
-              { src: '/biryani.avif', alt: "Slow-cooked dum chicken biryani, MK's Noida" },
+              { src: '/Classic%20Chicken%20Tikka%20Skewers.jpg', alt: "Slow-cooked dum chicken biryani, MK's Noida" },
               { src: '/images.jpg', alt: 'Creamy tandoori chicken plated fresh' },
-              { src: '/butterflied_tandoori_chicken_passage_to_india.jpeg', alt: 'Butterflied tandoori chicken fresh from the clay oven', tall: true },
+              { src: '/butterflied_tandoori_chicken_passage_to_india.jpeg', alt: 'Butterflied tandoori chicken fresh from the clay oven' },
+              { src: '/Chicken%20Tikka%20Roll%20(1).jpg', alt: "Chicken tikka roll fresh off the tawa, MK's Noida" },
+              { src: '/Creamy%20Chicken%20Roll.png', alt: "Creamy chicken roll wrapped in rumali roti, MK's Noida" },
+              { src: '/classic-chicken-tandoori.jpg', alt: 'Classic overnight-marinated tandoori chicken' },
+              { src: '/creamy-soya-chaap.png', alt: 'Creamy soya chaap, tandoor roasted' },
             ].map((img) => (
               <div
                 key={img.src}
-                className={`relative rounded-3xl overflow-hidden ${img.tall ? 'row-span-2 aspect-[3/4]' : 'aspect-square'}`}
+                className="relative rounded-3xl overflow-hidden aspect-square"
               >
                 <Image src={img.src} alt={img.alt} fill className="object-cover hover:scale-105 transition-transform duration-500" />
               </div>
@@ -301,7 +305,7 @@ export default function HomePage() {
             <p className="font-heading text-paper tracking-wide leading-[1.1]" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.75rem)' }}>
               &ldquo;You crave the roast? We crave your feedback.&rdquo;
             </p>
-            <p className="font-body text-terracotta text-sm uppercase tracking-widest mt-4">— MK&apos;s Tandoori Chicken</p>
+            <p className="font-body text-terracotta text-sm uppercase tracking-widest mt-4">— MK&apos;s Tandoori</p>
           </blockquote>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-14 text-center">
@@ -378,7 +382,7 @@ export default function HomePage() {
               style={{ border: 0, minHeight: 340 }}
               allowFullScreen loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="MK's Tandoori Chicken — Spectrum Metro Mall, Sector 75, Noida"
+              title="MK's Tandoori — Spectrum Metro Mall, Sector 75, Noida"
             />
           </div>
         </div>

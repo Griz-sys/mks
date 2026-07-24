@@ -11,6 +11,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-gluten), 'Segoe UI', sans-serif !important;
+  letter-spacing: 0.01em;
+}
+h1.font-body, h2.font-body, h3.font-body, h4.font-body, h5.font-body, h6.font-body {
+  font-family: var(--font-nunito), sans-serif !important;
+  letter-spacing: normal;
+}
+
 /* Eyebrow label — small caps flanked by dashes, matching the reference's editorial tone */
 .eyebrow {
   display: inline-flex;

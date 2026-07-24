@@ -53,16 +53,16 @@ export default function Navbar() {
         {/* LEFT — oval logo badge */}
         <Link href="/" aria-label="MK's Home" className="flex items-center gap-3 flex-shrink-0">
           <Image
-            src="/MKs-Logo.svg"
-            alt="MK's Tandoori Chicken logo"
+            src={solid ? '/logo%20dark%20new.svg' : '/Artboard%201%20copy.svg'}
+            alt="MK's Tandoori logo"
             width={56}
             height={56}
             className="w-12 h-12 md:w-14 md:h-14 object-contain"
             priority
           />
-          <div className="hidden sm:block leading-tight">
+          <div className="hidden sm:flex items-baseline gap-1.5">
             <p className={`font-heading text-2xl tracking-wide transition-colors ${solid ? 'text-ink' : 'text-white'}`}>MK&apos;s</p>
-            <p className={`font-body text-[10px] uppercase tracking-widest -mt-1 transition-colors ${solid ? 'text-ink/50' : 'text-white/70'}`}>tandoori chicken</p>
+            <p className={`font-heading text-2xl uppercase tracking-wide transition-colors ${solid ? 'text-ink' : 'text-white'}`}>tandoori</p>
           </div>
         </Link>
 
@@ -111,9 +111,9 @@ export default function Navbar() {
             <span
               key={i}
               className={`block h-0.5 w-6 rounded-full transition-all duration-300 ${solid ? 'bg-ink' : 'bg-white'}
-                ${i === 0 && mobileOpen ? 'rotate-45 translate-y-2' : ''}
+                ${i === 0 && mobileOpen ? 'translate-y-1.5' : ''}
                 ${i === 1 && mobileOpen ? 'opacity-0' : ''}
-                ${i === 2 && mobileOpen ? '-rotate-45 -translate-y-2' : ''}
+                ${i === 2 && mobileOpen ? '-translate-y-1.5' : ''}
               `}
             />
           ))}

@@ -38,7 +38,6 @@ export default function SpottedPattern({
                 c1 9 -8 15 -16 12
                 c-7 -2 -10 -10 -4 -16 Z`}
             fill={spot}
-            transform={`rotate(18 62 ${height * 0.7})`}
           />
           <path
             d={`M88 ${height * 0.22}

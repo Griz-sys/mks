@@ -16,7 +16,7 @@ export default function SpecialsSlider({ items }: { items: Special[] }) {
             </span>
           </div>
           <div className="p-5">
-            <h4 className="font-heading text-2xl text-ink tracking-wide leading-none">{item.name}</h4>
+            <h4 className="font-body text-2xl text-ink tracking-wide leading-none">{item.name}</h4>
             <p className="font-hindi text-ink/35 text-xs mt-1.5">{item.nameHindi}</p>
             <p className="font-body text-ink/50 text-xs uppercase tracking-widest mt-3">{item.tags}</p>
           </div>

@@ -25,13 +25,13 @@ const config: Config = {
         'mk-cream': '#FAF6F0',
       },
       fontFamily: {
-        heading: ['var(--font-bebas)', 'sans-serif'],
+        heading: ['var(--font-gluten)', 'sans-serif'],
         body: ['var(--font-nunito)', 'sans-serif'],
         hindi: ['var(--font-devanagari)', 'sans-serif'],
         // legacy aliases — old SEO subpages reference these font-* utilities
-        poster: ['var(--font-bebas)', 'sans-serif'],
-        display: ['var(--font-bebas)', 'sans-serif'],
-        tagline: ['var(--font-nunito)', 'sans-serif'],
+        poster: ['var(--font-gluten)', 'sans-serif'],
+        display: ['var(--font-gluten)', 'sans-serif'],
+        tagline: ['var(--font-gluten)', 'sans-serif'],
       },
       borderRadius: {
         xl: '1.5rem',

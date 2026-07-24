@@ -260,7 +260,7 @@ export default function TandooriChickenPage() {
                 >
                   <summary className="font-body font-semibold text-white p-5 cursor-pointer list-none flex justify-between items-center">
                     {faq.q}
-                    <span className="text-mk-orange ml-4 flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                    <span className="text-mk-orange ml-4 flex-shrink-0 transition-transform">+</span>
                   </summary>
                   <p className="font-body text-white/60 text-sm leading-relaxed px-5 pb-5">
                     {faq.a}

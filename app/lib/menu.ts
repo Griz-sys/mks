@@ -46,8 +46,8 @@ export const MENU: MenuCategory[] = [
     note: 'Hand-rolled, fresh off the tawa',
     items: [
       { name: 'Classic Chicken Roll', nameHindi: 'चिकन रोल', desc: 'Tandoori chicken, rumali, chutney', image: '/classic-chicken-roll.jpg', prices: [{ label: '', price: '₹180' }] },
-      { name: 'Classic Soya Roll', nameHindi: 'सोया रोल', desc: 'Soya chaap, rumali, chutney', prices: [{ label: '', price: '₹150' }] },
-      { name: 'Rumali Roti', nameHindi: 'रुमाली रोटी', desc: 'Thin hand-stretched, tawa roasted', prices: [{ label: '', price: '₹25' }] },
+      { name: 'Classic Soya Roll', nameHindi: 'सोया रोल', desc: 'Soya chaap, rumali, chutney', image: '/Creamy%20Chicken%20Roll%202.png', prices: [{ label: '', price: '₹150' }] },
+      { name: 'Rumali Roti', nameHindi: 'रुमाली रोटी', desc: 'Thin hand-stretched, tawa roasted', image: '/Roomali-roti.jpg', prices: [{ label: '', price: '₹25' }] },
     ],
   },
   {

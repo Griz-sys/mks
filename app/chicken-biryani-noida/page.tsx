@@ -110,7 +110,7 @@ export default function ChickenBiryaniPage() {
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-mk-charcoal pt-20">
         <Image
-          src="/biryani.avif"
+          src="/Classic%20Chicken%20Tikka%20Skewers.jpg"
           alt="Chicken biryani with saffron rice — MK's Noida"
           fill
           className="object-cover opacity-30"
@@ -203,7 +203,7 @@ export default function ChickenBiryaniPage() {
                     {item.tag}
                   </div>
                   <div className="p-6">
-                    <h3 className="font-display text-2xl text-white mb-1">{item.name}</h3>
+                    <h3 className="font-body text-2xl text-white mb-1">{item.name}</h3>
                     <span className="font-display text-mk-orange text-2xl block mb-3">{item.price}</span>
                     <p className="font-body text-white/50 text-sm leading-relaxed">{item.desc}</p>
                   </div>
@@ -222,7 +222,7 @@ export default function ChickenBiryaniPage() {
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 overflow-hidden">
               <Image
-                src="/biryani.avif"
+                src="/Classic%20Chicken%20Tikka%20Skewers.jpg"
                 alt="MK's chicken biryani close-up with whole spices"
                 fill
                 className="object-cover"
@@ -263,7 +263,7 @@ export default function ChickenBiryaniPage() {
                 <details key={i} className="group bg-mk-black border border-white/10 hover:border-mk-orange/30 transition-colors">
                   <summary className="font-body font-semibold text-white p-5 cursor-pointer list-none flex justify-between items-center">
                     {faq.q}
-                    <span className="text-mk-orange ml-4 flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                    <span className="text-mk-orange ml-4 flex-shrink-0 transition-transform">+</span>
                   </summary>
                   <p className="font-body text-white/60 text-sm leading-relaxed px-5 pb-5">{faq.a}</p>
                 </details>

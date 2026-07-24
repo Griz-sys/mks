@@ -30,7 +30,7 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <Image src="/MKs-Logo.svg" alt="MK's Tandoori Chicken logo" width={56} height={56} className="w-14 h-14 object-contain" />
+            <Image src="/Artboard%201%20copy.svg" alt="MK's Tandoori logo" width={56} height={56} className="w-14 h-14 object-contain" />
             <div>
               <p className="font-heading text-2xl tracking-wide">MK&apos;s</p>
               <p className="font-body text-xs uppercase tracking-widest text-paper/50 -mt-1">Real Roasted</p>
@@ -78,7 +78,7 @@ export default function Footer() {
 
       <div className="relative border-t border-paper/10">
         <div className="max-w-6xl mx-auto px-6 md:px-10 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="font-body text-xs text-paper/40">© {new Date().getFullYear()} MK&apos;s Tandoori Chicken. All rights reserved.</p>
+          <p className="font-body text-xs text-paper/40">© {new Date().getFullYear()} MK&apos;s Tandoori. All rights reserved.</p>
           <p className="font-body text-xs text-paper/40">Sector 75, Noida</p>
         </div>
       </div>

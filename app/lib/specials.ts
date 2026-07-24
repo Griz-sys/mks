@@ -26,17 +26,10 @@ export const SPECIALS: Special[] = [
     image: '/pngtree-grilled-tandoori-chicken-leg-piece-image_20244660.webp',
   },
   {
-    name: 'Pickled Soya Chaap',
-    nameHindi: 'अचारी चाप',
-    tags: 'Achari ◍ Mustard ◍ Tandoor',
-    price: '₹250',
-    image: '/l-intro-1607603831.jpg',
-  },
-  {
     name: 'Classic Chicken',
     nameHindi: 'क्लासिक चिकन',
     tags: 'Overnight ◍ Marinade ◍ Clay Oven',
     price: 'From ₹180',
-    image: '/biryani.avif',
+    image: '/Classic%20Chicken%20Tikka%20Skewers.jpg',
   },
 ]

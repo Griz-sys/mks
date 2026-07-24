@@ -1,13 +1,13 @@
 import type { Metadata, Viewport } from 'next'
-import { Bebas_Neue, Nunito, Noto_Sans_Devanagari } from 'next/font/google'
+import { Gluten, Nunito, Noto_Sans_Devanagari } from 'next/font/google'
 import './globals.css' 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
-const bebas = Bebas_Neue({
-  weight: ['400'],
+const gluten = Gluten({
+  weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],
-  variable: '--font-bebas',
+  variable: '--font-gluten',
   display: 'swap',
 })
 const nunito = Nunito({
@@ -26,9 +26,12 @@ const devanagari = Noto_Sans_Devanagari({
 export const metadata: Metadata = {
   metadataBase: new URL('https://mkstandoori.com'),
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/Artboard%201%20copy.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
     shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
   title: {
     template: "%s | MK's Tandoori — Sector 75, Noida",
@@ -47,14 +50,14 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://mkstandoori.com/mascot-badge.png',
-        alt: "MK's mascot badge — MK's Tandoori Chicken",
+        alt: "MK's mascot badge — MK's Tandoori",
         width: 1200,
         height: 630,
       },
     ],
   },
   robots: { index: true, follow: true },
-  authors: [{ name: "MK's Tandoori Chicken" }],
+  authors: [{ name: "MK's Tandoori" }],
   twitter: {
     card: 'summary_large_image',
     title: "MK's Tandoori — Real Roasted",
@@ -71,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${bebas.variable} ${nunito.variable} ${devanagari.variable}`}
+      className={`${gluten.variable} ${nunito.variable} ${devanagari.variable}`}
     >
       <body className="font-body bg-paper text-ink antialiased overflow-x-hidden">
         <Navbar />
