@@ -12,17 +12,19 @@ const footerLinks = [
   { label: 'Gallery', href: '/#gallery' },
   { label: 'Find Us', href: '/#location' },
   { label: 'Tandoori Chicken, Noida', href: '/tandoori-chicken-noida-sector-75' },
-  { label: 'Chicken Biryani', href: '/chicken-biryani-noida' },
+  { label: 'Chicken Tikka, Noida', href: '/chicken-tikka-noida' },
   { label: 'Soya Chaap, Noida', href: '/soya-chaap-noida' },
+  { label: 'Malai Chaap, Noida', href: '/malai-chaap-noida' },
   { label: 'Chicken Roll, Noida', href: '/chicken-roll-noida' },
   { label: 'Kati Roll, Noida', href: '/kati-roll-noida' },
+  { label: 'North Indian Restaurant', href: '/north-indian-restaurant-noida' },
 ]
 
 export default function Footer() {
   return (
     <footer className="relative bg-ink text-paper">
       <div className="absolute inset-0 opacity-15">
-        <Image src="/l-intro-1607603831.jpg" alt="" fill className="object-cover" aria-hidden="true" />
+        <Image src="/l-intro-1607603831.jpg" alt="" fill sizes="100vw" className="object-cover" aria-hidden="true" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/95 to-ink" />
 

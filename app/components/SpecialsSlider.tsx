@@ -10,14 +10,14 @@ export default function SpecialsSlider({ items }: { items: Special[] }) {
           className="snap-start flex-shrink-0 w-64 md:w-72 rounded-3xl bg-paper overflow-hidden shadow-xl"
         >
           <div className="relative aspect-square">
-            <Image src={item.image} alt={item.name} fill className="object-cover" />
+            <Image src={item.image} alt={item.name} fill sizes="(max-width: 768px) 256px, 288px" className="object-cover" />
             <span className="absolute top-3 right-3 rounded-full bg-ink text-paper font-heading text-sm tracking-wide px-4 py-1.5">
               {item.price}
             </span>
           </div>
           <div className="p-5">
             <h4 className="font-body text-2xl text-ink tracking-wide leading-none">{item.name}</h4>
-            <p className="font-hindi text-ink/35 text-xs mt-1.5">{item.nameHindi}</p>
+            <p lang="hi" className="font-hindi text-ink/35 text-xs mt-1.5">{item.nameHindi}</p>
             <p className="font-body text-ink/50 text-xs uppercase tracking-widest mt-3">{item.tags}</p>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import PillButton from './components/PillButton'
 import MenuTabs from './components/MenuTabs'
 import SpecialsSlider from './components/SpecialsSlider'
@@ -19,19 +20,31 @@ export const metadata: Metadata = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': 'https://mkstandoori.com/#organization',
   name: "MK's Tandoori",
   url: 'https://mkstandoori.com',
   logo: 'https://mkstandoori.com/logo-mk-light.jpg',
   sameAs: [INSTAGRAM_URL, SWIGGY_URL, ZOMATO_URL],
 }
 
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://mkstandoori.com/#website',
+  name: "MK's Tandoori",
+  url: 'https://mkstandoori.com',
+  publisher: { '@id': 'https://mkstandoori.com/#organization' },
+  inLanguage: 'en-IN',
+}
+
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'Restaurant',
+  '@id': 'https://mkstandoori.com/#restaurant',
   name: "MK's Tandoori",
   description: "It's roasted, not fried. Tandoori chicken, rolls & soya chaap in Noida Sector 75.",
   url: 'https://mkstandoori.com',
-  image: 'https://mkstandoori.com/mascot-badge.png',
+  image: 'https://mkstandoori.com/og-image.jpg',
   telephone: PHONE_SECONDARY_TEL.replace('tel:', ''),
   sameAs: [INSTAGRAM_URL, SWIGGY_URL, ZOMATO_URL],
   address: {
@@ -42,6 +55,12 @@ const localBusinessSchema = {
     postalCode: '201301',
     addressCountry: 'IN',
   },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 28.5745,
+    longitude: 77.3591,
+  },
+  hasMap: MAPS_QUERY_URL,
   openingHoursSpecification: [{
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
@@ -79,6 +98,7 @@ export default function HomePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
       {/* ══════════════════════════════════════════════════════════════════
@@ -89,6 +109,7 @@ export default function HomePage() {
           src="/l-intro-1607603831.jpg"
           alt="Chicken sizzling over the open tandoor flame at MK's"
           fill
+          sizes="100vw"
           className="object-cover"
           priority
         />
@@ -106,6 +127,7 @@ export default function HomePage() {
                 src="/Gemini_Generated_Image_c19bsjc19bsjc19b.png"
                 alt="It's Roasted Not Fried — MK's mascot holding a tandoori roll, standing on the packaging's spotted pattern"
                 fill
+                sizes="(min-width: 680px) 680px, 94vw"
                 className="object-cover"
                 priority
               />
@@ -165,10 +187,10 @@ export default function HomePage() {
         <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
           <div className="relative h-[340px] md:h-[440px] flex items-center justify-center order-2 md:order-1">
             <div className="absolute left-2 md:left-6 w-60 h-60 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-8 border-paper">
-              <Image src="/l-intro-1607603831.jpg" alt="Chicken sizzling over the open tandoor flame" fill className="object-cover" />
+              <Image src="/l-intro-1607603831.jpg" alt="Chicken sizzling over the open tandoor flame" fill sizes="(max-width: 768px) 240px, 320px" className="object-cover" />
             </div>
             <div className="absolute right-0 top-0 md:top-4 w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden shadow-xl border-8 border-paper">
-              <Image src="/Classic%20Chicken%20Tikka%20Skewers.jpg" alt="Slow-cooked dum chicken biryani" fill className="object-cover" />
+              <Image src="/Classic%20Chicken%20Tikka%20Skewers.jpg" alt="Classic chicken tikka skewers, clay tandoor roasted" fill sizes="(max-width: 768px) 128px, 176px" className="object-cover" />
             </div>
           </div>
 
@@ -272,7 +294,7 @@ export default function HomePage() {
             {[
               { src: '/l-intro-1607603831.jpg', alt: 'Chicken pieces sizzling over the open tandoor flame' },
               { src: '/pngtree-grilled-tandoori-chicken-leg-piece-image_20244660.webp', alt: 'Grilled tandoori chicken leg piece, char-marked and roasted' },
-              { src: '/Classic%20Chicken%20Tikka%20Skewers.jpg', alt: "Slow-cooked dum chicken biryani, MK's Noida" },
+              { src: '/Classic%20Chicken%20Tikka%20Skewers.jpg', alt: "Classic chicken tikka skewers, clay tandoor roasted, MK's Noida" },
               { src: '/images.jpg', alt: 'Creamy tandoori chicken plated fresh' },
               { src: '/butterflied_tandoori_chicken_passage_to_india.jpeg', alt: 'Butterflied tandoori chicken fresh from the clay oven' },
               { src: '/Chicken%20Tikka%20Roll%20(1).jpg', alt: "Chicken tikka roll fresh off the tawa, MK's Noida" },
@@ -284,7 +306,7 @@ export default function HomePage() {
                 key={img.src}
                 className="relative rounded-3xl overflow-hidden aspect-square"
               >
-                <Image src={img.src} alt={img.alt} fill className="object-cover hover:scale-105 transition-transform duration-500" />
+                <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 50vw, 384px" className="object-cover hover:scale-105 transition-transform duration-500" />
               </div>
             ))}
           </div>
@@ -321,6 +343,40 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════════════
+          EXPLORE — internal links to the Noida location/dish landing pages
+      ══════════════════════════════════════════════════════════════════ */}
+      <section className="px-5 md:px-10 py-14 md:py-20 border-t border-ink/10">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8">
+            <p className="eyebrow justify-center mb-3">Explore Noida Sector 75</p>
+            <h2 className="font-heading font-normal text-ink tracking-wide" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}>
+              What Are You In The Mood For?
+            </h2>
+          </div>
+          <nav aria-label="Popular dishes and dining occasions" className="flex flex-wrap justify-center gap-3">
+            {[
+              { href: '/tandoori-chicken-noida-sector-75', label: 'Tandoori Chicken in Sector 75' },
+              { href: '/chicken-tikka-noida', label: 'Chicken Tikka in Noida' },
+              { href: '/chicken-roll-noida', label: 'Chicken Roll in Noida' },
+              { href: '/kati-roll-noida', label: 'Kati Roll in Noida' },
+              { href: '/soya-chaap-noida', label: 'Soya Chaap in Noida' },
+              { href: '/malai-chaap-noida', label: 'Malai Chaap in Noida' },
+              { href: '/family-restaurant-sector-75-noida', label: 'Family Restaurant, Sector 75' },
+              { href: '/north-indian-restaurant-noida', label: 'North Indian Restaurant, Noida' },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="font-body font-bold text-sm text-ink/70 hover:text-paper hover:bg-terracotta transition-colors uppercase tracking-wide border border-ink/15 rounded-full px-5 py-2.5"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
         </div>
       </section>
 

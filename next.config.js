@@ -17,6 +17,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/chicken-biryani-noida',
+        destination: '/north-indian-restaurant-noida',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

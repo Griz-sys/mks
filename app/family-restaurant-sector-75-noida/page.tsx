@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/constants'
 
 export const metadata: Metadata = {
   title: "Family Restaurant in Sector 75 Noida | MK's — Dine Together",
@@ -30,13 +31,18 @@ const schema = {
   servesCuisine: 'Indian',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75',
+    streetAddress: ADDRESS_LINE_1,
     addressLocality: 'Noida',
     addressRegion: 'Uttar Pradesh',
     postalCode: '201301',
     addressCountry: 'IN',
   },
-  telephone: '+91-8076374624',
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 28.5745,
+    longitude: 77.3591,
+  },
+  telephone: PHONE_SECONDARY_TEL.replace('tel:', ''),
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -55,7 +61,7 @@ const schema = {
 const faqs = [
   {
     q: "Is MK's a good family restaurant in Sector 75 Noida?",
-    a: "Yes — MK's is designed for all ages. Our menu has something for everyone: tandoori chicken and biryani for adults, rolls and paneer tikka for kids and vegetarians.",
+    a: "Yes — MK's is designed for all ages. Our menu has something for everyone: tandoori chicken and chicken tikka for adults, rolls and paneer tikka for kids and vegetarians.",
   },
   {
     q: "Where exactly is MK's located near Sector 75?",
@@ -63,7 +69,7 @@ const faqs = [
   },
   {
     q: "Does MK's have vegetarian options for family dining?",
-    a: "Absolutely. We have Paneer Tikka, Veg Biryani, Paneer Tikka Roll, Dal Makhani, Tandoori Roti, and Raita for vegetarians in the family.",
+    a: "Absolutely. We have Paneer Tikka, Paneer Tikka Roll, Dal Makhani, Tandoori Roti, and Raita for vegetarians in the family.",
   },
   {
     q: "What time does MK's open for family dining?",
@@ -107,6 +113,7 @@ export default function FamilyRestaurantPage() {
           src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80&fit=crop"
           alt="Warm family restaurant interior — MK's Noida Sector 75"
           fill
+          sizes="100vw"
           className="object-cover opacity-25"
           priority
         />
@@ -148,7 +155,7 @@ export default function FamilyRestaurantPage() {
               </p>
               <p>
                 MK&apos;s is built exactly for that. Our menu spans authentic tandoori chicken
-                (our signature), rich biryani, fresh rolls for the kids, paneer dishes for
+                (our signature), fresh rolls for the kids, paneer dishes for
                 vegetarians, and comforting dal makhani and breads to round out a full family spread.
               </p>
               <p>
@@ -173,12 +180,12 @@ export default function FamilyRestaurantPage() {
                 {
                   icon: '🍗',
                   who: 'For the Meat Lovers',
-                  items: ['Tandoori Chicken (Half/Full)', 'Chicken Tikka', 'Seekh Kebab', 'Chicken Biryani', 'Mutton Biryani'],
+                  items: ['Tandoori Chicken (Half/Full)', 'Chicken Tikka', 'Seekh Kebab'],
                 },
                 {
                   icon: '🌿',
                   who: 'For Vegetarians',
-                  items: ['Paneer Tikka', 'Veg Biryani', 'Paneer Tikka Roll', 'Dal Makhani', 'Garlic Naan + Raita'],
+                  items: ['Paneer Tikka', 'Paneer Tikka Roll', 'Dal Makhani', 'Garlic Naan + Raita'],
                 },
                 {
                   icon: '🧒',
@@ -233,6 +240,7 @@ export default function FamilyRestaurantPage() {
                 src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80&fit=crop"
                 alt="Family dining at MK's — authentic Indian food Noida Sector 75"
                 fill
+                sizes="(max-width: 768px) 100vw, 512px"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-mk-black/40 to-transparent" />
@@ -253,7 +261,7 @@ export default function FamilyRestaurantPage() {
                 {[
                   { name: 'Tandoori Chicken (Full)', price: '₹349', note: 'Share across the table' },
                   { name: 'Paneer Tikka', price: '₹199', note: 'For the vegetarians' },
-                  { name: 'Chicken Biryani × 2', price: '₹498', note: 'One per pair, or share' },
+                  { name: 'Chicken Tikka (4 Pc)', price: '₹350', note: 'Boneless, for sharing' },
                   { name: 'Dal Makhani', price: '₹159', note: 'Rich, everyone loves it' },
                   { name: 'Garlic Naan × 4', price: '₹236', note: 'Mandatory' },
                   { name: 'Raita', price: '₹49', note: 'To cool things down' },
@@ -268,7 +276,7 @@ export default function FamilyRestaurantPage() {
                 ))}
                 <li className="flex justify-between items-center pt-2">
                   <span className="font-body font-bold text-white uppercase tracking-widest text-sm">Total</span>
-                  <span className="font-display text-mk-orange text-2xl">≈ ₹1,490</span>
+                  <span className="font-display text-mk-orange text-2xl">≈ ₹1,340</span>
                 </li>
               </ul>
               <p className="font-body text-white/30 text-xs mt-4">For 4 people. Adjust quantities as needed.</p>
@@ -305,7 +313,7 @@ export default function FamilyRestaurantPage() {
             Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75, Noida. Open daily 11am–11pm.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+918076374624" className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors">
+            <a href={PHONE_SECONDARY_TEL} className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors">
               Reserve a Table
             </a>
             <Link href="/#menu" className="border border-white/20 text-white font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:border-mk-orange hover:text-mk-orange transition-colors">
@@ -315,11 +323,11 @@ export default function FamilyRestaurantPage() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <p className="font-body text-white/30 text-xs mb-4 uppercase tracking-widest">Also explore</p>
             <div className="flex flex-wrap gap-3 justify-center">
+              <Link href="/north-indian-restaurant-noida" className="font-body text-xs text-white/40 hover:text-mk-orange transition-colors uppercase tracking-widest border border-white/10 px-4 py-2">
+                North Indian Restaurant Noida
+              </Link>
               <Link href="/tandoori-chicken-noida-sector-75" className="font-body text-xs text-white/40 hover:text-mk-orange transition-colors uppercase tracking-widest border border-white/10 px-4 py-2">
                 Tandoori Chicken Sector 75
-              </Link>
-              <Link href="/chicken-biryani-noida" className="font-body text-xs text-white/40 hover:text-mk-orange transition-colors uppercase tracking-widest border border-white/10 px-4 py-2">
-                Chicken Biryani Noida
               </Link>
               <Link href="/soya-chaap-noida" className="font-body text-xs text-white/40 hover:text-mk-orange transition-colors uppercase tracking-widest border border-white/10 px-4 py-2">
                 Soya Chaap Noida

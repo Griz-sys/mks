@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { PHONE_SECONDARY, PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/constants'
 
 export const metadata: Metadata = {
   title: "Chicken Roll in Noida | MK's Restaurant Sector 75",
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
     "Looking for a chicken roll in Noida? MK's rolls tandoori chicken in a fresh rumali roti with house chutney — ₹180. Quick, roasted not fried. Near Sector 75.",
   keywords: [
     'chicken roll noida',
+    'chicken roll near me',
     'best chicken roll noida',
     'chicken roll sector 75 noida',
     'tandoori chicken roll noida',
@@ -19,6 +21,13 @@ export const metadata: Metadata = {
     title: "Chicken Roll in Noida — MK's Restaurant Sector 75",
     description: 'Tandoori chicken rolled in fresh rumali roti with house chutney. ₹180.',
     type: 'website',
+    images: [{ url: 'https://mkstandoori.com/og-chicken-roll.jpg', width: 1200, height: 630, alt: "Tandoori chicken roll in rumali roti with chutney — MK's Noida" }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Chicken Roll in Noida — MK's Restaurant Sector 75",
+    description: 'Tandoori chicken rolled in fresh rumali roti with house chutney. ₹180.',
+    images: ['https://mkstandoori.com/og-chicken-roll.jpg'],
   },
 }
 
@@ -72,13 +81,18 @@ const schema = {
   ],
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75',
+    streetAddress: ADDRESS_LINE_1,
     addressLocality: 'Noida',
     addressRegion: 'Uttar Pradesh',
     postalCode: '201301',
     addressCountry: 'IN',
   },
-  telephone: '+91-8076374624',
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 28.5745,
+    longitude: 77.3591,
+  },
+  telephone: PHONE_SECONDARY_TEL.replace('tel:', ''),
 }
 
 export default function ChickenRollPage() {
@@ -113,6 +127,7 @@ export default function ChickenRollPage() {
           src="/chciken_roll.png"
           alt="Tandoori chicken roll in rumali roti with chutney — MK's Noida"
           fill
+          sizes="100vw"
           className="object-cover opacity-30"
           priority
         />
@@ -222,6 +237,7 @@ export default function ChickenRollPage() {
                 src="/chciken_roll.png"
                 alt="MK's chicken roll close-up, rumali roti and chutney"
                 fill
+                sizes="(max-width: 768px) 100vw, 512px"
                 className="object-cover"
               />
             </div>
@@ -274,8 +290,8 @@ export default function ChickenRollPage() {
             Visit us at Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75, Noida — or call to order.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+918076374624" className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors">
-              Call +91 80763 74624
+            <a href={PHONE_SECONDARY_TEL} className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors">
+              Call {PHONE_SECONDARY}
             </a>
             <Link href="/#location" className="border border-white/20 text-white font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:border-mk-orange hover:text-mk-orange transition-colors">
               Get Directions
@@ -289,9 +305,6 @@ export default function ChickenRollPage() {
               </Link>
               <Link href="/tandoori-chicken-noida-sector-75" className="font-body text-xs text-white/40 hover:text-mk-orange transition-colors uppercase tracking-widest border border-white/10 px-4 py-2">
                 Tandoori Chicken Sector 75
-              </Link>
-              <Link href="/chicken-biryani-noida" className="font-body text-xs text-white/40 hover:text-mk-orange transition-colors uppercase tracking-widest border border-white/10 px-4 py-2">
-                Chicken Biryani Noida
               </Link>
             </div>
           </div>

@@ -63,12 +63,12 @@ export default function MenuTabs({ categories }: { categories: MenuCategory[] })
                 </div>
               ) : (
                 <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden flex-shrink-0 shadow-md">
-                  <Image src={item.image ?? ITEM_IMAGES[i % ITEM_IMAGES.length]} alt={item.name} fill className="object-cover" />
+                  <Image src={item.image ?? ITEM_IMAGES[i % ITEM_IMAGES.length]} alt={item.name} fill sizes="80px" className="object-cover" />
                 </div>
               )}
               <div className="flex-1 min-w-0">
                 <div className="flex items-baseline gap-2 flex-wrap">
-                  <h4 className="font-body font-bold text-ink text-sm md:text-base leading-snug">{item.name}</h4>
+                  <h3 className="font-body font-bold text-ink text-sm md:text-base leading-snug">{item.name}</h3>
                   <span className="flex-1 min-w-[10px] border-b border-dotted border-ink/25 translate-y-[-2px]" />
                   <span className="font-body font-bold text-terracotta text-lg md:text-xl tracking-wide whitespace-nowrap flex-shrink-0">
                     {item.prices.map((p) => (p.label ? `${p.label} ${p.price}` : p.price)).join(' · ')}

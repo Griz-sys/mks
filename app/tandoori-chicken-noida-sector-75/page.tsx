@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { PHONE_SECONDARY, PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/constants'
 
 export const metadata: Metadata = {
   title: "Best Tandoori Chicken in Noida Sector 75 | MK's Restaurant",
@@ -20,6 +21,13 @@ export const metadata: Metadata = {
     description:
       "Authentic clay tandoor chicken in Noida Sector 75. Roasted at 450°C. Starting ₹199.",
     type: 'website',
+    images: [{ url: 'https://mkstandoori.com/og-tandoori-chicken.jpg', width: 1200, height: 630, alt: "Smoking tandoori chicken leg piece — MK's Noida Sector 75" }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Best Tandoori Chicken in Noida Sector 75 — MK's",
+    description: "Authentic clay tandoor chicken in Noida Sector 75. Roasted at 450°C. Starting ₹199.",
+    images: ['https://mkstandoori.com/og-tandoori-chicken.jpg'],
   },
 }
 
@@ -55,13 +63,18 @@ const schema = {
   ],
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Shop No. 33, E Block, Spectrum Metro Mall, Phase-2',
+    streetAddress: ADDRESS_LINE_1,
     addressLocality: 'Noida',
     addressRegion: 'Uttar Pradesh',
     postalCode: '201301',
     addressCountry: 'IN',
   },
-  telephone: '+91-8076374624',
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 28.5745,
+    longitude: 77.3591,
+  },
+  telephone: PHONE_SECONDARY_TEL.replace('tel:', ''),
 }
 
 const faqs = [
@@ -128,6 +141,7 @@ export default function TandooriChickenPage() {
           src="/pngtree-grilled-tandoori-chicken-leg-piece-image_20244660.webp"
           alt="Smoking tandoori chicken leg piece — MK's Noida Sector 75"
           fill
+          sizes="100vw"
           className="object-cover opacity-30"
           priority
         />
@@ -281,10 +295,10 @@ export default function TandooriChickenPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+918076374624"
+              href={PHONE_SECONDARY_TEL}
               className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors"
             >
-              Call +91 80763 74624
+              Call {PHONE_SECONDARY}
             </a>
             <Link
               href="/#location"
@@ -296,8 +310,8 @@ export default function TandooriChickenPage() {
           <div className="mt-12 pt-8 border-t border-white/10">
             <p className="font-body text-white/30 text-xs mb-4 uppercase tracking-widest">Also explore</p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Link href="/chicken-biryani-noida" className="font-body text-xs text-white/40 hover:text-mk-orange transition-colors uppercase tracking-widest border border-white/10 px-4 py-2">
-                Chicken Biryani Noida
+              <Link href="/chicken-tikka-noida" className="font-body text-xs text-white/40 hover:text-mk-orange transition-colors uppercase tracking-widest border border-white/10 px-4 py-2">
+                Chicken Tikka Noida
               </Link>
               <Link href="/family-restaurant-sector-75-noida" className="font-body text-xs text-white/40 hover:text-mk-orange transition-colors uppercase tracking-widest border border-white/10 px-4 py-2">
                 Family Restaurant Sector 75

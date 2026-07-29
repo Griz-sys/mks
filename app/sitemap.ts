@@ -18,12 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${base}/chicken-biryani-noida`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
       url: `${base}/family-restaurant-sector-75-noida`,
       lastModified: now,
       changeFrequency: 'monthly',
@@ -43,6 +37,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${base}/kati-roll-noida`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${base}/chicken-tikka-noida`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${base}/malai-chaap-noida`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${base}/north-indian-restaurant-noida`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.9,
