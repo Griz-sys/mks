@@ -14,3 +14,6 @@ export const ADDRESS_LINE_2 = 'Phase-2, Sector 75, Noida 201301'
 export const MAPS_QUERY_URL = 'https://maps.google.com?q=Spectrum+Metro+Mall+Phase+2+Sector+75+Noida'
 
 export const HOURS = 'Every day · 11:00 AM – 11:00 PM' // TODO: confirm/edit actual hours
+
+// Used by /review — the QR code page that redirects to your Google review link.
+export const GOOGLE_REVIEW_URL = 'https://share.google/Scqir6yRV4iz0rftH'
