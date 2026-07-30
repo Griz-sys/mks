@@ -34,9 +34,9 @@ export const MENU: MenuCategory[] = [
     titleHindi: 'सोया चाप',
     note: 'Slow marinated, tandoor roasted — 3 strips a plate',
     items: [
-      { name: 'Classic Soya Chaap', nameHindi: 'क्लासिक चाप', desc: 'Classic spice marinade, tandoor', image: '/classic-soya-chaap.png', prices: [{ label: '3 strips', price: '₹250' }] },
-      { name: 'Creamy Soya Chaap', nameHindi: 'क्रीमी चाप', desc: 'Cream marinade, tandoor roasted', image: '/creamy-soya-chaap.png', prices: [{ label: '3 strips', price: '₹250' }] },
-      { name: 'Pickled Soya Chaap', nameHindi: 'अचारी चाप', desc: 'Achari marinade, tandoor roasted', image: '/classic-soya-chaap.png', prices: [{ label: '3 strips', price: '₹250' }] },
+      { name: 'Classic Soya Chaap', nameHindi: 'क्लासिक चाप', desc: 'Classic spice marinade, tandoor', image: '/classic-soya-chaap.jpg', prices: [{ label: '3 strips', price: '₹250' }] },
+      { name: 'Creamy Soya Chaap', nameHindi: 'क्रीमी चाप', desc: 'Cream marinade, tandoor roasted', image: '/creamy-soya-chaap.jpg', prices: [{ label: '3 strips', price: '₹250' }] },
+      { name: 'Pickled Soya Chaap', nameHindi: 'अचारी चाप', desc: 'Achari marinade, tandoor roasted', image: '/classic-soya-chaap.jpg', prices: [{ label: '3 strips', price: '₹250' }] },
     ],
   },
   {
@@ -46,7 +46,7 @@ export const MENU: MenuCategory[] = [
     note: 'Hand-rolled, fresh off the tawa',
     items: [
       { name: 'Classic Chicken Roll', nameHindi: 'चिकन रोल', desc: 'Tandoori chicken, rumali, chutney', image: '/classic-chicken-roll.jpg', prices: [{ label: '', price: '₹180' }] },
-      { name: 'Classic Soya Roll', nameHindi: 'सोया रोल', desc: 'Soya chaap, rumali, chutney', image: '/Creamy%20Chicken%20Roll%202.png', prices: [{ label: '', price: '₹150' }] },
+      { name: 'Classic Soya Roll', nameHindi: 'सोया रोल', desc: 'Soya chaap, rumali, chutney', image: '/Creamy%20Chicken%20Roll%202.jpg', prices: [{ label: '', price: '₹150' }] },
       { name: 'Rumali Roti', nameHindi: 'रुमाली रोटी', desc: 'Thin hand-stretched, tawa roasted', image: '/Roomali-roti.jpg', prices: [{ label: '', price: '₹25' }] },
     ],
   },

@@ -123,7 +123,7 @@ export default function SoyaChaapPage() {
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-mk-charcoal pt-20">
         <Image
-          src="/Gemini_Generated_Image_cvrmn8cvrmn8cvrm.png"
+          src="/Gemini_Generated_Image_cvrmn8cvrmn8cvrm.jpg"
           alt="Tandoor-roasted soya chaap skewers with naan and mint chutney — MK's Noida"
           fill
           sizes="100vw"
@@ -232,7 +232,7 @@ export default function SoyaChaapPage() {
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 overflow-hidden">
               <Image
-                src="/Gemini_Generated_Image_cvrmn8cvrmn8cvrm.png"
+                src="/Gemini_Generated_Image_cvrmn8cvrmn8cvrm.jpg"
                 alt="MK's soya chaap skewers close-up, tandoor roasted"
                 fill
                 sizes="(max-width: 768px) 100vw, 512px"

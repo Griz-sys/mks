@@ -117,7 +117,7 @@ export default function KatiRollPage() {
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-mk-charcoal pt-20">
         <Image
-          src="/Gemini_Generated_Image_3f92hf3f92hf3f92.png"
+          src="/Gemini_Generated_Image_3f92hf3f92hf3f92.jpg"
           alt="Kolkata-style kati roll with tandoori filling and chutney — MK's Noida"
           fill
           sizes="100vw"

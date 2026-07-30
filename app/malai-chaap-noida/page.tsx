@@ -111,7 +111,7 @@ export default function MalaiChaapPage() {
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-mk-charcoal pt-20">
         <Image
-          src="/creamy-soya-chaap.png"
+          src="/creamy-soya-chaap.jpg"
           alt="Malai soya chaap skewers with mint chutney — MK's Noida"
           fill
           sizes="100vw"
@@ -212,7 +212,7 @@ export default function MalaiChaapPage() {
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 overflow-hidden">
               <Image
-                src="/creamy-soya-chaap.png"
+                src="/creamy-soya-chaap.jpg"
                 alt="MK's malai chaap close-up, tandoor roasted"
                 fill
                 sizes="(max-width: 768px) 100vw, 512px"

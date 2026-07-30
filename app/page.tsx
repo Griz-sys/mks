@@ -124,12 +124,12 @@ export default function HomePage() {
           <div className="relative w-[94vw] max-w-[680px] aspect-square">
             <div className="relative w-full h-full rounded-full overflow-hidden shadow-2xl">
               <Image
-                src="/Gemini_Generated_Image_c19bsjc19bsjc19b.png"
+                src="/Gemini_Generated_Image_c19bsjc19bsjc19b.jpg"
                 alt="It's Roasted Not Fried — MK's mascot holding a tandoori roll, standing on the packaging's spotted pattern"
                 fill
                 sizes="(min-width: 680px) 680px, 94vw"
                 className="object-cover"
-                priority
+                loading="eager"
               />
             </div>
 
@@ -298,9 +298,9 @@ export default function HomePage() {
               { src: '/images.jpg', alt: 'Creamy tandoori chicken plated fresh' },
               { src: '/butterflied_tandoori_chicken_passage_to_india.jpeg', alt: 'Butterflied tandoori chicken fresh from the clay oven' },
               { src: '/Chicken%20Tikka%20Roll%20(1).jpg', alt: "Chicken tikka roll fresh off the tawa, MK's Noida" },
-              { src: '/Creamy%20Chicken%20Roll.png', alt: "Creamy chicken roll wrapped in rumali roti, MK's Noida" },
+              { src: '/Creamy%20Chicken%20Roll.jpg', alt: "Creamy chicken roll wrapped in rumali roti, MK's Noida" },
               { src: '/classic-chicken-tandoori.jpg', alt: 'Classic overnight-marinated tandoori chicken' },
-              { src: '/creamy-soya-chaap.png', alt: 'Creamy soya chaap, tandoor roasted' },
+              { src: '/creamy-soya-chaap.jpg', alt: 'Creamy soya chaap, tandoor roasted' },
             ].map((img) => (
               <div
                 key={img.src}
