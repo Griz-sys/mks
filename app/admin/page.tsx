@@ -5,6 +5,10 @@ import DeletePostButton from './posts/DeletePostButton'
 
 export const dynamic = 'force-dynamic'
 
+function todayISO(): string {
+  return new Date().toISOString().slice(0, 10)
+}
+
 export default async function AdminPostsPage() {
   const posts = await getAllPostsForAdmin()
 
@@ -31,30 +35,35 @@ export default async function AdminPostsPage() {
                 </tr>
               </thead>
               <tbody>
-                {posts.map((post) => (
-                  <tr key={post.id} className="border-t border-ink/5">
-                    <td className="px-5 py-3 font-body text-ink">{post.title}</td>
-                    <td className="px-5 py-3 font-body text-ink/60">{post.category}</td>
-                    <td className="px-5 py-3">
-                      <span
-                        className={`px-2.5 py-1 rounded-full text-xs font-body font-semibold ${
-                          post.status === 'published'
-                            ? 'bg-green-100 text-green-700'
-                            : 'bg-tint/50 text-ink/60'
-                        }`}
-                      >
-                        {post.status}
-                      </span>
-                    </td>
-                    <td className="px-5 py-3 font-body text-ink/40 text-xs">{post.modifiedDate}</td>
-                    <td className="px-5 py-3 text-right whitespace-nowrap">
-                      <Link href={`/admin/posts/${post.id}/edit`} className="font-body text-xs text-terracotta hover:underline mr-4">
-                        Edit
-                      </Link>
-                      <DeletePostButton id={post.id!} title={post.title} />
-                    </td>
-                  </tr>
-                ))}
+                {posts.map((post) => {
+                  const isScheduled = post.status === 'published' && post.publishedDate > todayISO()
+                  return (
+                    <tr key={post.id} className="border-t border-ink/5">
+                      <td className="px-5 py-3 font-body text-ink">{post.title}</td>
+                      <td className="px-5 py-3 font-body text-ink/60">{post.category}</td>
+                      <td className="px-5 py-3">
+                        <span
+                          className={`px-2.5 py-1 rounded-full text-xs font-body font-semibold ${
+                            isScheduled
+                              ? 'bg-amber-100 text-amber-700'
+                              : post.status === 'published'
+                                ? 'bg-green-100 text-green-700'
+                                : 'bg-tint/50 text-ink/60'
+                          }`}
+                        >
+                          {isScheduled ? `scheduled for ${post.publishedDate}` : post.status}
+                        </span>
+                      </td>
+                      <td className="px-5 py-3 font-body text-ink/40 text-xs">{post.modifiedDate}</td>
+                      <td className="px-5 py-3 text-right whitespace-nowrap">
+                        <Link href={`/admin/posts/${post.id}/edit`} className="font-body text-xs text-terracotta hover:underline mr-4">
+                          Edit
+                        </Link>
+                        <DeletePostButton id={post.id!} title={post.title} />
+                      </td>
+                    </tr>
+                  )
+                })}
               </tbody>
             </table>
           </div>

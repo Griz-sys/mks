@@ -353,6 +353,10 @@ export default function PostForm({
             <input type="date" value={form.modifiedDate} onChange={(e) => update('modifiedDate', e.target.value)} className={inputClass} />
           </Field>
         </div>
+        <p className="font-body text-xs text-ink/40 -mt-3 mb-2">
+          To schedule a post, set a future Published Date and click Publish — it stays hidden and shows as
+          &ldquo;scheduled&rdquo; here until that date arrives (may take up to ~1 hour past midnight to actually appear).
+        </p>
       </section>
 
       <section className="bg-white rounded-2xl border border-ink/10 p-6 mb-6">
@@ -492,7 +496,7 @@ export default function PostForm({
         </div>
       </section>
 
-      <div className="flex gap-3 sticky bottom-4">
+      <div className="flex gap-3 sticky bottom-0 bg-paper/95 backdrop-blur-sm border-t border-ink/10 py-4 z-10">
         <button
           type="button"
           onClick={() => handleSave('draft')}

@@ -69,10 +69,13 @@ function rowToFrontmatter(row: PostRow): PostFrontmatter {
 }
 
 /** All published posts, sorted newest first. */
+/** Published AND due — a future-dated published_date is treated as scheduled, not yet public. */
 export async function getAllPostsMeta(): Promise<PostMeta[]> {
   await ensureSchema()
   const rows = (await sql`
-    SELECT * FROM posts WHERE status = 'published' ORDER BY published_date DESC
+    SELECT * FROM posts
+    WHERE status = 'published' AND published_date <= to_char(now(), 'YYYY-MM-DD')
+    ORDER BY published_date DESC
   `) as unknown as PostRow[]
   return rows.map((row) => {
     const frontmatter = rowToFrontmatter(row)
@@ -115,7 +118,9 @@ export async function getPostForEdit(id: number): Promise<(PostFrontmatter & { b
 export async function getRawPost(slug: string): Promise<{ frontmatter: PostFrontmatter; content: string } | undefined> {
   await ensureSchema()
   const rows = (await sql`
-    SELECT * FROM posts WHERE slug = ${slug} AND status = 'published' LIMIT 1
+    SELECT * FROM posts
+    WHERE slug = ${slug} AND status = 'published' AND published_date <= to_char(now(), 'YYYY-MM-DD')
+    LIMIT 1
   `) as unknown as PostRow[]
   if (!rows[0]) return undefined
   return { frontmatter: rowToFrontmatter(rows[0]), content: rows[0].body }
