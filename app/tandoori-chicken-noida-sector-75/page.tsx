@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { PHONE_SECONDARY, PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/constants'
 
 export const metadata: Metadata = {
-  title: "Best Tandoori Chicken in Noida Sector 75 | MK's Restaurant",
+  title: { absolute: "Best Tandoori Chicken in Noida Sector 75 | MK's Restaurant" },
   description:
     "Looking for the best tandoori chicken in Noida Sector 75? MK's serves authentic clay tandoor roasted chicken — marinated overnight, never fried. Starting ₹199. Call +91 80763 74624.",
   keywords: [

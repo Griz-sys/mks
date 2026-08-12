@@ -1,0 +1,105 @@
+---
+# ============================================================================
+# BLOG POST TEMPLATE — this file is reference documentation only. Content is
+# no longer read from this folder at runtime: posts are stored in Postgres
+# and published through the admin panel at /admin (see app/admin/, backed by
+# app/lib/blog/posts.ts, app/lib/blog/validation.ts, and app/lib/db.ts). This
+# file just documents what every field in that form means and maps to, one
+# to one with app/lib/blog/types.ts (PostFrontmatter) — useful when writing
+# a post outside the editor first (e.g. with an LLM) before pasting it in.
+#
+# Field notes:
+# - slug          must match the filename (without .mdx) and the final URL
+#                  segment: /blog/<slug>
+# - seoTitle       50-60 chars, front-loads the target keyword — this is what
+#                  Google/AI engines show as the <title>. `title` is the H1
+#                  shown on the page and can be more natural/readable.
+# - metaDescription 140-160 chars, includes the target keyword + a reason to
+#                  click (price, USP, location).
+# - searchIntent   informational | commercial | navigational | transactional
+# - difficulty     easy | medium | hard — your own estimate of ranking effort
+# - category       ONE topic bucket (e.g. "Tandoori Chicken", "Soya Chaap",
+#                  "Food Guides") — used for /blog/category/<slug>
+# - tags           multiple, granular (e.g. "noida", "sector 75",
+#                  "north indian food") — used for /blog/tag/<slug>
+# - featuredImage  must point to a real file in /public — no invented paths
+# - ogImage        absolute-path (or full URL) 1200x630 image for social cards
+# - ogImagePrompt  a text prompt for generating the OG image, if you need one
+# - faqs           3-6 Q&As — rendered as an accordion AND as FAQPage JSON-LD
+# - internalLinks  label/href pairs the body should link to (Menu, dish
+#                  pages, other posts) — real routes only, see app/ for what
+#                  exists (there is no standalone /about, /contact, /menu
+#                  page — those are homepage anchors: /#menu /#gallery
+#                  /#location)
+# - externalReferences label/url pairs to reputable, verifiable outside
+#                  sources only — never invent a URL you haven't verified
+# ============================================================================
+title: ""
+seoTitle: ""
+metaDescription: ""
+slug: ""
+excerpt: ""
+
+targetKeyword: ""
+relatedKeywords: []
+searchIntent: "informational"
+difficulty: "medium"
+
+category: ""
+tags: []
+
+author: "MK's Tandoori Team"
+publishedDate: "YYYY-MM-DD"
+modifiedDate: "YYYY-MM-DD"
+
+featuredImage:
+  src: "/replace-with-real-public-image.jpg"
+  alt: ""
+  caption: ""
+  title: ""
+ogImage: "/replace-with-real-og-image.jpg"
+ogImagePrompt: ""
+
+faqs:
+  - question: ""
+    answer: ""
+
+internalLinks:
+  - label: "Menu"
+    href: "/#menu"
+  - label: "Find Us"
+    href: "/#location"
+
+externalReferences: []
+---
+
+Short introduction (2-3 sentences) that directly answers the reader's core
+question in the first 50 words — this is the paragraph Google AI Overview,
+ChatGPT, and featured snippets will most likely quote.
+
+## The Problem / What Readers Are Actually Searching For
+
+Name the entity plainly, explain the intent behind the search, and define any
+term a first-time reader wouldn't know.
+
+## Detailed Explanation
+
+Break this into 2-4 `##` subsections. Keep paragraphs to 2-4 sentences. Use a
+`![alt text](/public-image.jpg "caption")` figure wherever it clarifies the
+point — every image needs real alt text and a caption, not a placeholder.
+
+## Expert Tips
+
+- Bullet lists read better for both humans and AI summarizers than prose.
+- Keep each tip to one sentence if possible.
+
+## Where to Get It in Noida
+
+Mention MK's Tandoori by name, Sector 75, Spectrum Metro Mall, and link to the
+relevant dish page — naturally, once, not stuffed.
+
+<!--
+FAQs, Summary, and the Visit/Order/Call/Maps CTA are appended automatically by
+app/blog/[slug]/page.tsx from the `faqs` frontmatter — do not duplicate them
+in the body.
+-->

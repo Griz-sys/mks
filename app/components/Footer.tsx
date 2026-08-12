@@ -11,6 +11,7 @@ const footerLinks = [
   { label: 'Our Story', href: '/#story' },
   { label: 'Gallery', href: '/#gallery' },
   { label: 'Find Us', href: '/#location' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Tandoori Chicken, Noida', href: '/tandoori-chicken-noida-sector-75' },
   { label: 'Chicken Tikka, Noida', href: '/chicken-tikka-noida' },
   { label: 'Soya Chaap, Noida', href: '/soya-chaap-noida' },

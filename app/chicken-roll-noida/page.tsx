@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { PHONE_SECONDARY, PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/constants'
 
 export const metadata: Metadata = {
-  title: "Chicken Roll in Noida | MK's Restaurant Sector 75",
+  title: { absolute: "Chicken Roll in Noida | MK's Restaurant Sector 75" },
   description:
     "Looking for a chicken roll in Noida? MK's rolls tandoori chicken in a fresh rumali roti with house chutney — ₹180. Quick, roasted not fried. Near Sector 75.",
   keywords: [

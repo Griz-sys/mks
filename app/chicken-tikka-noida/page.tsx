@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { PHONE_SECONDARY, PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/constants'
 
 export const metadata: Metadata = {
-  title: "Chicken Tikka in Noida | MK's Restaurant Sector 75",
+  title: { absolute: "Chicken Tikka in Noida | MK's Restaurant Sector 75" },
   description:
     "Craving chicken tikka in Noida? MK's serves boneless chicken tikka — Classic, Creamy or Hot & Spicy — marinated overnight and roasted in a clay tandoor. From ₹350. Near Sector 75.",
   keywords: [

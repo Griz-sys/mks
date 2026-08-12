@@ -15,6 +15,11 @@ const nextConfig = {
         hostname: 'api.qrserver.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: '*.public.blob.vercel-storage.com',
+        pathname: '/**',
+      },
     ],
   },
   async redirects() {

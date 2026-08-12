@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Gluten, Nunito, Noto_Sans_Devanagari } from 'next/font/google'
-import './globals.css' 
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import './globals.css'
+import SiteChrome from './components/SiteChrome'
 
 const gluten = Gluten({
   weight: ['300', '400', '500', '600', '700'],
@@ -77,9 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${gluten.variable} ${nunito.variable} ${devanagari.variable}`}
     >
       <body className="font-body bg-paper text-ink antialiased overflow-x-hidden">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   )

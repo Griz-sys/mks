@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { PHONE_SECONDARY, PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/constants'
 
 export const metadata: Metadata = {
-  title: "Malai Chaap in Noida | MK's Restaurant Sector 75",
+  title: { absolute: "Malai Chaap in Noida | MK's Restaurant Sector 75" },
   description:
     "Craving malai chaap in Noida? MK's Creamy Soya Chaap is a rich, mildly-spiced malai marinade on soya chaap sticks, roasted in a clay tandoor — never fried. ₹250. Near Sector 75.",
   keywords: [

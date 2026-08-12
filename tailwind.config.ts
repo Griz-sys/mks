@@ -63,9 +63,28 @@ const config: Config = {
         float: 'float 4.5s ease-in-out infinite',
         wiggle: 'wiggle 2.5s ease-in-out infinite',
       },
+      typography: {
+        mk: {
+          css: {
+            '--tw-prose-body': '#2A2521',
+            '--tw-prose-headings': '#2A2521',
+            '--tw-prose-links': '#B84700',
+            '--tw-prose-bold': '#2A2521',
+            '--tw-prose-bullets': '#B84700',
+            '--tw-prose-quotes': '#2A2521',
+            '--tw-prose-quote-borders': '#B84700',
+            '--tw-prose-hr': '#E8C9A8',
+            '--tw-prose-th-borders': '#E8C9A8',
+            '--tw-prose-td-borders': '#E8C9A8',
+            a: { fontWeight: '600', textDecoration: 'none' },
+            'a:hover': { textDecoration: 'underline' },
+            'h2, h3, h4': { fontFamily: 'var(--font-gluten), sans-serif', letterSpacing: '0.01em' },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }
 
 export default config

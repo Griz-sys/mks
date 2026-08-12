@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/constants'
 
 export const metadata: Metadata = {
-  title: "Family Restaurant in Sector 75 Noida | MK's — Dine Together",
+  title: { absolute: "Family Restaurant in Sector 75 Noida | MK's — Dine Together" },
   description:
     "Planning a family meal in Noida Sector 75? MK's offers a warm, welcoming dining experience with authentic tandoori food for the whole family. Call +91 80763 74624.",
   keywords: [

@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { label: 'Menu', href: '/#menu' },
   { label: 'Our Story', href: '/#story' },
   { label: 'Gallery', href: '/#gallery' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Location', href: '/#location' },
 ]
 
