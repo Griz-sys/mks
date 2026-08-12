@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html { scroll-behavior: smooth; }
+/* Keeps anchor-jumped headings (Table of Contents, /#menu, /#gallery, etc.)
+   clear of the fixed Navbar (h-20 = 5rem) instead of landing underneath it. */
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
 
 body {
   background-color: #FAF6F0;
