@@ -106,8 +106,8 @@ export default function HomePage() {
       ══════════════════════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden pt-24 pb-10 md:pt-28 md:pb-14 px-5">
         <Image
-          src="/l-intro-1607603831.jpg"
-          alt="Chicken sizzling over the open tandoor flame at MK's"
+          src="/pics/17.jpg"
+          alt="MK's tandoori chicken on a slate board with mint chutney and pickled onions"
           fill
           sizes="100vw"
           className="object-cover"
@@ -187,10 +187,10 @@ export default function HomePage() {
         <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
           <div className="relative h-[340px] md:h-[440px] flex items-center justify-center order-2 md:order-1">
             <div className="absolute left-2 md:left-6 w-60 h-60 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-8 border-paper">
-              <Image src="/l-intro-1607603831.jpg" alt="Chicken sizzling over the open tandoor flame" fill sizes="(max-width: 768px) 240px, 320px" className="object-cover" />
+              <Image src="/pics/14.jpg" alt="Classic tandoori chicken, 8 pieces, fresh from the clay tandoor" fill sizes="(max-width: 768px) 240px, 320px" className="object-cover" />
             </div>
             <div className="absolute right-0 top-0 md:top-4 w-32 h-32 md:w-44 md:h-44 rounded-full overflow-hidden shadow-xl border-8 border-paper">
-              <Image src="/Classic%20Chicken%20Tikka%20Skewers.jpg" alt="Classic chicken tikka skewers, clay tandoor roasted" fill sizes="(max-width: 768px) 128px, 176px" className="object-cover" />
+              <Image src="/pics/classic%20chicken%20tikka.jpg" alt="Classic chicken tikka, clay tandoor roasted" fill sizes="(max-width: 768px) 128px, 176px" className="object-cover" />
             </div>
           </div>
 
@@ -292,15 +292,15 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
             {[
-              { src: '/l-intro-1607603831.jpg', alt: 'Chicken pieces sizzling over the open tandoor flame' },
-              { src: '/pngtree-grilled-tandoori-chicken-leg-piece-image_20244660.webp', alt: 'Grilled tandoori chicken leg piece, char-marked and roasted' },
-              { src: '/Classic%20Chicken%20Tikka%20Skewers.jpg', alt: "Classic chicken tikka skewers, clay tandoor roasted, MK's Noida" },
-              { src: '/images.jpg', alt: 'Creamy tandoori chicken plated fresh' },
-              { src: '/butterflied_tandoori_chicken_passage_to_india.jpeg', alt: 'Butterflied tandoori chicken fresh from the clay oven' },
-              { src: '/Chicken%20Tikka%20Roll%20(1).jpg', alt: "Chicken tikka roll fresh off the tawa, MK's Noida" },
-              { src: '/Creamy%20Chicken%20Roll.jpg', alt: "Creamy chicken roll wrapped in rumali roti, MK's Noida" },
-              { src: '/classic-chicken-tandoori.jpg', alt: 'Classic overnight-marinated tandoori chicken' },
-              { src: '/creamy-soya-chaap.jpg', alt: 'Creamy soya chaap, tandoor roasted' },
+              { src: '/pics/9.jpg', alt: "Malai tandoori chicken, 8 pieces, with mint dip and pickled onions at MK's Noida" },
+              { src: '/pics/12.jpg', alt: 'Classic tandoori chicken, 2 pieces, fresh from the clay tandoor' },
+              { src: '/pics/21.jpg', alt: 'Chicken tikka on a slate board with rumali roti and chutneys' },
+              { src: '/pics/10.jpg', alt: 'Malai tandoori chicken, 2 pieces, cream and cashew marinade' },
+              { src: '/pics/14.jpg', alt: "Classic tandoori chicken, 8 pieces, MK's Noida" },
+              { src: '/pics/22.jpg', alt: 'Soya chaap roll with a soya keema rice bowl' },
+              { src: '/pics/13.jpg', alt: 'Classic tandoori chicken, 4 pieces, served with pickled onions' },
+              { src: '/pics/23.jpg', alt: 'Malai soya chaap, a roll and a soya keema rice bowl' },
+              { src: '/pics/11.jpg', alt: 'Malai tandoori chicken, 4 pieces, roasted not fried' },
             ].map((img) => (
               <div
                 key={img.src}

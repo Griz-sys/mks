@@ -6,7 +6,7 @@ import { PHONE_SECONDARY, PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/con
 export const metadata: Metadata = {
   title: { absolute: "Best Tandoori Chicken in Noida Sector 75 | MK's Restaurant" },
   description:
-    "Looking for the best tandoori chicken in Noida Sector 75? MK's serves authentic clay tandoor roasted chicken — marinated overnight, never fried. Starting ₹199. Call +91 80763 74624.",
+    "Looking for the best tandoori chicken in Noida Sector 75? MK's serves authentic clay tandoor roasted chicken — marinated overnight, never fried. Starting ₹219. Call +91 80763 74624.",
   keywords: [
     'tandoori chicken noida sector 75',
     'tandoori chicken noida',
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Best Tandoori Chicken in Noida Sector 75 — MK's",
     description:
-      "Authentic clay tandoor chicken in Noida Sector 75. Roasted at 450°C. Starting ₹199.",
+      "Authentic clay tandoor chicken in Noida Sector 75. Roasted at 450°C. Starting ₹219.",
     type: 'website',
     images: [{ url: 'https://mkstandoori.com/og-tandoori-chicken.jpg', width: 1200, height: 630, alt: "Smoking tandoori chicken leg piece — MK's Noida Sector 75" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Best Tandoori Chicken in Noida Sector 75 — MK's",
-    description: "Authentic clay tandoor chicken in Noida Sector 75. Roasted at 450°C. Starting ₹199.",
+    description: "Authentic clay tandoor chicken in Noida Sector 75. Roasted at 450°C. Starting ₹219.",
     images: ['https://mkstandoori.com/og-tandoori-chicken.jpg'],
   },
 }
@@ -39,26 +39,26 @@ const schema = {
   hasMenuItem: [
     {
       '@type': 'MenuItem',
-      name: 'Classic Chicken 2 Pc',
+      name: 'Classic Tandoori Chicken 2 Pc',
       description: 'Classic tandoori chicken — marinated overnight in yoghurt and spices, roasted in clay tandoor.',
-      offers: { '@type': 'Offer', price: '180', priceCurrency: 'INR' },
+      offers: { '@type': 'Offer', price: '219', priceCurrency: 'INR' },
     },
     {
       '@type': 'MenuItem',
-      name: 'Classic Chicken 4 Pc',
-      offers: { '@type': 'Offer', price: '350', priceCurrency: 'INR' },
+      name: 'Classic Tandoori Chicken 4 Pc',
+      offers: { '@type': 'Offer', price: '399', priceCurrency: 'INR' },
     },
     {
       '@type': 'MenuItem',
-      name: 'Creamy Chicken 2 Pc',
-      description: 'Creamy marinated tandoori chicken roasted in clay tandoor.',
-      offers: { '@type': 'Offer', price: '190', priceCurrency: 'INR' },
+      name: 'Malai Tandoori Chicken 2 Pc',
+      description: 'Chicken marinated in cream, cashew paste and green cardamom, roasted in clay tandoor.',
+      offers: { '@type': 'Offer', price: '249', priceCurrency: 'INR' },
     },
     {
       '@type': 'MenuItem',
       name: 'Classic Chicken Tikka 4 Pc',
       description: 'Classic boneless chicken tikka pieces roasted in clay tandoor.',
-      offers: { '@type': 'Offer', price: '350', priceCurrency: 'INR' },
+      offers: { '@type': 'Offer', price: '349', priceCurrency: 'INR' },
     },
   ],
   address: {
@@ -88,7 +88,7 @@ const faqs = [
   },
   {
     q: "What is the price of tandoori chicken at MK’s?",
-    a: "Classic Chicken starts at Rs.180 (2 pc) or Rs.350 (4 pc). Creamy Chicken is Rs.190 (2 pc). Chicken Tikka starts at Rs.350 (4 pc). Classic Chicken Roll is Rs.180.",
+    a: "Classic Tandoori Chicken is Rs.219 (2 pc), Rs.399 (4 pc) or Rs.749 (8 pc). Malai Tandoori Chicken is Rs.249 (2 pc), Rs.429 (4 pc) or Rs.779 (8 pc). Chicken Tikka starts at Rs.349 (4 pc). Classic Chicken Tikka Roll is Rs.199.",
   },
   {
     q: "Does MK’s offer home delivery for tandoori chicken in Noida?",
@@ -138,8 +138,8 @@ export default function TandooriChickenPage() {
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-mk-charcoal pt-20">
         <Image
-          src="/pngtree-grilled-tandoori-chicken-leg-piece-image_20244660.webp"
-          alt="Smoking tandoori chicken leg piece — MK's Noida Sector 75"
+          src="/pics/classic%20chicken.jpg"
+          alt="Classic tandoori chicken fresh from the clay tandoor — MK's Noida Sector 75"
           fill
           sizes="100vw"
           className="object-cover opacity-30"
@@ -210,12 +210,12 @@ export default function TandooriChickenPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { name: 'Classic Chicken 2 Pc', price: '₹180', desc: 'Classic tandoori marinade. Roasted to order in clay tandoor. Served with mint chutney & onions.' },
-                { name: 'Classic Chicken 4 Pc', price: '₹350', desc: 'Four pieces — best for sharing. Classic spice marinade, zero frying.' },
-                { name: 'Classic Chicken 8 Pc', price: '₹650', desc: 'Eight pieces — perfect for a group. The full MK\'s classic experience.' },
-                { name: 'Creamy Chicken 2 Pc', price: '₹190', desc: 'Creamy marinade with a rich, mellow spice profile. Still roasted, never fried.' },
-                { name: 'Creamy Chicken 4 Pc', price: '₹380', desc: 'Four pieces of our popular creamy variant. Great for those who prefer milder spice.' },
-                { name: 'Hot & Spicy Chicken Tikka 4 Pc', price: '₹380', desc: 'Boneless tikka with extra heat. For the spice lovers.' },
+                { name: 'Classic Tandoori Chicken 2 Pc', price: '₹219', desc: 'Classic tandoori marinade. Roasted to order in clay tandoor. Served with mint chutney & onions.' },
+                { name: 'Classic Tandoori Chicken 4 Pc', price: '₹399', desc: 'Four pieces — best for sharing. Classic spice marinade, zero frying.' },
+                { name: 'Classic Tandoori Chicken 8 Pc', price: '₹749', desc: 'Eight pieces — perfect for a group. The full MK\'s classic experience.' },
+                { name: 'Malai Tandoori Chicken 2 Pc', price: '₹249', desc: 'Cream, cashew paste and green cardamom. Rich and mellow, still roasted, never fried.' },
+                { name: 'Malai Tandoori Chicken 4 Pc', price: '₹429', desc: 'Four pieces of our popular malai variant. Great for those who prefer milder spice.' },
+                { name: 'Fiery Chicken Tikka 4 Pc', price: '₹349', desc: 'Boneless tikka with crushed red chilies and lemon. For the spice lovers.' },
               ].map((item) => (
                 <div key={item.name} className="bg-mk-black border border-white/10 hover:border-mk-orange/40 transition-colors p-5">
                   <div className="flex justify-between items-start mb-2">

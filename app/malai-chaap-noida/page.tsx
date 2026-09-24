@@ -6,7 +6,7 @@ import { PHONE_SECONDARY, PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/con
 export const metadata: Metadata = {
   title: { absolute: "Malai Chaap in Noida | MK's Restaurant Sector 75" },
   description:
-    "Craving malai chaap in Noida? MK's Creamy Soya Chaap is a rich, mildly-spiced malai marinade on soya chaap sticks, roasted in a clay tandoor — never fried. ₹250. Near Sector 75.",
+    "Craving malai chaap in Noida? MK's Malai Chaap is a rich, mildly-spiced malai marinade on soya chaap sticks, roasted in a clay tandoor — never fried. ₹249. Near Sector 75.",
   keywords: [
     'malai chaap noida',
     'malai chaap sector 75 noida',
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://mkstandoori.com/malai-chaap-noida' },
   openGraph: {
     title: "Malai Chaap in Noida — MK's Restaurant Sector 75",
-    description: 'Rich, creamy malai marinade on soya chaap, clay-tandoor roasted. ₹250 for 3 strips.',
+    description: 'Rich, creamy malai marinade on soya chaap, clay-tandoor roasted. ₹249 a plate.',
     type: 'website',
     images: [{ url: 'https://mkstandoori.com/og-malai-chaap.jpg', width: 1200, height: 630, alt: "Malai soya chaap skewers — MK's Noida" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Malai Chaap in Noida — MK's Restaurant Sector 75",
-    description: 'Rich, creamy malai marinade on soya chaap, clay-tandoor roasted. ₹250 for 3 strips.',
+    description: 'Rich, creamy malai marinade on soya chaap, clay-tandoor roasted. ₹249 a plate.',
     images: ['https://mkstandoori.com/og-malai-chaap.jpg'],
   },
 }
@@ -33,11 +33,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Where can I get good malai chaap in Noida?',
-    a: "MK's near Sector 75 Noida (at Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75) serves malai chaap — our Creamy Soya Chaap — in a rich cream marinade, clay-tandoor roasted.",
+    a: "MK's near Sector 75 Noida (at Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75) serves Malai Chaap — high-protein (less maida) soya chaap in fresh cream and cashew, clay-tandoor roasted.",
   },
   {
     q: 'What is malai chaap?',
-    a: "Malai chaap is soya chaap (soybean sticks) marinated in a rich, mildly-spiced cream (malai) blend before being roasted. On MK's menu, this is listed as Creamy Soya Chaap.",
+    a: "Malai chaap is soya chaap (soybean sticks) marinated in a rich, mildly-spiced cream (malai) blend before being roasted.",
   },
   {
     q: 'Is malai chaap vegetarian?',
@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     q: "What is the price of malai chaap at MK's?",
-    a: "MK's Malai (Creamy) Soya Chaap is ₹250 for a plate of 3 strips. We also serve Classic and Achari (pickled) soya chaap at the same price.",
+    a: "MK's Malai Chaap is ₹249 a plate. We also serve Classic and Achari (pickled) soya chaap at the same price.",
   },
   {
     q: 'Is malai chaap fried or roasted at MK\'s?',
@@ -61,9 +61,9 @@ const schema = {
   hasMenuItem: [
     {
       '@type': 'MenuItem',
-      name: 'Malai (Creamy) Soya Chaap',
+      name: 'Malai Chaap',
       description: 'Soya chaap sticks in a rich malai (cream) marinade, roasted in a clay tandoor. 3 strips a plate.',
-      offers: { '@type': 'Offer', price: '250', priceCurrency: 'INR' },
+      offers: { '@type': 'Offer', price: '249', priceCurrency: 'INR' },
     },
   ],
   address: {
@@ -111,7 +111,7 @@ export default function MalaiChaapPage() {
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-mk-charcoal pt-20">
         <Image
-          src="/creamy-soya-chaap.jpg"
+          src="/pics/creamy%20soya%20chaap.jpg"
           alt="Malai soya chaap skewers with mint chutney — MK's Noida"
           fill
           sizes="100vw"
@@ -130,7 +130,7 @@ export default function MalaiChaapPage() {
             <span className="text-mk-orange">in Noida</span>
           </h1>
           <p className="font-tagline text-xl text-white/70 max-w-xl">
-            Rich, creamy marinade on soya chaap. Clay-tandoor roasted, never fried. ₹250.
+            Rich, creamy marinade on soya chaap. Clay-tandoor roasted, never fried. ₹249.
           </p>
         </div>
       </section>
@@ -151,7 +151,7 @@ export default function MalaiChaapPage() {
               <p>
                 Searching for <strong className="text-white">malai chaap in Noida</strong> means you
                 want soya chaap in that rich, mellow cream marinade — milder and creamier than a
-                classic spice blend. At MK&apos;s, that&apos;s our Creamy Soya Chaap.
+                classic spice blend. At MK&apos;s, that&apos;s our Malai Chaap.
               </p>
               <p>
                 Made from soybean sticks, our malai chaap is marinated in a thick cream (malai)
@@ -180,16 +180,16 @@ export default function MalaiChaapPage() {
                 Bestseller
               </div>
               <div className="p-6">
-                <h3 className="font-body text-2xl text-white mb-1">Malai (Creamy) Soya Chaap</h3>
-                <span className="font-display text-mk-orange text-2xl block mb-3">₹250</span>
+                <h3 className="font-body text-2xl text-white mb-1">Malai Chaap</h3>
+                <span className="font-display text-mk-orange text-2xl block mb-3">₹249</span>
                 <p className="font-body text-white/50 text-sm leading-relaxed">Rich malai marinade, milder spice, tandoor roasted. 3 strips a plate.</p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {[
-                { name: 'Classic Soya Chaap', price: '₹250', desc: 'Classic house spice marinade, tandoor roasted.' },
-                { name: 'Pickled (Achari) Soya Chaap', price: '₹250', desc: 'Tangy achari marinade, tandoor roasted.' },
+                { name: 'Classic Chaap', price: '₹249', desc: 'Yogurt, ginger-garlic and house garam masala, tandoor roasted.' },
+                { name: 'Achari Chaap', price: '₹249', desc: 'Tangy achari spices and mustard oil, charred.' },
               ].map((item) => (
                 <div key={item.name} className="bg-mk-black border border-white/10 hover:border-mk-orange/40 transition-colors overflow-hidden">
                   <div className="p-6">
@@ -212,7 +212,7 @@ export default function MalaiChaapPage() {
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 overflow-hidden">
               <Image
-                src="/creamy-soya-chaap.jpg"
+                src="/pics/23.jpg"
                 alt="MK's malai chaap close-up, tandoor roasted"
                 fill
                 sizes="(max-width: 768px) 100vw, 512px"

@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     q: "Does MK's have vegetarian options?",
-    a: "Yes — Soya Chaap (Classic, Creamy/Malai, and Achari) and a Classic Soya Roll are both on the menu, alongside our tandoori chicken dishes.",
+    a: "Yes — Soya Chaap (Classic, Malai, and Achari), a Classic Soya Chaap Roll and a Soya Keema Rice Bowl are all on the menu, alongside our tandoori chicken dishes.",
   },
   {
     q: "Is MK's available for delivery or takeaway near Sector 75?",
@@ -113,7 +113,7 @@ export default function NorthIndianRestaurantPage() {
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-mk-charcoal pt-20">
         <Image
-          src="/classic-chicken-tandoori.jpg"
+          src="/pics/14.jpg"
           alt="Tandoori chicken platter — MK's North Indian Restaurant, Noida"
           fill
           sizes="100vw"
@@ -181,12 +181,12 @@ export default function NorthIndianRestaurantPage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { href: '/tandoori-chicken-noida-sector-75', title: 'Tandoori Chicken', desc: 'Bone-in, overnight marinated, clay tandoor roasted.', price: 'From ₹180' },
-                { href: '/chicken-tikka-noida', title: 'Chicken Tikka', desc: 'Boneless, Classic, Creamy or Hot & Spicy.', price: 'From ₹350' },
-                { href: '/soya-chaap-noida', title: 'Soya Chaap', desc: 'Classic, Malai (Creamy), or Achari — always roasted.', price: '₹250' },
-                { href: '/malai-chaap-noida', title: 'Malai Chaap', desc: 'Rich cream marinade on soya chaap sticks.', price: '₹250' },
-                { href: '/chicken-roll-noida', title: 'Chicken Roll', desc: 'Tandoori chicken in fresh rumali roti with chutney.', price: '₹180' },
-                { href: '/kati-roll-noida', title: 'Kati Roll', desc: 'Kolkata-style, skewer-roasted chicken or soya chaap.', price: 'From ₹150' },
+                { href: '/tandoori-chicken-noida-sector-75', title: 'Tandoori Chicken', desc: 'Bone-in, overnight marinated, clay tandoor roasted.', price: 'From ₹219' },
+                { href: '/chicken-tikka-noida', title: 'Chicken Tikka', desc: 'Boneless, Classic, Malai or Fiery.', price: 'From ₹349' },
+                { href: '/soya-chaap-noida', title: 'Soya Chaap', desc: 'Classic, Malai, or Achari — always roasted.', price: '₹249' },
+                { href: '/malai-chaap-noida', title: 'Malai Chaap', desc: 'Rich cream marinade on soya chaap sticks.', price: '₹249' },
+                { href: '/chicken-roll-noida', title: 'Chicken Roll', desc: 'Chicken tikka in soft rumali roti with coriander chutney.', price: '₹199' },
+                { href: '/kati-roll-noida', title: 'Kati Roll', desc: 'Kolkata-style, skewer-roasted chicken or soya chaap.', price: 'From ₹159' },
               ].map((dish) => (
                 <Link
                   key={dish.href}
@@ -228,8 +228,8 @@ export default function NorthIndianRestaurantPage() {
             </div>
             <div className="relative h-80 overflow-hidden">
               <Image
-                src="/l-intro-1607603831.jpg"
-                alt="Chicken sizzling over the open tandoor flame at MK's, Noida"
+                src="/pics/21.jpg"
+                alt="Chicken tikka with rumali roti and chutneys at MK's, Noida"
                 fill
                 sizes="(max-width: 768px) 100vw, 512px"
                 className="object-cover"

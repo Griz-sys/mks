@@ -6,7 +6,7 @@ import { PHONE_SECONDARY, PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/con
 export const metadata: Metadata = {
   title: { absolute: "Kati Roll in Noida | MK's Restaurant Sector 75" },
   description:
-    "Craving a Kolkata-style kati roll in Noida? MK's wraps tandoor-roasted chicken or soya chaap in a flaky rumali paratha with chutney. From ₹150. Near Sector 75.",
+    "Craving a Kolkata-style kati roll in Noida? MK's wraps tandoor-roasted chicken or soya chaap in a flaky rumali paratha with chutney. From ₹159. Near Sector 75.",
   keywords: [
     'kati roll noida',
     'best kati roll noida',
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://mkstandoori.com/kati-roll-noida' },
   openGraph: {
     title: "Kati Roll in Noida — MK's Restaurant Sector 75",
-    description: 'Kolkata-style kati roll — tandoor-roasted chicken or soya chaap, wrapped fresh. From ₹150.',
+    description: 'Kolkata-style kati roll — tandoor-roasted chicken or soya chaap, wrapped fresh. From ₹159.',
     type: 'website',
     images: [{ url: 'https://mkstandoori.com/og-kati-roll.jpg', width: 1200, height: 630, alt: "Kolkata-style kati roll with tandoori filling and chutney — MK's Noida" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Kati Roll in Noida — MK's Restaurant Sector 75",
-    description: 'Kolkata-style kati roll — tandoor-roasted chicken or soya chaap, wrapped fresh. From ₹150.',
+    description: 'Kolkata-style kati roll — tandoor-roasted chicken or soya chaap, wrapped fresh. From ₹159.',
     images: ['https://mkstandoori.com/og-kati-roll.jpg'],
   },
 }
@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     q: "What kati roll options does MK's have?",
-    a: 'Chicken Kati Roll at ₹180, made with our tandoori chicken, and a Soya Kati Roll at ₹150, made with tandoori soya chaap — both vegetarian and non-vegetarian eaters covered.',
+    a: 'Chicken Kati Roll at ₹199, made with our chicken tikka, and a Soya Kati Roll at ₹159, made with tandoori soya chaap — both vegetarian and non-vegetarian eaters covered.',
   },
   {
     q: "Is MK's kati roll available for delivery in Noida?",
@@ -63,13 +63,13 @@ const schema = {
       '@type': 'MenuItem',
       name: 'Chicken Kati Roll',
       description: 'Tandoor-roasted chicken wrapped in fresh rumali roti with chutney and onions, Kolkata style.',
-      offers: { '@type': 'Offer', price: '180', priceCurrency: 'INR' },
+      offers: { '@type': 'Offer', price: '199', priceCurrency: 'INR' },
     },
     {
       '@type': 'MenuItem',
       name: 'Soya Kati Roll',
       description: 'Tandoor-roasted soya chaap wrapped in fresh rumali roti with chutney and onions, Kolkata style.',
-      offers: { '@type': 'Offer', price: '150', priceCurrency: 'INR' },
+      offers: { '@type': 'Offer', price: '159', priceCurrency: 'INR' },
     },
   ],
   address: {
@@ -117,7 +117,7 @@ export default function KatiRollPage() {
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-mk-charcoal pt-20">
         <Image
-          src="/Gemini_Generated_Image_3f92hf3f92hf3f92.jpg"
+          src="/pics/classic%20chicken%20roll.jpg"
           alt="Kolkata-style kati roll with tandoori filling and chutney — MK's Noida"
           fill
           sizes="100vw"
@@ -136,7 +136,7 @@ export default function KatiRollPage() {
             <span className="text-mk-orange">in Noida</span>
           </h1>
           <p className="font-tagline text-xl text-white/70 max-w-xl">
-            Kolkata-style, skewer-roasted filling. Chicken or Soya Chaap. From ₹150.
+            Kolkata-style, skewer-roasted filling. Chicken or Soya Chaap. From ₹159.
           </p>
         </div>
       </section>
@@ -187,13 +187,13 @@ export default function KatiRollPage() {
               {[
                 {
                   name: 'Chicken Kati Roll',
-                  price: '₹180',
+                  price: '₹199',
                   desc: 'Skewer-roasted tandoori chicken, rumali roti, mint chutney, onions.',
                   tag: 'Bestseller',
                 },
                 {
                   name: 'Soya Kati Roll',
-                  price: '₹150',
+                  price: '₹159',
                   desc: 'Skewer-roasted tandoori soya chaap, rumali roti, mint chutney, onions.',
                   tag: 'Veg',
                 },

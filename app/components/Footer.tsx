@@ -25,7 +25,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-ink text-paper">
       <div className="absolute inset-0 opacity-15">
-        <Image src="/l-intro-1607603831.jpg" alt="" fill sizes="100vw" className="object-cover" aria-hidden="true" />
+        <Image src="/pics/13.jpg" alt="" fill sizes="100vw" className="object-cover" aria-hidden="true" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/95 to-ink" />
 

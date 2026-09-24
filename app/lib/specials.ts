@@ -1,35 +1,44 @@
 // Hand-picked highlights for the Chef's Picks slider — flavour descriptors are
 // editorial copy, not ingredient claims. Edit freely.
 
+import { pic } from './menu'
+
 export type Special = { name: string; nameHindi: string; tags: string; price: string; image: string }
 
 export const SPECIALS: Special[] = [
   {
-    name: 'Hot & Spicy Chicken Tikka',
-    nameHindi: 'हॉट एंड स्पाइसी टिक्का',
-    tags: 'Chilli ◍ Garlic ◍ Char',
-    price: 'From ₹380',
-    image: '/butterflied_tandoori_chicken_passage_to_india.jpeg',
+    name: 'Fiery Chicken Tikka',
+    nameHindi: 'फायरी चिकन टिक्का',
+    tags: 'Red Chilli ◍ Lemon ◍ Char',
+    price: 'From ₹349',
+    image: pic('hot and spicy chicken tikka.jpg'),
   },
   {
-    name: 'Creamy Chicken',
-    nameHindi: 'क्रीमी चिकन',
-    tags: 'Cream ◍ Cashew ◍ Smoke',
-    price: 'From ₹190',
-    image: '/images.jpg',
+    name: 'Malai Tandoori Chicken',
+    nameHindi: 'मलाई तंदूरी चिकन',
+    tags: 'Cream ◍ Cashew ◍ Cardamom',
+    price: 'From ₹249',
+    image: pic('crwamy chicken.jpg'),
   },
   {
-    name: 'Classic Chicken Roll',
-    nameHindi: 'चिकन रोल',
-    tags: 'Tandoori ◍ Rumali ◍ Chutney',
-    price: '₹180',
-    image: '/pngtree-grilled-tandoori-chicken-leg-piece-image_20244660.webp',
+    name: 'Classic Chicken Tikka Roll',
+    nameHindi: 'चिकन टिक्का रोल',
+    tags: 'Tikka ◍ Rumali ◍ Chutney',
+    price: '₹199',
+    image: pic('classic chicken roll.jpg'),
   },
   {
-    name: 'Classic Chicken',
-    nameHindi: 'क्लासिक चिकन',
-    tags: 'Overnight ◍ Marinade ◍ Clay Oven',
-    price: 'From ₹180',
-    image: '/Classic%20Chicken%20Tikka%20Skewers.jpg',
+    name: 'Classic Tandoori Chicken',
+    nameHindi: 'क्लासिक तंदूरी चिकन',
+    tags: 'Yogurt ◍ Ginger-Garlic ◍ Smoke',
+    price: 'From ₹219',
+    image: pic('classic chicken.jpg'),
+  },
+  {
+    name: 'Chicken Tikka Rice Bowl',
+    nameHindi: 'चिकन टिक्का राइस बाउल',
+    tags: 'Tikka ◍ Basmati ◍ Onion',
+    price: '₹219',
+    image: pic('cheicken tikka rice bowl.jpg'),
   },
 ]

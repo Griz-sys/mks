@@ -6,7 +6,7 @@ import { PHONE_SECONDARY, PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/con
 export const metadata: Metadata = {
   title: { absolute: "Chicken Roll in Noida | MK's Restaurant Sector 75" },
   description:
-    "Looking for a chicken roll in Noida? MK's rolls tandoori chicken in a fresh rumali roti with house chutney — ₹180. Quick, roasted not fried. Near Sector 75.",
+    "Looking for a chicken roll in Noida? MK's rolls tandoori chicken in a fresh rumali roti with house chutney — ₹199. Quick, roasted not fried. Near Sector 75.",
   keywords: [
     'chicken roll noida',
     'chicken roll near me',
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://mkstandoori.com/chicken-roll-noida' },
   openGraph: {
     title: "Chicken Roll in Noida — MK's Restaurant Sector 75",
-    description: 'Tandoori chicken rolled in fresh rumali roti with house chutney. ₹180.',
+    description: 'Tandoori chicken rolled in fresh rumali roti with house chutney. ₹199.',
     type: 'website',
     images: [{ url: 'https://mkstandoori.com/og-chicken-roll.jpg', width: 1200, height: 630, alt: "Tandoori chicken roll in rumali roti with chutney — MK's Noida" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Chicken Roll in Noida — MK's Restaurant Sector 75",
-    description: 'Tandoori chicken rolled in fresh rumali roti with house chutney. ₹180.',
+    description: 'Tandoori chicken rolled in fresh rumali roti with house chutney. ₹199.',
     images: ['https://mkstandoori.com/og-chicken-roll.jpg'],
   },
 }
@@ -42,7 +42,7 @@ const faqs = [
   },
   {
     q: "What is the price of a chicken roll at MK's?",
-    a: 'The Classic Chicken Roll is ₹180. We also do a Classic Soya Roll (veg) for ₹150, and Rumali Roti alone for ₹25.',
+    a: 'The Classic Chicken Tikka Roll is ₹199. We also do a Classic Soya Chaap Roll (veg) for ₹159, and Rumali Roti alone for ₹25.',
   },
   {
     q: "Is MK's chicken roll available for delivery in Noida?",
@@ -62,15 +62,15 @@ const schema = {
   hasMenuItem: [
     {
       '@type': 'MenuItem',
-      name: 'Classic Chicken Roll',
+      name: 'Classic Chicken Tikka Roll',
       description: 'Tandoori chicken, rolled in fresh rumali roti with mint chutney and onions.',
-      offers: { '@type': 'Offer', price: '180', priceCurrency: 'INR' },
+      offers: { '@type': 'Offer', price: '199', priceCurrency: 'INR' },
     },
     {
       '@type': 'MenuItem',
-      name: 'Classic Soya Roll',
+      name: 'Classic Soya Chaap Roll',
       description: 'Tandoori soya chaap, rolled in fresh rumali roti with mint chutney and onions.',
-      offers: { '@type': 'Offer', price: '150', priceCurrency: 'INR' },
+      offers: { '@type': 'Offer', price: '159', priceCurrency: 'INR' },
     },
     {
       '@type': 'MenuItem',
@@ -124,8 +124,8 @@ export default function ChickenRollPage() {
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-mk-charcoal pt-20">
         <Image
-          src="/chciken_roll.jpg"
-          alt="Tandoori chicken roll in rumali roti with chutney — MK's Noida"
+          src="/pics/classic%20chicken%20roll.jpg"
+          alt="Chicken tikka roll in rumali roti with chutney — MK's Noida"
           fill
           sizes="100vw"
           className="object-cover opacity-30"
@@ -143,7 +143,7 @@ export default function ChickenRollPage() {
             <span className="text-mk-orange">in Noida</span>
           </h1>
           <p className="font-tagline text-xl text-white/70 max-w-xl">
-            Tandoori chicken, fresh rumali roti, house chutney. ₹180. Ready in minutes.
+            Tandoori chicken, fresh rumali roti, house chutney. ₹199. Ready in minutes.
           </p>
         </div>
       </section>
@@ -191,14 +191,14 @@ export default function ChickenRollPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
                 {
-                  name: 'Classic Chicken Roll',
-                  price: '₹180',
+                  name: 'Classic Chicken Tikka Roll',
+                  price: '₹199',
                   desc: 'Tandoori chicken, rumali roti, mint chutney, onions. Made to order.',
                   tag: 'Bestseller',
                 },
                 {
-                  name: 'Classic Soya Roll',
-                  price: '₹150',
+                  name: 'Classic Soya Chaap Roll',
+                  price: '₹159',
                   veg: true,
                   desc: 'Tandoori soya chaap, rumali roti, mint chutney, onions.',
                   tag: 'Veg',
@@ -234,8 +234,8 @@ export default function ChickenRollPage() {
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 overflow-hidden">
               <Image
-                src="/chciken_roll.jpg"
-                alt="MK's chicken roll close-up, rumali roti and chutney"
+                src="/pics/22.jpg"
+                alt="MK's roll wrapped in rumali roti, served with a rice bowl"
                 fill
                 sizes="(max-width: 768px) 100vw, 512px"
                 className="object-cover"

@@ -6,7 +6,7 @@ import { PHONE_SECONDARY, PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/con
 export const metadata: Metadata = {
   title: { absolute: "Soya Chaap in Noida | MK's Restaurant Sector 75" },
   description:
-    "Craving tandoori soya chaap in Noida? MK's serves clay-tandoor roasted soya chaap — Classic, Creamy or Achari, 3 strips a plate. Starting ₹250. Near Sector 75.",
+    "Craving tandoori soya chaap in Noida? MK's serves clay-tandoor roasted soya chaap — Classic, Malai or Achari. ₹249 a plate. Near Sector 75.",
   keywords: [
     'soya chaap noida',
     'best soya chaap noida',
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://mkstandoori.com/soya-chaap-noida' },
   openGraph: {
     title: "Soya Chaap in Noida — MK's Restaurant Sector 75",
-    description: 'Clay-tandoor roasted soya chaap. Classic, Creamy, Achari. ₹250 for 3 strips.',
+    description: 'Clay-tandoor roasted soya chaap. Classic, Malai, Achari. ₹249 a plate.',
     type: 'website',
     images: [{ url: 'https://mkstandoori.com/og-soya-chaap.jpg', width: 1200, height: 630, alt: "Tandoor-roasted soya chaap skewers — MK's Noida" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Soya Chaap in Noida — MK's Restaurant Sector 75",
-    description: 'Clay-tandoor roasted soya chaap. Classic, Creamy, Achari. ₹250 for 3 strips.',
+    description: 'Clay-tandoor roasted soya chaap. Classic, Malai, Achari. ₹249 a plate.',
     images: ['https://mkstandoori.com/og-soya-chaap.jpg'],
   },
 }
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Where can I get the best soya chaap in Noida?',
-    a: "MK's near Sector 75 Noida (at Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75) serves clay-tandoor roasted soya chaap in Classic, Creamy, and Achari flavours.",
+    a: "MK's near Sector 75 Noida (at Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75) serves clay-tandoor roasted soya chaap in Classic, Malai, and Achari flavours.",
   },
   {
     q: 'Is soya chaap vegetarian?',
@@ -41,11 +41,11 @@ const faqs = [
   },
   {
     q: "What flavours of soya chaap does MK's serve?",
-    a: 'Three: Classic (our house spice marinade), Creamy (rich, mellow cream marinade), and Achari (tangy pickled-spice marinade). All are tandoor roasted, never fried.',
+    a: 'Three: Classic (yogurt, ginger-garlic and house garam masala), Malai (fresh cream and cashew), and Achari (tangy achari spices and mustard oil). All are tandoor roasted, never fried.',
   },
   {
     q: "What is the price of soya chaap at MK's?",
-    a: 'Soya Chaap is ₹250 for a plate of 3 strips, across all three flavours — Classic, Creamy, and Achari.',
+    a: 'Soya Chaap is ₹249 a plate across all three flavours — Classic, Malai, and Achari. It is high-protein, made with less maida.',
   },
   {
     q: 'Is the soya chaap fried or roasted?',
@@ -61,21 +61,21 @@ const schema = {
   hasMenuItem: [
     {
       '@type': 'MenuItem',
-      name: 'Classic Soya Chaap',
+      name: 'Classic Chaap',
       description: 'Soya chaap sticks in a classic spice marinade, roasted in a clay tandoor. 3 strips a plate.',
-      offers: { '@type': 'Offer', price: '250', priceCurrency: 'INR' },
+      offers: { '@type': 'Offer', price: '249', priceCurrency: 'INR' },
     },
     {
       '@type': 'MenuItem',
-      name: 'Creamy Soya Chaap',
+      name: 'Malai Chaap',
       description: 'Soya chaap sticks in a rich cream marinade, tandoor roasted. 3 strips a plate.',
-      offers: { '@type': 'Offer', price: '250', priceCurrency: 'INR' },
+      offers: { '@type': 'Offer', price: '249', priceCurrency: 'INR' },
     },
     {
       '@type': 'MenuItem',
-      name: 'Pickled (Achari) Soya Chaap',
+      name: 'Achari Chaap',
       description: 'Soya chaap sticks in a tangy achari marinade, tandoor roasted. 3 strips a plate.',
-      offers: { '@type': 'Offer', price: '250', priceCurrency: 'INR' },
+      offers: { '@type': 'Offer', price: '249', priceCurrency: 'INR' },
     },
   ],
   address: {
@@ -123,8 +123,8 @@ export default function SoyaChaapPage() {
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-mk-charcoal pt-20">
         <Image
-          src="/Gemini_Generated_Image_cvrmn8cvrmn8cvrm.jpg"
-          alt="Tandoor-roasted soya chaap skewers with naan and mint chutney — MK's Noida"
+          src="/pics/creamy%20soya%20chaap.jpg"
+          alt="Tandoor-roasted malai soya chaap with mint chutney — MK's Noida"
           fill
           sizes="100vw"
           className="object-cover opacity-30"
@@ -142,7 +142,7 @@ export default function SoyaChaapPage() {
             <span className="text-mk-orange">in Noida</span>
           </h1>
           <p className="font-tagline text-xl text-white/70 max-w-xl">
-            Clay-tandoor roasted, never fried. Classic, Creamy, or Achari. ₹250 a plate.
+            Clay-tandoor roasted, never fried. Classic, Malai, or Achari. ₹249 a plate.
           </p>
         </div>
       </section>
@@ -171,7 +171,7 @@ export default function SoyaChaapPage() {
                 clay tandoor. No shortcuts, no frying, just real roast.
               </p>
               <p>
-                We serve it in three ways: Classic, for the purist; Creamy, for a richer, milder
+                We serve it in three ways: Classic, for the purist; Malai, for a richer, milder
                 bite; and Achari, with a tangy pickled-spice kick. All three come as a plate of
                 3 strips, plated with mint chutney and lime.
               </p>
@@ -190,20 +190,20 @@ export default function SoyaChaapPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
                 {
-                  name: 'Classic Soya Chaap',
-                  price: '₹250',
+                  name: 'Classic Chaap',
+                  price: '₹249',
                   desc: 'Classic house spice marinade, tandoor roasted. 3 strips a plate.',
                   tag: 'Bestseller',
                 },
                 {
-                  name: 'Creamy Soya Chaap',
-                  price: '₹250',
+                  name: 'Malai Chaap',
+                  price: '₹249',
                   desc: 'Rich cream marinade, milder spice, tandoor roasted. 3 strips a plate.',
                   tag: 'Veg',
                 },
                 {
-                  name: 'Pickled Soya Chaap',
-                  price: '₹250',
+                  name: 'Achari Chaap',
+                  price: '₹249',
                   desc: 'Tangy achari marinade, tandoor roasted. 3 strips a plate.',
                   tag: 'Veg',
                 },
@@ -232,8 +232,8 @@ export default function SoyaChaapPage() {
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 overflow-hidden">
               <Image
-                src="/Gemini_Generated_Image_cvrmn8cvrmn8cvrm.jpg"
-                alt="MK's soya chaap skewers close-up, tandoor roasted"
+                src="/pics/23.jpg"
+                alt="MK's malai soya chaap with a soya chaap roll and keema rice bowl"
                 fill
                 sizes="(max-width: 768px) 100vw, 512px"
                 className="object-cover"
@@ -249,7 +249,7 @@ export default function SoyaChaapPage() {
                   'Ginger-garlic paste',
                   'House dry spice blend',
                   'Achari (pickling spice) mix — for the Achari variant',
-                  'Fresh cream — for the Creamy variant',
+                  'Fresh cream and cashew — for the Malai variant',
                   'Skewered and roasted in a clay tandoor',
                   'Finished with mint chutney and lime',
                 ].map((ingredient) => (

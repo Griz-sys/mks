@@ -110,8 +110,8 @@ export default function FamilyRestaurantPage() {
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-mk-charcoal pt-20">
         <Image
-          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80&fit=crop"
-          alt="Warm family restaurant interior — MK's Noida Sector 75"
+          src="/pics/14.jpg"
+          alt="Classic tandoori chicken for the table — MK's Noida Sector 75"
           fill
           sizes="100vw"
           className="object-cover opacity-25"
@@ -237,7 +237,7 @@ export default function FamilyRestaurantPage() {
             </div>
             <div className="relative h-80 overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=80&fit=crop"
+                src="/pics/21.jpg"
                 alt="Family dining at MK's — authentic Indian food Noida Sector 75"
                 fill
                 sizes="(max-width: 768px) 100vw, 512px"
@@ -259,12 +259,12 @@ export default function FamilyRestaurantPage() {
             <div className="bg-mk-black border border-mk-orange/20 p-8 text-left">
               <ul className="space-y-3">
                 {[
-                  { name: 'Tandoori Chicken (Full)', price: '₹349', note: 'Share across the table' },
-                  { name: 'Paneer Tikka', price: '₹199', note: 'For the vegetarians' },
-                  { name: 'Chicken Tikka (4 Pc)', price: '₹350', note: 'Boneless, for sharing' },
-                  { name: 'Dal Makhani', price: '₹159', note: 'Rich, everyone loves it' },
-                  { name: 'Garlic Naan × 4', price: '₹236', note: 'Mandatory' },
-                  { name: 'Raita', price: '₹49', note: 'To cool things down' },
+                  { name: 'Classic Tandoori Chicken (4 Pc)', price: '₹399', note: 'Share across the table' },
+                  { name: 'Malai Chicken Tikka (4 Pc)', price: '₹379', note: 'Boneless, for sharing' },
+                  { name: 'Malai Chaap', price: '₹249', note: 'For the vegetarians' },
+                  { name: 'Soya Keema Rice Bowl', price: '₹159', note: 'Something hearty' },
+                  { name: 'Rumali Roti × 4', price: '₹100', note: 'Mandatory' },
+                  { name: 'Tomato Garlic Chutney', price: '₹39', note: 'For dipping' },
                 ].map((item) => (
                   <li key={item.name} className="flex justify-between items-start border-b border-white/5 pb-3">
                     <div>
@@ -276,7 +276,7 @@ export default function FamilyRestaurantPage() {
                 ))}
                 <li className="flex justify-between items-center pt-2">
                   <span className="font-body font-bold text-white uppercase tracking-widest text-sm">Total</span>
-                  <span className="font-display text-mk-orange text-2xl">≈ ₹1,340</span>
+                  <span className="font-display text-mk-orange text-2xl">≈ ₹1,325</span>
                 </li>
               </ul>
               <p className="font-body text-white/30 text-xs mt-4">For 4 people. Adjust quantities as needed.</p>

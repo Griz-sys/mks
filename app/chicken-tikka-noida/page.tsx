@@ -6,7 +6,7 @@ import { PHONE_SECONDARY, PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/con
 export const metadata: Metadata = {
   title: { absolute: "Chicken Tikka in Noida | MK's Restaurant Sector 75" },
   description:
-    "Craving chicken tikka in Noida? MK's serves boneless chicken tikka — Classic, Creamy or Hot & Spicy — marinated overnight and roasted in a clay tandoor. From ₹350. Near Sector 75.",
+    "Craving chicken tikka in Noida? MK's serves boneless chicken tikka — Classic, Malai or Fiery — marinated overnight and roasted in a clay tandoor. From ₹349. Near Sector 75.",
   keywords: [
     'chicken tikka noida',
     'best chicken tikka noida',
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://mkstandoori.com/chicken-tikka-noida' },
   openGraph: {
     title: "Chicken Tikka in Noida — MK's Restaurant Sector 75",
-    description: 'Boneless chicken tikka, clay-tandoor roasted. Classic, Creamy, Hot & Spicy. From ₹350.',
+    description: 'Boneless chicken tikka, clay-tandoor roasted. Classic, Malai, Fiery. From ₹349.',
     type: 'website',
     images: [{ url: 'https://mkstandoori.com/og-chicken-tikka.jpg', width: 1200, height: 630, alt: "Grilled boneless chicken tikka — MK's Noida" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Chicken Tikka in Noida — MK's Restaurant Sector 75",
-    description: 'Boneless chicken tikka, clay-tandoor roasted. Classic, Creamy, Hot & Spicy. From ₹350.',
+    description: 'Boneless chicken tikka, clay-tandoor roasted. Classic, Malai, Fiery. From ₹349.',
     images: ['https://mkstandoori.com/og-chicken-tikka.jpg'],
   },
 }
@@ -37,11 +37,11 @@ const faqs = [
   },
   {
     q: "What chicken tikka flavours does MK's serve?",
-    a: 'Three: Classic (our house spice blend), Creamy (cream and cashew marinade), and Hot & Spicy (extra chilli). All boneless, all clay-tandoor roasted.',
+    a: 'Three: Classic (yogurt, ginger-garlic and aromatic spices), Malai (cream and cashew marinade), and Fiery (crushed red chilies and lemon). All boneless, all clay-tandoor roasted.',
   },
   {
     q: "What is the price of chicken tikka at MK's?",
-    a: 'Classic and Creamy Chicken Tikka are ₹350 for 4 pc or ₹650 for 8 pc. Hot & Spicy Chicken Tikka is ₹380 for 4 pc or ₹680 for 8 pc.',
+    a: 'Classic and Fiery Chicken Tikka are ₹349 for 4 pc or ₹649 for 8 pc. Malai Chicken Tikka is ₹379 for 4 pc or ₹679 for 8 pc.',
   },
   {
     q: 'What is the difference between chicken tikka and tandoori chicken?',
@@ -64,26 +64,26 @@ const schema = {
       name: 'Classic Chicken Tikka',
       description: 'Boneless chicken tikka, classic spice blend, roasted in clay tandoor.',
       offers: [
-        { '@type': 'Offer', price: '350', priceCurrency: 'INR', name: '4 Pc' },
-        { '@type': 'Offer', price: '650', priceCurrency: 'INR', name: '8 Pc' },
+        { '@type': 'Offer', price: '349', priceCurrency: 'INR', name: '4 Pc' },
+        { '@type': 'Offer', price: '649', priceCurrency: 'INR', name: '8 Pc' },
       ],
     },
     {
       '@type': 'MenuItem',
-      name: 'Creamy Chicken Tikka',
+      name: 'Malai Chicken Tikka',
       description: 'Boneless chicken tikka, cream and cashew marinade, roasted in clay tandoor.',
       offers: [
-        { '@type': 'Offer', price: '350', priceCurrency: 'INR', name: '4 Pc' },
-        { '@type': 'Offer', price: '650', priceCurrency: 'INR', name: '8 Pc' },
+        { '@type': 'Offer', price: '379', priceCurrency: 'INR', name: '4 Pc' },
+        { '@type': 'Offer', price: '679', priceCurrency: 'INR', name: '8 Pc' },
       ],
     },
     {
       '@type': 'MenuItem',
-      name: 'Hot & Spicy Chicken Tikka',
-      description: 'Boneless chicken tikka, extra chilli marinade, roasted in clay tandoor.',
+      name: 'Fiery Chicken Tikka',
+      description: 'Boneless chicken tikka, crushed red chili and lemon marinade, roasted in clay tandoor.',
       offers: [
-        { '@type': 'Offer', price: '380', priceCurrency: 'INR', name: '4 Pc' },
-        { '@type': 'Offer', price: '680', priceCurrency: 'INR', name: '8 Pc' },
+        { '@type': 'Offer', price: '349', priceCurrency: 'INR', name: '4 Pc' },
+        { '@type': 'Offer', price: '649', priceCurrency: 'INR', name: '8 Pc' },
       ],
     },
   ],
@@ -132,7 +132,7 @@ export default function ChickenTikkaPage() {
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-mk-charcoal pt-20">
         <Image
-          src="/classic-chicken-tikka.jpg"
+          src="/pics/classic%20chicken%20tikka.jpg"
           alt="Grilled boneless chicken tikka skewers — MK's Noida"
           fill
           sizes="100vw"
@@ -151,7 +151,7 @@ export default function ChickenTikkaPage() {
             <span className="text-mk-orange">in Noida</span>
           </h1>
           <p className="font-tagline text-xl text-white/70 max-w-xl">
-            Boneless, clay-tandoor roasted. Classic, Creamy, or Hot &amp; Spicy. From ₹350.
+            Boneless, clay-tandoor roasted. Classic, Malai, or Fiery. From ₹349.
           </p>
         </div>
       </section>
@@ -180,8 +180,8 @@ export default function ChickenTikkaPage() {
                 spice — before going onto skewers and into the clay tandoor at 450°C.
               </p>
               <p>
-                We serve it three ways: Classic, for the purist; Creamy, with a rich cream and
-                cashew marinade; and Hot &amp; Spicy, for those who want extra chilli heat. All
+                We serve it three ways: Classic, for the purist; Malai, with a rich cream and
+                cashew marinade; and Fiery, with crushed red chilies and a splash of lemon. All
                 boneless, all roasted, never fried.
               </p>
             </div>
@@ -198,12 +198,12 @@ export default function ChickenTikkaPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { name: 'Classic Chicken Tikka 4 Pc', price: '₹350', desc: 'Boneless, classic spice blend, clay tandoor roasted.' },
-                { name: 'Classic Chicken Tikka 8 Pc', price: '₹650', desc: 'Eight pieces — great for sharing.' },
-                { name: 'Creamy Chicken Tikka 4 Pc', price: '₹350', desc: 'Boneless, cream and cashew marinade.' },
-                { name: 'Creamy Chicken Tikka 8 Pc', price: '₹650', desc: 'Eight pieces of our popular creamy variant.' },
-                { name: 'Hot & Spicy Chicken Tikka 4 Pc', price: '₹380', desc: 'Boneless, extra chilli marinade. For spice lovers.' },
-                { name: 'Hot & Spicy Chicken Tikka 8 Pc', price: '₹680', desc: 'Eight pieces of our hottest tikka.' },
+                { name: 'Classic Chicken Tikka 4 Pc', price: '₹349', desc: 'Marinated in yogurt, fresh ginger, garlic and aromatic spices for a smoky finish.' },
+                { name: 'Classic Chicken Tikka 8 Pc', price: '₹649', desc: 'Eight pieces — great for sharing.' },
+                { name: 'Fiery Chicken Tikka 4 Pc', price: '₹349', desc: 'Steeped in crushed red chilies, spices and a splash of lemon.' },
+                { name: 'Fiery Chicken Tikka 8 Pc', price: '₹649', desc: 'Eight pieces of our hottest tikka.' },
+                { name: 'Malai Chicken Tikka 4 Pc', price: '₹379', desc: 'Velvety chicken in rich cream, cashew paste and spices. Has nuts.' },
+                { name: 'Malai Chicken Tikka 8 Pc', price: '₹679', desc: 'Eight pieces of our popular malai variant.' },
               ].map((item) => (
                 <div key={item.name} className="bg-mk-black border border-white/10 hover:border-mk-orange/40 transition-colors p-5">
                   <div className="flex justify-between items-start mb-2">
@@ -222,8 +222,8 @@ export default function ChickenTikkaPage() {
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 overflow-hidden">
               <Image
-                src="/creamy-chicken-tikka.jpg"
-                alt="MK's creamy chicken tikka close-up, tandoor roasted"
+                src="/pics/creamy%20chicken%20tikka.jpg"
+                alt="MK's malai chicken tikka close-up, tandoor roasted"
                 fill
                 sizes="(max-width: 768px) 100vw, 512px"
                 className="object-cover"
@@ -238,8 +238,8 @@ export default function ChickenTikkaPage() {
                   'Thick yoghurt marinade base',
                   'Ginger-garlic paste',
                   'House dry spice blend',
-                  'Cream and cashew paste — for the Creamy variant',
-                  'Extra chilli — for the Hot & Spicy variant',
+                  'Cream and cashew paste — for the Malai variant',
+                  'Crushed red chilies and lemon — for the Fiery variant',
                   'Skewered and roasted in a clay tandoor',
                   'Finished with mint chutney and lime',
                 ].map((ingredient) => (
