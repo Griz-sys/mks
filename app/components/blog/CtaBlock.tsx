@@ -2,8 +2,8 @@ import PillButton from '@/app/components/PillButton'
 import {
   ADDRESS_LINE_1,
   ADDRESS_LINE_2,
-  PHONE_SECONDARY,
-  PHONE_SECONDARY_TEL,
+  PHONE_PRIMARY,
+  PHONE_PRIMARY_TEL,
   MAPS_QUERY_URL,
   SWIGGY_URL,
   ZOMATO_URL,
@@ -20,8 +20,8 @@ export default function CtaBlock() {
         <PillButton href="/#location" variant="primary">Visit Restaurant</PillButton>
         <PillButton href={SWIGGY_URL} variant="swiggy">Order on Swiggy</PillButton>
         <PillButton href={ZOMATO_URL} variant="zomato">Order on Zomato</PillButton>
-        <PillButton href={PHONE_SECONDARY_TEL} variant="outline" className="!border-paper/40 !text-paper hover:!bg-paper hover:!text-ink">
-          Call {PHONE_SECONDARY}
+        <PillButton href={PHONE_PRIMARY_TEL} variant="outline" className="!border-paper/40 !text-paper hover:!bg-paper hover:!text-ink">
+          Call {PHONE_PRIMARY}
         </PillButton>
         <PillButton href={MAPS_QUERY_URL} variant="outline" className="!border-paper/40 !text-paper hover:!bg-paper hover:!text-ink">
           Get Directions

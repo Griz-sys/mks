@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { PHONE_SECONDARY, PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/constants'
+import { PHONE_PRIMARY, PHONE_PRIMARY_TEL, ADDRESS_LINE_1 } from '../lib/constants'
 
 export const metadata: Metadata = {
   title: { absolute: "Kati Roll in Noida | MK's Restaurant Sector 75" },
@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     q: "Is MK's kati roll available for delivery in Noida?",
-    a: "Yes — call +91 80763 74624 for delivery, or order through Swiggy or Zomato.",
+    a: "Yes — call +91 87966 22275 for delivery, or order through Swiggy or Zomato.",
   },
   {
     q: "What makes MK's kati roll different from a regular roll?",
@@ -85,7 +85,7 @@ const schema = {
     latitude: 28.5745,
     longitude: 77.3591,
   },
-  telephone: PHONE_SECONDARY_TEL.replace('tel:', ''),
+  telephone: PHONE_PRIMARY_TEL.replace('tel:', ''),
 }
 
 export default function KatiRollPage() {
@@ -267,8 +267,8 @@ export default function KatiRollPage() {
             Visit us at Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75, Noida — or call to order.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={PHONE_SECONDARY_TEL} className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors">
-              Call {PHONE_SECONDARY}
+            <a href={PHONE_PRIMARY_TEL} className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors">
+              Call {PHONE_PRIMARY}
             </a>
             <Link href="/#location" className="border border-white/20 text-white font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:border-mk-orange hover:text-mk-orange transition-colors">
               Get Directions

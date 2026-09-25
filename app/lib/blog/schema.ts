@@ -1,6 +1,6 @@
 import {
   ADDRESS_LINE_1,
-  PHONE_SECONDARY_TEL,
+  PHONE_PRIMARY_TEL,
   HOURS,
 } from '@/app/lib/constants'
 import { SITE_URL } from './config'
@@ -29,7 +29,7 @@ export function buildRestaurantSchema() {
       latitude: RESTAURANT_GEO.latitude,
       longitude: RESTAURANT_GEO.longitude,
     },
-    telephone: PHONE_SECONDARY_TEL.replace('tel:', ''),
+    telephone: PHONE_PRIMARY_TEL.replace('tel:', ''),
     url: SITE_URL,
     openingHours: HOURS.replace('Every day · ', 'Mo-Su '),
   }
@@ -55,7 +55,7 @@ export function buildLocalBusinessSchema() {
       latitude: RESTAURANT_GEO.latitude,
       longitude: RESTAURANT_GEO.longitude,
     },
-    telephone: PHONE_SECONDARY_TEL.replace('tel:', ''),
+    telephone: PHONE_PRIMARY_TEL.replace('tel:', ''),
     url: SITE_URL,
   }
 }

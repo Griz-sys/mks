@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { PHONE_SECONDARY, PHONE_SECONDARY_TEL, ADDRESS_LINE_1, HOURS } from '../lib/constants'
+import { PHONE_PRIMARY, PHONE_PRIMARY_TEL, ADDRESS_LINE_1, HOURS } from '../lib/constants'
 
 export const metadata: Metadata = {
   title: { absolute: "North Indian Restaurant in Noida | MK's — Near Sector 75" },
   description:
-    "Looking for a North Indian restaurant near you in Noida? MK's serves tandoori chicken, chicken tikka, soya chaap & rolls — roasted, never fried. Sector 75. Call +91 80763 74624.",
+    "Looking for a North Indian restaurant near you in Noida? MK's serves tandoori chicken, chicken tikka, soya chaap & rolls — roasted, never fried. Sector 75. Call +91 87966 22275.",
   keywords: [
     'north indian restaurant noida',
     'restaurant near me',
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://mkstandoori.com/north-indian-restaurant-noida' },
   openGraph: {
     title: "North Indian Restaurant in Noida — MK's, Sector 75",
-    description: 'Tandoori chicken, chicken tikka, soya chaap & rolls. Roasted, never fried. Open daily 11am–11pm.',
+    description: 'Tandoori chicken, chicken tikka, soya chaap & rolls. Roasted, never fried. Open daily 1pm–11pm.',
     type: 'website',
     images: [{ url: 'https://mkstandoori.com/og-north-indian-restaurant.jpg', width: 1200, height: 630, alt: "Tandoori chicken platter — MK's North Indian Restaurant, Noida" }],
   },
   twitter: {
     card: 'summary_large_image',
     title: "North Indian Restaurant in Noida — MK's, Sector 75",
-    description: 'Tandoori chicken, chicken tikka, soya chaap & rolls. Roasted, never fried. Open daily 11am–11pm.',
+    description: 'Tandoori chicken, chicken tikka, soya chaap & rolls. Roasted, never fried. Open daily 1pm–11pm.',
     images: ['https://mkstandoori.com/og-north-indian-restaurant.jpg'],
   },
 }
@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "Is MK's available for delivery or takeaway near Sector 75?",
-    a: "Yes — call +91 80763 74624, or find us on Swiggy and Zomato for delivery. Walk-ins and takeaway are also welcome at our Spectrum Metro Mall counter.",
+    a: "Yes — call +91 87966 22275, or find us on Swiggy and Zomato for delivery. Walk-ins and takeaway are also welcome at our Spectrum Metro Mall counter.",
   },
 ]
 
@@ -72,12 +72,12 @@ const schema = {
     latitude: 28.5745,
     longitude: 77.3591,
   },
-  telephone: PHONE_SECONDARY_TEL.replace('tel:', ''),
+  telephone: PHONE_PRIMARY_TEL.replace('tel:', ''),
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-      opens: '11:00',
+      opens: '13:00',
       closes: '23:00',
     },
   ],
@@ -164,7 +164,7 @@ export default function NorthIndianRestaurantPage() {
                 and finishes in a 450°C clay tandoor.
               </p>
               <p>
-                We&apos;re open every day, 11:00 AM to 11:00 PM, with dine-in, takeaway, and delivery
+                We&apos;re open every day, 1:00 PM to 11:00 PM, with dine-in, takeaway, and delivery
                 through Swiggy and Zomato.
               </p>
             </div>
@@ -212,7 +212,7 @@ export default function NorthIndianRestaurantPage() {
               <div className="space-y-6">
                 {[
                   { icon: '🔥', title: 'Clay Tandoor, 450°C', body: 'Every non-veg and veg tandoor dish goes into a real clay tandoor — not an electric oven or deep fryer.' },
-                  { icon: '🕐', title: 'Open Every Day', body: 'Monday to Sunday, 11:00 AM – 11:00 PM. No closed days.' },
+                  { icon: '🕐', title: 'Open Every Day', body: 'Monday to Sunday, 1:00 PM – 11:00 PM. No closed days.' },
                   { icon: '📍', title: 'Easy to Find', body: 'Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75, Noida. Ample parking.' },
                   { icon: '🚴', title: 'Dine-in, Takeaway & Delivery', body: 'Eat in, pick up at the counter, or order through Swiggy and Zomato.' },
                 ].map((feature) => (
@@ -262,11 +262,11 @@ export default function NorthIndianRestaurantPage() {
         <section className="py-20 px-4 bg-mk-black text-center">
           <h2 className="font-display text-4xl text-white mb-4">Visit or Order From MK&apos;s</h2>
           <p className="font-body text-white/50 mb-8 max-w-md mx-auto">
-            Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75, Noida. Open daily 11am–11pm.
+            Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75, Noida. Open daily 1pm–11pm.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={PHONE_SECONDARY_TEL} className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors">
-              Call {PHONE_SECONDARY}
+            <a href={PHONE_PRIMARY_TEL} className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors">
+              Call {PHONE_PRIMARY}
             </a>
             <Link href="/#location" className="border border-white/20 text-white font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:border-mk-orange hover:text-mk-orange transition-colors">
               Get Directions

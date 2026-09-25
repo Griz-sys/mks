@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { PHONE_SECONDARY, PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/constants'
+import { PHONE_PRIMARY, PHONE_PRIMARY_TEL, ADDRESS_LINE_1 } from '../lib/constants'
 
 export const metadata: Metadata = {
   title: { absolute: "Best Tandoori Chicken in Noida Sector 75 | MK's Restaurant" },
   description:
-    "Looking for the best tandoori chicken in Noida Sector 75? MK's serves authentic clay tandoor roasted chicken — marinated overnight, never fried. Starting ₹219. Call +91 80763 74624.",
+    "Looking for the best tandoori chicken in Noida Sector 75? MK's serves authentic clay tandoor roasted chicken — marinated overnight, never fried. Starting ₹219. Call +91 87966 22275.",
   keywords: [
     'tandoori chicken noida sector 75',
     'tandoori chicken noida',
@@ -74,7 +74,7 @@ const schema = {
     latitude: 28.5745,
     longitude: 77.3591,
   },
-  telephone: PHONE_SECONDARY_TEL.replace('tel:', ''),
+  telephone: PHONE_PRIMARY_TEL.replace('tel:', ''),
 }
 
 const faqs = [
@@ -92,7 +92,7 @@ const faqs = [
   },
   {
     q: "Does MK’s offer home delivery for tandoori chicken in Noida?",
-    a: "Call us at +91 80763 74624 for delivery details. We’re also available on popular food delivery platforms.",
+    a: "Call us at +91 87966 22275 for delivery details. We’re also available on popular food delivery platforms.",
   },
   {
     q: "What makes MK's tandoori chicken different?",
@@ -295,10 +295,10 @@ export default function TandooriChickenPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href={PHONE_SECONDARY_TEL}
+              href={PHONE_PRIMARY_TEL}
               className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors"
             >
-              Call {PHONE_SECONDARY}
+              Call {PHONE_PRIMARY}
             </a>
             <Link
               href="/#location"

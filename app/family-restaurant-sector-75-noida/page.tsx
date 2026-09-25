@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { PHONE_SECONDARY_TEL, ADDRESS_LINE_1 } from '../lib/constants'
+import { PHONE_PRIMARY_TEL, ADDRESS_LINE_1 } from '../lib/constants'
 
 export const metadata: Metadata = {
   title: { absolute: "Family Restaurant in Sector 75 Noida | MK's — Dine Together" },
   description:
-    "Planning a family meal in Noida Sector 75? MK's offers a warm, welcoming dining experience with authentic tandoori food for the whole family. Call +91 80763 74624.",
+    "Planning a family meal in Noida Sector 75? MK's offers a warm, welcoming dining experience with authentic tandoori food for the whole family. Call +91 87966 22275.",
   keywords: [
     'family restaurant sector 75 noida',
     'best family restaurant noida',
@@ -42,12 +42,12 @@ const schema = {
     latitude: 28.5745,
     longitude: 77.3591,
   },
-  telephone: PHONE_SECONDARY_TEL.replace('tel:', ''),
+  telephone: PHONE_PRIMARY_TEL.replace('tel:', ''),
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-      opens: '11:00',
+      opens: '13:00',
       closes: '23:00',
     },
   ],
@@ -73,11 +73,11 @@ const faqs = [
   },
   {
     q: "What time does MK's open for family dining?",
-    a: "We're open every day from 11:00 AM to 11:00 PM — including weekends and public holidays.",
+    a: "We're open every day from 1:00 PM to 11:00 PM — including weekends and public holidays.",
   },
   {
     q: "Can I book a table at MK's for a family gathering?",
-    a: "Call us at +91 80763 74624 to reserve a table or enquire about group bookings for family gatherings.",
+    a: "Call us at +91 87966 22275 to reserve a table or enquire about group bookings for family gatherings.",
   },
 ]
 
@@ -129,7 +129,7 @@ export default function FamilyRestaurantPage() {
             <span className="text-mk-orange">Sector 75, Noida</span>
           </h1>
           <p className="font-tagline text-xl text-white/70 max-w-xl">
-            Warm. Welcoming. Authentic Indian food for the whole family — every day, 11am to 11pm.
+            Warm. Welcoming. Authentic Indian food for the whole family — every day, 1pm to 11pm.
           </p>
         </div>
       </section>
@@ -159,7 +159,7 @@ export default function FamilyRestaurantPage() {
                 vegetarians, and comforting dal makhani and breads to round out a full family spread.
               </p>
               <p>
-                We&apos;re open seven days a week from 11:00 AM to 11:00 PM. Whether it&apos;s a
+                We&apos;re open seven days a week from 1:00 PM to 11:00 PM. Whether it&apos;s a
                 weeknight dinner, a weekend lunch outing, or a birthday celebration — we&apos;re
                 ready for your family.
               </p>
@@ -220,9 +220,9 @@ export default function FamilyRestaurantPage() {
               </h2>
               <div className="space-y-6">
                 {[
-                  { icon: '🕐', title: 'Open Every Day', body: 'Monday to Sunday, 11:00 AM – 11:00 PM. No closed days.' },
+                  { icon: '🕐', title: 'Open Every Day', body: 'Monday to Sunday, 1:00 PM – 11:00 PM. No closed days.' },
                   { icon: '📍', title: 'Easy to Find', body: 'Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75, Noida — a short drive from Sector 75. Ample parking.' },
-                  { icon: '📞', title: 'Book a Table', body: 'Call +91 80763 74624 to reserve your table or ask about group bookings for family gatherings.' },
+                  { icon: '📞', title: 'Book a Table', body: 'Call +91 87966 22275 to reserve your table or ask about group bookings for family gatherings.' },
                   { icon: '🚴', title: 'Delivery Too', body: 'Can\'t make it in? Order delivery through our phone line or popular food delivery apps.' },
                 ].map((feature) => (
                   <div key={feature.title} className="flex gap-4">
@@ -310,10 +310,10 @@ export default function FamilyRestaurantPage() {
         <section className="py-20 px-4 text-center">
           <h2 className="font-display text-4xl text-white mb-4">Bring the Family</h2>
           <p className="font-body text-white/50 mb-8 max-w-md mx-auto">
-            Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75, Noida. Open daily 11am–11pm.
+            Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75, Noida. Open daily 1pm–11pm.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={PHONE_SECONDARY_TEL} className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors">
+            <a href={PHONE_PRIMARY_TEL} className="bg-mk-orange text-mk-black font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors">
               Reserve a Table
             </a>
             <Link href="/#menu" className="border border-white/20 text-white font-body font-bold px-10 py-4 uppercase tracking-widest text-sm hover:border-mk-orange hover:text-mk-orange transition-colors">

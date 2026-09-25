@@ -8,7 +8,7 @@ import { MENU } from './lib/menu'
 import { SPECIALS } from './lib/specials'
 import {
   SWIGGY_URL, ZOMATO_URL, INSTAGRAM_URL,
-  PHONE_PRIMARY, PHONE_PRIMARY_TEL, PHONE_SECONDARY, PHONE_SECONDARY_TEL,
+  PHONE_PRIMARY, PHONE_PRIMARY_TEL,
   ADDRESS_LINE_1, ADDRESS_LINE_2, MAPS_QUERY_URL, HOURS,
 } from './lib/constants'
 
@@ -45,7 +45,7 @@ const localBusinessSchema = {
   description: "It's roasted, not fried. Tandoori chicken, rolls & soya chaap in Noida Sector 75.",
   url: 'https://mkstandoori.com',
   image: 'https://mkstandoori.com/og-image.jpg',
-  telephone: PHONE_SECONDARY_TEL.replace('tel:', ''),
+  telephone: PHONE_PRIMARY_TEL.replace('tel:', ''),
   sameAs: [INSTAGRAM_URL, SWIGGY_URL, ZOMATO_URL],
   address: {
     '@type': 'PostalAddress',
@@ -64,7 +64,7 @@ const localBusinessSchema = {
   openingHoursSpecification: [{
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-    opens: '11:00', closes: '23:00',
+    opens: '13:00', closes: '23:00',
   }],
   servesCuisine: 'Indian',
   priceRange: '₹₹',
@@ -205,11 +205,11 @@ export default function HomePage() {
             </p>
             <div className="flex items-center gap-6 mt-7 flex-wrap">
               <PillButton href="/#menu" variant="primary">See The Menu</PillButton>
-              <a href={PHONE_SECONDARY_TEL} className="flex items-center gap-2 font-heading text-2xl text-ink hover:text-terracotta transition-colors tracking-wide">
+              <a href={PHONE_PRIMARY_TEL} className="flex items-center gap-2 font-heading text-2xl text-ink hover:text-terracotta transition-colors tracking-wide">
                 <svg viewBox="0 0 20 20" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8">
                   <path d="M4 3h3l2 5-2.5 1.5a11 11 0 005 5L13 12l5 2v3a2 2 0 01-2 2C8.5 19 1 11.5 1 5a2 2 0 012-2z" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                {PHONE_SECONDARY}
+                {PHONE_PRIMARY}
               </a>
             </div>
           </div>
@@ -400,7 +400,6 @@ export default function HomePage() {
               <div>
                 <p className="font-body font-bold text-ink/40 text-xs uppercase tracking-widest mb-1">Phone</p>
                 <a href={PHONE_PRIMARY_TEL} className="font-heading text-2xl text-ink hover:text-terracotta transition-colors block tracking-wide">{PHONE_PRIMARY}</a>
-                <a href={PHONE_SECONDARY_TEL} className="font-heading text-2xl text-ink hover:text-terracotta transition-colors block tracking-wide">{PHONE_SECONDARY}</a>
               </div>
               <div>
                 <p className="font-body font-bold text-ink/40 text-xs uppercase tracking-widest mb-1">Hours</p>
