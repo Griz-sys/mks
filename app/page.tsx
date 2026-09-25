@@ -335,7 +335,7 @@ export default function HomePage() {
               { stat: '450°C', label: 'Clay tandoor heat' },
               { stat: '12+ hrs', label: 'Overnight marinade' },
               { stat: '0', label: 'Deep fryers used' },
-              { stat: '11–11', label: 'Open every day' },
+              { stat: '1–11', label: 'Open every day' },
             ].map((s) => (
               <div key={s.label}>
                 <p className="font-heading text-terracotta tracking-wide" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}>{s.stat}</p>
