@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import PillButton from './PillButton'
-import { SWIGGY_URL, ZOMATO_URL } from '../lib/constants'
+import { SWIGGY_URL /* , ZOMATO_URL */ } from '../lib/constants'
 
 const NAV_LINKS = [
   { label: 'Menu', href: '/#menu' },
@@ -95,9 +95,9 @@ export default function Navbar() {
               <PillButton href={SWIGGY_URL} variant="swiggy" size="sm" className="w-full">
                 Order on Swiggy
               </PillButton>
-              <PillButton href={ZOMATO_URL} variant="zomato" size="sm" className="w-full">
+              {/* <PillButton href={ZOMATO_URL} variant="zomato" size="sm" className="w-full">
                 Order on Zomato
-              </PillButton>
+              </PillButton> */}
             </div>
           )}
         </div>
