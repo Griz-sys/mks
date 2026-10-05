@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "Is MK's available for delivery or takeaway near Sector 75?",
-    a: "Yes — call +91 87966 22275, or find us on Swiggy and Zomato for delivery. Walk-ins and takeaway are also welcome at our Spectrum Metro Mall counter.",
+    a: "Yes — call +91 87966 22275, or find us on Swiggy for delivery. Walk-ins and takeaway are also welcome at our Spectrum Metro Mall counter.",
   },
 ]
 
@@ -165,7 +165,7 @@ export default function NorthIndianRestaurantPage() {
               </p>
               <p>
                 We&apos;re open every day, 1:00 PM to 11:00 PM, with dine-in, takeaway, and delivery
-                through Swiggy and Zomato.
+                through Swiggy.
               </p>
             </div>
           </div>
@@ -214,7 +214,7 @@ export default function NorthIndianRestaurantPage() {
                   { icon: '🔥', title: 'Clay Tandoor, 450°C', body: 'Every non-veg and veg tandoor dish goes into a real clay tandoor — not an electric oven or deep fryer.' },
                   { icon: '🕐', title: 'Open Every Day', body: 'Monday to Sunday, 1:00 PM – 11:00 PM. No closed days.' },
                   { icon: '📍', title: 'Easy to Find', body: 'Shop No. 33, E Block, Spectrum Metro Mall, Phase-2, Sector 75, Noida. Ample parking.' },
-                  { icon: '🚴', title: 'Dine-in, Takeaway & Delivery', body: 'Eat in, pick up at the counter, or order through Swiggy and Zomato.' },
+                  { icon: '🚴', title: 'Dine-in, Takeaway & Delivery', body: 'Eat in, pick up at the counter, or order through Swiggy.' },
                 ].map((feature) => (
                   <div key={feature.title} className="flex gap-4">
                     <span className="text-2xl flex-shrink-0">{feature.icon}</span>

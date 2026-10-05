@@ -49,7 +49,7 @@ const faqs = [
   },
   {
     q: "Is MK's chicken tikka available for delivery in Noida?",
-    a: "Yes — call +91 87966 22275 for delivery, or order through Swiggy or Zomato.",
+    a: "Yes — call +91 87966 22275 for delivery, or order through Swiggy.",
   },
 ]
 

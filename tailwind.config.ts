@@ -15,7 +15,6 @@ const config: Config = {
         paper: '#FAF6F0',
         tint: '#E8C9A8',
         swiggy: '#FC8019',
-        zomato: '#E23744',
 
         // legacy tokens kept so existing SEO subpages don't break
         'mk-orange': '#B84700',

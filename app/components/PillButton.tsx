@@ -1,11 +1,10 @@
 import Link from 'next/link'
 
-type Variant = 'primary' | 'swiggy' | 'zomato' | 'outline' | 'dark'
+type Variant = 'primary' | 'swiggy' | 'outline' | 'dark'
 
 const variantClasses: Record<Variant, string> = {
   primary: 'bg-ink text-paper hover:bg-terracotta shadow-lg shadow-ink/20',
   swiggy: 'bg-swiggy text-white hover:brightness-95 shadow-lg shadow-swiggy/30',
-  zomato: 'bg-zomato text-white hover:brightness-95 shadow-lg shadow-zomato/30',
   outline: 'bg-transparent text-ink border-2 border-ink/70 hover:bg-ink hover:text-paper',
   dark: 'bg-ink text-paper hover:bg-ink/90 shadow-lg shadow-ink/20',
 }
