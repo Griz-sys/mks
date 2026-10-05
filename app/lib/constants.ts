@@ -1,7 +1,7 @@
 // Centralized, easy-to-edit site facts. Update here — everything else reads from this file.
 
 export const SWIGGY_URL = 'https://www.swiggy.com/menu/1460556'
-export const ZOMATO_URL = 'http://zoma.to/r/22910168'
+export const ZOMATO_URL = 'https://www.zomato.com/ncr/mks-tandoori-sector-75-noida'
 export const INSTAGRAM_URL = 'https://instagram.com/mkstandoori' // TODO: replace with the real Instagram handle
 
 export const PHONE_PRIMARY = '+91 87966 22275'
