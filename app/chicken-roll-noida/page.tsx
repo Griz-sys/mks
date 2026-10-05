@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     q: "Is MK's chicken roll available for delivery in Noida?",
-    a: "Yes — call +91 87966 22275 for delivery, or find us on Swiggy.",
+    a: "Yes — call +91 87966 22275 for delivery, or find us on Swiggy and Zomato.",
   },
   {
     q: "What makes MK's chicken roll different?",

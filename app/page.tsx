@@ -7,7 +7,7 @@ import SpecialsSlider from './components/SpecialsSlider'
 import { MENU } from './lib/menu'
 import { SPECIALS } from './lib/specials'
 import {
-  SWIGGY_URL, INSTAGRAM_URL,
+  SWIGGY_URL, ZOMATO_URL, INSTAGRAM_URL,
   PHONE_PRIMARY, PHONE_PRIMARY_TEL,
   ADDRESS_LINE_1, ADDRESS_LINE_2, MAPS_QUERY_URL, HOURS,
 } from './lib/constants'
@@ -24,7 +24,7 @@ const organizationSchema = {
   name: "MK's Tandoori",
   url: 'https://mkstandoori.com',
   logo: 'https://mkstandoori.com/logo-mk-light.jpg',
-  sameAs: [INSTAGRAM_URL, SWIGGY_URL],
+  sameAs: [INSTAGRAM_URL, SWIGGY_URL, ZOMATO_URL],
 }
 
 const websiteSchema = {
@@ -46,7 +46,7 @@ const localBusinessSchema = {
   url: 'https://mkstandoori.com',
   image: 'https://mkstandoori.com/og-image.jpg',
   telephone: PHONE_PRIMARY_TEL.replace('tel:', ''),
-  sameAs: [INSTAGRAM_URL, SWIGGY_URL],
+  sameAs: [INSTAGRAM_URL, SWIGGY_URL, ZOMATO_URL],
   address: {
     '@type': 'PostalAddress',
     streetAddress: ADDRESS_LINE_1,
@@ -86,7 +86,7 @@ const FEATURES = [
     ),
   },
   {
-    title: 'Delivery on Swiggy',
+    title: 'Swiggy & Zomato',
     desc: 'Delivered fast across Sector 75',
     icon: (
       <path d="M4 24l4-12h16l4 12M4 24h24M4 24v4h24v-4M10 28a2 2 0 104 0M22 28a2 2 0 104 0" strokeLinecap="round" strokeLinejoin="round" />

@@ -45,7 +45,7 @@ const faqs = [
   },
   {
     q: "Is MK's kati roll available for delivery in Noida?",
-    a: "Yes — call +91 87966 22275 for delivery, or order through Swiggy.",
+    a: "Yes — call +91 87966 22275 for delivery, or order through Swiggy or Zomato.",
   },
   {
     q: "What makes MK's kati roll different from a regular roll?",

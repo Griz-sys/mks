@@ -3,7 +3,7 @@ import Image from 'next/image'
 import PillButton from './PillButton'
 import {
   ADDRESS_LINE_1, ADDRESS_LINE_2, PHONE_PRIMARY, PHONE_PRIMARY_TEL,
-  SWIGGY_URL, INSTAGRAM_URL,
+  SWIGGY_URL, ZOMATO_URL, INSTAGRAM_URL,
 } from '../lib/constants'
 
 const footerLinks = [
@@ -71,6 +71,7 @@ export default function Footer() {
           </a>
           <div className="flex flex-wrap gap-2 mt-5">
             <PillButton href={SWIGGY_URL} variant="swiggy" size="sm">Swiggy</PillButton>
+            <PillButton href={ZOMATO_URL} variant="zomato" size="sm">Zomato</PillButton>
             <PillButton href={INSTAGRAM_URL} variant="outline" size="sm" className="!border-paper/40 !text-paper hover:!bg-paper hover:!text-ink">
               Instagram
             </PillButton>

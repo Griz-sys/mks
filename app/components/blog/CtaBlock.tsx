@@ -6,6 +6,7 @@ import {
   PHONE_PRIMARY_TEL,
   MAPS_QUERY_URL,
   SWIGGY_URL,
+  ZOMATO_URL,
 } from '@/app/lib/constants'
 
 export default function CtaBlock() {
@@ -18,6 +19,7 @@ export default function CtaBlock() {
       <div className="flex flex-wrap gap-3">
         <PillButton href="/#location" variant="primary">Visit Restaurant</PillButton>
         <PillButton href={SWIGGY_URL} variant="swiggy">Order on Swiggy</PillButton>
+        <PillButton href={ZOMATO_URL} variant="zomato">Order on Zomato</PillButton>
         <PillButton href={PHONE_PRIMARY_TEL} variant="outline" className="!border-paper/40 !text-paper hover:!bg-paper hover:!text-ink">
           Call {PHONE_PRIMARY}
         </PillButton>

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     default: "MK's Tandoori — Real Roasted | Sector 75, Noida",
   },
   description:
-    "MK's Tandoori — roasted, not fried. Rolls, tikka, soya chaap & more from Spectrum Metro Mall, Sector 75, Noida. Order on Swiggy.",
+    "MK's Tandoori — roasted, not fried. Rolls, tikka, soya chaap & more from Spectrum Metro Mall, Sector 75, Noida. Order on Swiggy or Zomato.",
   keywords: [
     'tandoori chicken noida', 'mk\'s tandoori chicken', 'chicken roll sector 75',
     'best restaurant noida sector 75', 'soya chaap noida', 'spectrum metro mall food',
