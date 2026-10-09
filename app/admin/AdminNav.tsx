@@ -19,6 +19,9 @@ export default function AdminNav() {
           MK&apos;s Admin
         </Link>
         <nav className="flex items-center gap-4">
+          <Link href="/admin/orders" className="font-body text-sm text-ink/60 hover:text-terracotta transition-colors">
+            Orders
+          </Link>
           <Link href="/admin" className="font-body text-sm text-ink/60 hover:text-terracotta transition-colors">
             Posts
           </Link>
