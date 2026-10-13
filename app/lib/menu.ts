@@ -27,6 +27,17 @@ export const MENU: MenuCategory[] = [
     ],
   },
   {
+    id: 'paneer',
+    title: 'Paneer Tikkas',
+    titleHindi: 'पनीर टिक्का',
+    note: 'Fresh paneer, marinated and roasted in a clay tandoor',
+    items: [
+      { name: 'Classic Paneer Tikka', nameHindi: 'क्लासिक पनीर टिक्का', desc: 'Fresh paneer marinated in yogurt, ginger, garlic and aromatic spices, charred in the tandoor with peppers and onions.', image: pic('classic-paneer-tikka.jpg'), prices: [{ label: '', price: '₹349' }] },
+      { name: 'Achari Paneer Tikka', nameHindi: 'अचारी पनीर टिक्का', desc: 'Paneer tossed in tangy achari spices and mustard oil, roasted in the tandoor for a pickle-spiced kick.', image: pic('achari-paneer-tikka.jpg'), prices: [{ label: '', price: '₹369' }] },
+      { name: 'Malai Paneer Tikka', nameHindi: 'मलाई पनीर टिक्का', desc: 'Soft paneer in a rich marinade of fresh cream, cashew and cardamom, gently roasted in the tandoor. Has nuts.', image: pic('malai-paneer-tikka.jpg'), prices: [{ label: '', price: '₹389' }] },
+    ],
+  },
+  {
     id: 'chicken',
     title: 'Tandoori Chicken',
     titleHindi: 'तंदूरी चिकन',
@@ -59,6 +70,7 @@ export const MENU: MenuCategory[] = [
     items: [
       { name: 'Classic Soya Chaap Roll', nameHindi: 'सोया चाप रोल', desc: 'Juicy, smoky soya chaap tossed with crisp onions and coriander chutney, wrapped in a rumali roti.', image: pic('classic soya roll.jpg'), prices: [{ label: '', price: '₹159' }] },
       { name: 'Classic Chicken Tikka Roll', nameHindi: 'चिकन टिक्का रोल', desc: 'Tender, roasted chicken tikka wrapped with sliced onions and coriander chutney, in a soft rumali roti.', image: pic('classic chicken roll.jpg'), prices: [{ label: '', price: '₹199' }] },
+      { name: 'Paneer Tikka Roll', nameHindi: 'पनीर टिक्का रोल', desc: 'Smoky paneer tikka with sliced onions and coriander chutney, wrapped in a soft rumali roti.', image: pic('classic soya roll.jpg'), prices: [{ label: '', price: '₹179' }] },
     ],
   },
   {
@@ -90,11 +102,22 @@ export const MENU: MenuCategory[] = [
     id: 'addons',
     title: 'Add-ons',
     titleHindi: 'ऐड-ऑन',
-    note: 'Beverages priced at MRP',
+    note: 'Round out your meal',
     items: [
       { name: 'Rumali Roti', nameHindi: 'रुमाली रोटी', desc: 'Thin, hand-stretched, tawa roasted', image: pic('romali roti.jpg'), prices: [{ label: '', price: '₹25' }] },
       { name: 'Tomato Garlic Chutney', desc: 'House-made, tangy and garlicky', image: pic('sauce.JPG'), prices: [{ label: '', price: '₹39' }] },
-      { name: 'Beverages', desc: 'Chilled soft drinks', prices: [{ label: '', price: 'MRP' }] },
+    ],
+  },
+  {
+    id: 'beverages',
+    title: 'Beverages',
+    titleHindi: 'पेय',
+    note: 'Chilled, to go with your tikka',
+    items: [
+      { name: 'Coke', nameHindi: 'कोक', desc: 'Chilled soft drink', prices: [{ label: '', price: '₹40' }] },
+      { name: 'Diet Coke', nameHindi: 'डाइट कोक', desc: 'Chilled can', prices: [{ label: '', price: '₹50' }] },
+      { name: 'Lahori Jeera', nameHindi: 'लाहौरी जीरा', desc: 'Chilled jeera soda', prices: [{ label: '', price: '₹10' }] },
+      { name: 'Water Bottle', nameHindi: 'पानी की बोतल', desc: 'Packaged drinking water', prices: [{ label: '', price: '₹10' }] },
     ],
   },
 ]

@@ -6,12 +6,16 @@ import type { MenuCategory, MenuItem } from '../lib/menu'
 
 const TAB_ICONS: Record<string, React.ReactNode> = {
   tikka: <path d="M4 36L28 4M10 22a4 4 0 106-6M15 16a4 4 0 106-6M5 30a4 4 0 106-6" strokeLinecap="round" strokeLinejoin="round" />,
+  // paneer cube
+  paneer: <path d="M5 15l11-7 11 7v13l-11 7-11-7V15zM5 15l11 7 11-7M16 22v13" strokeLinecap="round" strokeLinejoin="round" />,
   chicken: <path d="M8 38c0-12 4-20 8-20s8 8 8 20M10 20c0-8 3-14 6-14s6 6 6 14" strokeLinecap="round" />,
   chaap: <path d="M16 6c6 4 8 10 8 15a8 8 0 11-16 0c0-5 2-11 8-15z" strokeLinecap="round" strokeLinejoin="round" />,
   rolls: <path d="M6 14c8-4 12-4 20 0M6 14l3 18h14l3-18M6 14l10-8 10 8" strokeLinecap="round" strokeLinejoin="round" />,
   bowls: <path d="M3 18h26a13 13 0 01-26 0zM10 12c0-3 2-3 2-6M16 12c0-3 2-3 2-6M22 12c0-3 2-3 2-6M11 31h10" strokeLinecap="round" strokeLinejoin="round" />,
   combos: <path d="M4 24h24M6 24a10 10 0 0120 0M16 14v-2M3 30h26" strokeLinecap="round" strokeLinejoin="round" />,
   addons: <path d="M10 6h12l-1.5 26a2 2 0 01-2 2h-5a2 2 0 01-2-2L10 6zM8 6h16" strokeLinecap="round" strokeLinejoin="round" />,
+  // bottle
+  beverages: <path d="M13 4h6v6l3 4v20a2 2 0 01-2 2h-8a2 2 0 01-2-2V14l3-4V4zM10 20h12M10 28h12" strokeLinecap="round" strokeLinejoin="round" />,
 }
 
 export default function MenuTabs({ categories }: { categories: MenuCategory[] }) {
