@@ -286,17 +286,118 @@ export default function OrdersBoard() {
       ) : active.length === 0 ? (
         <p className="font-body text-ink/50">No completed or cancelled orders yet.</p>
       ) : (
-        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {active.map((o) => (
-            <OrderCard key={o.id} order={o} now={now} highlight={false} pending={false} onAction={() => {}} />
-          ))}
-        </div>
+        <HistoryList orders={active} />
       )}
     </div>
   )
 }
 
 const shortId = (id: string) => id.slice(-6).toUpperCase()
+
+/** One item line, e.g. "2 × Classic Chicken Tikka (4 Pc)". */
+function itemLine(it: AdminOrder['items'][number]): string {
+  const extras = [...(it.selectedVariations ?? []), ...(it.selectedAddons ?? [])].map((x) => x.name)
+  return `${it.quantity} × ${it.menuItem.name}${extras.length ? ` (${extras.join(', ')})` : ''}`
+}
+
+/** Completed / cancelled orders as a compact list (table on wide screens). Click a row for full items. */
+function HistoryList({ orders }: { orders: AdminOrder[] }) {
+  const [open, setOpen] = useState<string | null>(null)
+  const completed = orders.filter((o) => o.status === 'COMPLETED')
+  const cancelled = orders.length - completed.length
+  const revenue = completed.reduce((sum, o) => sum + Number(o.totalAmount), 0)
+
+  return (
+    <div>
+      <p className="mb-3 font-body text-sm text-ink/60">
+        Last {orders.length} orders · <span className="text-green-700 font-semibold">{completed.length} completed ({money(revenue)})</span>
+        {cancelled > 0 && <> · <span className="text-red-600 font-semibold">{cancelled} cancelled</span></>}
+      </p>
+
+      <div className="rounded-2xl border border-ink/10 bg-white overflow-hidden">
+        {/* Column headings (wide screens only) */}
+        <div className="hidden md:grid grid-cols-[110px_150px_190px_1fr_90px_110px] gap-4 px-5 py-3 bg-tint/30 font-heading text-sm text-ink">
+          <span>Order</span>
+          <span>Pickup</span>
+          <span>Customer</span>
+          <span>Items</span>
+          <span className="text-right">Total</span>
+          <span className="text-right">Status</span>
+        </div>
+
+        {orders.map((o) => {
+          const expanded = open === o.id
+          const lines = o.items.map(itemLine)
+          const paid = o.payment?.status === 'CAPTURED'
+          return (
+            // div (not button) so the tel: link inside is valid HTML.
+            <div
+              key={o.id}
+              role="button"
+              tabIndex={0}
+              onClick={() => setOpen(expanded ? null : o.id)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  setOpen(expanded ? null : o.id)
+                }
+              }}
+              aria-expanded={expanded}
+              className="cursor-pointer border-t border-ink/5 px-5 py-3 hover:bg-tint/10 focus:outline-none focus-visible:bg-tint/20 transition-colors md:grid md:grid-cols-[110px_150px_190px_1fr_90px_110px] md:gap-4 md:items-start"
+            >
+              {/* Mobile: order # + status on one line */}
+              <div className="flex items-center justify-between md:block">
+                <span className="font-heading text-ink">#{shortId(o.id)}</span>
+                <span className="md:hidden">
+                  <StatusPill status={o.status} />
+                </span>
+              </div>
+
+              <span className="block font-body text-sm text-ink/70">{formatSlot(o.scheduledFor)}</span>
+
+              <span className="block font-body text-sm">
+                <span className="text-ink">{o.user.name || 'Guest'}</span>{' '}
+                <a
+                  href={`tel:${o.user.phone}`}
+                  onClick={(e) => e.stopPropagation()}
+                  className="text-terracotta hover:underline md:block"
+                >
+                  {o.user.phone}
+                </a>
+              </span>
+
+              <span className={`block font-body text-sm text-ink/80 mt-1 md:mt-0 ${expanded ? '' : 'line-clamp-1'}`}>
+                {expanded ? lines.map((l) => <span key={l} className="block">{l}</span>) : lines.join(', ')}
+              </span>
+
+              <span className="flex items-baseline justify-between mt-1 md:mt-0 md:block md:text-right">
+                <span className="font-body font-bold text-ink">{money(o.totalAmount)}</span>
+                <span className="font-body text-xs text-ink/50 md:block">{paid ? 'Paid online' : 'At pickup'}</span>
+              </span>
+
+              <span className="hidden md:block text-right">
+                <StatusPill status={o.status} />
+              </span>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+function StatusPill({ status }: { status: OrderStatus }) {
+  const done = status === 'COMPLETED'
+  return (
+    <span
+      className={`inline-block rounded-full px-2.5 py-0.5 font-body text-xs font-semibold ${
+        done ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+      }`}
+    >
+      {done ? 'Completed' : 'Cancelled'}
+    </span>
+  )
+}
 
 function OrderCard({
   order,
