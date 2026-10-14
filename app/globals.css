@@ -21,6 +21,11 @@ h1.font-body, h2.font-body, h3.font-body, h4.font-body, h5.font-body, h6.font-bo
   font-family: var(--font-nunito), sans-serif !important;
   letter-spacing: normal;
 }
+/* Admin orders page: plain system font instead of the brand fonts (see app/admin/orders/page.tsx). */
+.admin-plain h1, .admin-plain h2, .admin-plain h3, .admin-plain h4, .admin-plain h5, .admin-plain h6 {
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  letter-spacing: normal;
+}
 
 /* Eyebrow label — small caps flanked by dashes, matching the reference's editorial tone */
 .eyebrow {

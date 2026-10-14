@@ -197,13 +197,13 @@ export default function OrdersBoard() {
     <div>
       <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
         <div className="flex items-center gap-3">
-          <h1 className="font-heading text-3xl text-ink">Orders</h1>
+          <h1 className="font-semibold tracking-tight text-3xl text-ink">Orders</h1>
           <div className="flex rounded-full border border-ink/10 bg-white p-1">
             {(['active', 'history'] as View[]).map((v) => (
               <button
                 key={v}
                 onClick={() => setView(v)}
-                className={`rounded-full px-4 py-1.5 font-body text-sm font-semibold transition ${
+                className={`rounded-full px-4 py-1.5 text-sm font-semibold transition ${
                   view === v ? 'bg-ink text-paper' : 'text-ink/60 hover:text-terracotta'
                 }`}
               >
@@ -214,16 +214,16 @@ export default function OrdersBoard() {
         </div>
         <div className="flex items-center gap-3">
           {lastUpdated && (
-            <span className="font-body text-xs text-ink/40">
+            <span className="text-xs text-ink/40">
               Updated {lastUpdated.toLocaleTimeString('en-IN', { timeZone: TZ, hour: 'numeric', minute: '2-digit', second: '2-digit' })}
             </span>
           )}
           {soundOn ? (
-            <span className="rounded-full bg-green-100 text-green-700 px-3 py-1.5 font-body text-xs font-semibold">🔔 Sound on</span>
+            <span className="rounded-full bg-green-100 text-green-700 px-3 py-1.5 text-xs font-semibold">🔔 Sound on</span>
           ) : (
             <button
               onClick={enableSound}
-              className="rounded-full bg-terracotta text-paper font-body text-sm font-semibold px-4 py-2 hover:bg-terracotta-dark transition"
+              className="rounded-full bg-terracotta text-paper text-sm font-semibold px-4 py-2 hover:bg-terracotta-dark transition"
             >
               🔔 Turn on order alerts
             </button>
@@ -233,12 +233,12 @@ export default function OrdersBoard() {
 
       {unseen.size > 0 && (
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-terracotta text-paper px-5 py-4 animate-pulse">
-          <p className="font-heading text-xl">
+          <p className="font-semibold tracking-tight text-xl">
             {unseen.size} new order{unseen.size > 1 ? 's' : ''}!
           </p>
           <button
             onClick={() => acknowledge()}
-            className="rounded-full bg-paper text-ink font-body text-sm font-semibold px-4 py-2"
+            className="rounded-full bg-paper text-ink text-sm font-semibold px-4 py-2"
           >
             Got it
           </button>
@@ -246,26 +246,26 @@ export default function OrdersBoard() {
       )}
 
       {error && (
-        <p className="mb-6 rounded-2xl bg-red-50 text-red-700 px-5 py-3 font-body text-sm">
+        <p className="mb-6 rounded-2xl bg-red-50 text-red-700 px-5 py-3 text-sm">
           Can’t reach the order server ({error}). Retrying every few seconds…
         </p>
       )}
 
       {orders === null && !error ? (
-        <p className="font-body text-ink/50">Loading orders…</p>
+        <p className="text-ink/50">Loading orders…</p>
       ) : view === 'active' ? (
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {columns.map((col) => (
             <section key={col.title} className="min-w-0">
               <div className="mb-3 flex items-baseline justify-between">
-                <h2 className="font-heading text-lg text-ink">
+                <h2 className="font-semibold tracking-tight text-lg text-ink">
                   {col.title} <span className="text-ink/40">({col.items.length})</span>
                 </h2>
-                <span className="font-body text-xs text-ink/40">{col.hint}</span>
+                <span className="text-xs text-ink/40">{col.hint}</span>
               </div>
               <div className="space-y-3">
                 {col.items.length === 0 && (
-                  <p className="rounded-2xl border border-dashed border-ink/15 px-4 py-6 text-center font-body text-sm text-ink/30">
+                  <p className="rounded-2xl border border-dashed border-ink/15 px-4 py-6 text-center text-sm text-ink/30">
                     Nothing here
                   </p>
                 )}
@@ -284,7 +284,7 @@ export default function OrdersBoard() {
           ))}
         </div>
       ) : active.length === 0 ? (
-        <p className="font-body text-ink/50">No completed or cancelled orders yet.</p>
+        <p className="text-ink/50">No completed or cancelled orders yet.</p>
       ) : (
         <HistoryList orders={active} />
       )}
@@ -309,14 +309,14 @@ function HistoryList({ orders }: { orders: AdminOrder[] }) {
 
   return (
     <div>
-      <p className="mb-3 font-body text-sm text-ink/60">
+      <p className="mb-3 text-sm text-ink/60">
         Last {orders.length} orders · <span className="text-green-700 font-semibold">{completed.length} completed ({money(revenue)})</span>
         {cancelled > 0 && <> · <span className="text-red-600 font-semibold">{cancelled} cancelled</span></>}
       </p>
 
       <div className="rounded-2xl border border-ink/10 bg-white overflow-hidden">
         {/* Column headings (wide screens only) */}
-        <div className="hidden md:grid grid-cols-[110px_150px_190px_1fr_90px_110px] gap-4 px-5 py-3 bg-tint/30 font-heading text-sm text-ink">
+        <div className="hidden md:grid grid-cols-[110px_150px_190px_1fr_90px_110px] gap-4 px-5 py-3 bg-tint/30 font-semibold tracking-tight text-sm text-ink">
           <span>Order</span>
           <span>Pickup</span>
           <span>Customer</span>
@@ -347,15 +347,15 @@ function HistoryList({ orders }: { orders: AdminOrder[] }) {
             >
               {/* Mobile: order # + status on one line */}
               <div className="flex items-center justify-between md:block">
-                <span className="font-heading text-ink">#{shortId(o.id)}</span>
+                <span className="font-semibold tracking-tight text-ink">#{shortId(o.id)}</span>
                 <span className="md:hidden">
                   <StatusPill status={o.status} />
                 </span>
               </div>
 
-              <span className="block font-body text-sm text-ink/70">{formatSlot(o.scheduledFor)}</span>
+              <span className="block text-sm text-ink/70">{formatSlot(o.scheduledFor)}</span>
 
-              <span className="block font-body text-sm">
+              <span className="block text-sm">
                 <span className="text-ink">{o.user.name || 'Guest'}</span>{' '}
                 <a
                   href={`tel:${o.user.phone}`}
@@ -366,13 +366,13 @@ function HistoryList({ orders }: { orders: AdminOrder[] }) {
                 </a>
               </span>
 
-              <span className={`block font-body text-sm text-ink/80 mt-1 md:mt-0 ${expanded ? '' : 'line-clamp-1'}`}>
+              <span className={`block text-sm text-ink/80 mt-1 md:mt-0 ${expanded ? '' : 'line-clamp-1'}`}>
                 {expanded ? lines.map((l) => <span key={l} className="block">{l}</span>) : lines.join(', ')}
               </span>
 
               <span className="flex items-baseline justify-between mt-1 md:mt-0 md:block md:text-right">
-                <span className="font-body font-bold text-ink">{money(o.totalAmount)}</span>
-                <span className="font-body text-xs text-ink/50 md:block">{paid ? 'Paid online' : 'At pickup'}</span>
+                <span className="font-bold text-ink">{money(o.totalAmount)}</span>
+                <span className="text-xs text-ink/50 md:block">{paid ? 'Paid online' : 'At pickup'}</span>
               </span>
 
               <span className="hidden md:block text-right">
@@ -390,7 +390,7 @@ function StatusPill({ status }: { status: OrderStatus }) {
   const done = status === 'COMPLETED'
   return (
     <span
-      className={`inline-block rounded-full px-2.5 py-0.5 font-body text-xs font-semibold ${
+      className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-semibold ${
         done ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
       }`}
     >
@@ -424,26 +424,26 @@ function OrderCard({
     >
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0">
-          <p className="font-heading text-lg text-ink leading-tight">#{shortId(order.id)}</p>
-          <p className="font-body text-sm text-ink/70 truncate">{order.user.name || 'Guest'}</p>
-          <a href={`tel:${order.user.phone}`} className="font-body text-sm text-terracotta hover:underline">
+          <p className="font-semibold tracking-tight text-lg text-ink leading-tight">#{shortId(order.id)}</p>
+          <p className="text-sm text-ink/70 truncate">{order.user.name || 'Guest'}</p>
+          <a href={`tel:${order.user.phone}`} className="text-sm text-terracotta hover:underline">
             {order.user.phone}
           </a>
         </div>
         <div className="text-right shrink-0">
-          <p className="font-body text-sm font-semibold text-ink">{formatSlot(order.scheduledFor)}</p>
+          <p className="text-sm font-semibold text-ink">{formatSlot(order.scheduledFor)}</p>
           {!finished && (
-            <p className={`font-body text-xs ${due < 0 ? 'text-red-600 font-semibold' : 'text-ink/50'}`}>
+            <p className={`text-xs ${due < 0 ? 'text-red-600 font-semibold' : 'text-ink/50'}`}>
               {due < 0 ? `${relative(due)} late` : `pickup in ${relative(due)}`}
             </p>
           )}
           {order.status === 'CANCELLED' && (
-            <span className="mt-1 inline-block rounded-full bg-red-100 text-red-700 px-2 py-0.5 font-body text-xs font-semibold">
+            <span className="mt-1 inline-block rounded-full bg-red-100 text-red-700 px-2 py-0.5 text-xs font-semibold">
               Cancelled
             </span>
           )}
           {order.status === 'COMPLETED' && (
-            <span className="mt-1 inline-block rounded-full bg-green-100 text-green-700 px-2 py-0.5 font-body text-xs font-semibold">
+            <span className="mt-1 inline-block rounded-full bg-green-100 text-green-700 px-2 py-0.5 text-xs font-semibold">
               Completed
             </span>
           )}
@@ -454,7 +454,7 @@ function OrderCard({
         {order.items.map((it) => {
           const extras = [...(it.selectedVariations ?? []), ...(it.selectedAddons ?? [])].map((x) => x.name)
           return (
-            <li key={it.id} className="font-body text-sm text-ink">
+            <li key={it.id} className="text-sm text-ink">
               <span className="font-semibold">{it.quantity} ×</span> {it.menuItem.name}
               {extras.length > 0 && <span className="block pl-5 text-xs text-ink/50">{extras.join(', ')}</span>}
             </li>
@@ -463,9 +463,9 @@ function OrderCard({
       </ul>
 
       <div className="mt-3 flex items-center justify-between border-t border-ink/5 pt-3">
-        <span className="font-heading text-lg text-ink">{money(order.totalAmount)}</span>
+        <span className="font-semibold tracking-tight text-lg text-ink">{money(order.totalAmount)}</span>
         <span
-          className={`rounded-full px-2.5 py-1 font-body text-xs font-semibold ${
+          className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
             paid ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'
           }`}
         >
@@ -480,7 +480,7 @@ function OrderCard({
               key={a.status}
               disabled={pending}
               onClick={() => onAction(a)}
-              className={`rounded-full font-body text-sm font-semibold px-4 py-2 transition disabled:opacity-50 ${
+              className={`rounded-full text-sm font-semibold px-4 py-2 transition disabled:opacity-50 ${
                 a.tone === 'primary'
                   ? 'flex-1 bg-ink text-paper hover:bg-terracotta'
                   : 'border border-red-200 text-red-600 hover:bg-red-50'
